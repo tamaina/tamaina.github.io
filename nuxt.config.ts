@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     // nitro config
-    preset: 'service-worker',
+
   },
   image: {
     // image config https://v1.image.nuxtjs.org/configuration
