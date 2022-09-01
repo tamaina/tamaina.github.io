@@ -11,7 +11,9 @@ Based on [the content module](https://content.nuxtjs.org/) and [the image module
 ## Publish
 I recommend to use the static site hosting service like Netlify or Cloudflare Pages.
 
-Build Command: `nuxt generate`  
+Build Command: `npm run generate` 　
 Public Path: `.output/public`
 
-## Preview
+## Development and Preview
+Development: `npm run dev`  
+Preview: `npm run preview`
