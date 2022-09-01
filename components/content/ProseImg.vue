@@ -2,12 +2,13 @@
 
 <template>
   <nuxt-picture
-    :src="src"
+    :src="(src.startsWith('http') || src.startsWith('/')) ? src : `/${pathname}/${src}`"
     :alt="alt"
     :width="width"
     :height="height"
-    sizes="xs:200px md:500px lg:1024"
+    sizes="xs:200px md:500px lg:1024px"
   />
+  {{ content }}
 </template>
 
 <script setup lang="ts">
@@ -29,4 +30,10 @@ defineProps({
     default: undefined
   }
 })
+
+const route = useRoute();
+const { data: content } = await useAsyncData(() => queryContent(route.path).findOne());
+const indexRegExp = /\/index\.(md|yml|yaml|json)$/;
+const isIndex = indexRegExp.test(content.value._file);
+const pathname = isIndex ? content.value._file.replace(indexRegExp, '') : content.value._file.replace(/\/[^/]+$/, '');
 </script>
