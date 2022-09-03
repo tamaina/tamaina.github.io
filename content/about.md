@@ -1,3 +1,3 @@
 # About Content v2
 
-[Back home](/)
+This page will not be shon.

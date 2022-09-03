@@ -1,12 +1,10 @@
-<script lang="ts" setup>
-  //const { data } = await useAsyncData(() => useUnwrap())
-</script>
-
 <template>
+  <p><NuxtLink to="/">Back To Home</NuxtLink></p>
+
   <main>
     <ContentDoc v-slot="{ doc }">
       <ContentRenderer :value="doc" />
-      <div>{{ doc }}</div>
+      <pre>{{ doc }}</pre>
     </ContentDoc>
   </main>
 </template>

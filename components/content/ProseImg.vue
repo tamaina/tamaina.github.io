@@ -8,7 +8,6 @@
     :height="height"
     sizes="xs:200px md:500px lg:1024px"
   />
-  {{ content }}
 </template>
 
 <script setup lang="ts">
