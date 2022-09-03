@@ -12,7 +12,7 @@ Based on [Nuxt Content](https://content.nuxtjs.org/) and [Nuxt Image](https://v1
 The editing method is the same as for Nuxt Content.
 
 This boilerplate sets `content` directory to the [public directory](https://v3.nuxtjs.org/guide/directory-structure/public/).  
-So static files like `robots.txt` and `favicon.ico` should place under `content` directory.
+So static files like `robots.txt` and `favicon.ico` should be placed under `content` directory.
 
 ## ~~Publish~~
 ~~I recommend to use the static site hosting service like Netlify or Cloudflare Pages.~~
