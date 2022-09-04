@@ -10,7 +10,7 @@
 
     <main>
       <ContentDoc v-slot="{ doc }">
-        <ContentRenderer :value="doc" />
+        <ContentRenderer v-if="doc.body" :value="doc" />
         <pre>{{ doc }}</pre>
       </ContentDoc>
     </main>
