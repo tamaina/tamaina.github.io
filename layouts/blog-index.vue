@@ -32,10 +32,10 @@
 <script setup lang="ts">
 import { DynamicScroller, DynamicScrollerItem } from 'vue-virtual-scroller';
 
-const route = useRoute();
-const { data: content } = await useAsyncData(() => queryContent(route.path).findOne());
+const router = useRouter();
+const { data: content } = await useAsyncData(() => queryContent(router.currentRoute.value.path).findOne());
 
-const baseQuery = queryContent(route.path).where(Object.assign({ layout: { $ne: 'blog-index' } }, content.value.where || {}));
+const baseQuery = queryContent(content.value._path).where(Object.assign({ layout: { $ne: 'blog-index' } }, content.value.where || {}));
 const { data: pages } = await useAsyncData(() => baseQuery.sort({ published: 1 }).find());
 </script>
 
