@@ -37,7 +37,6 @@ const { data: content } = await useAsyncData(() => queryContent(route.path).find
 
 const baseQuery = queryContent(route.path).where(Object.assign({ layout: { $ne: 'blog-index' } }, content.value.where || {}));
 const { data: pages } = await useAsyncData(() => baseQuery.sort({ published: 1 }).find());
-console.log(pages)
 </script>
 
 <style module lang="scss">
