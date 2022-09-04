@@ -30,5 +30,5 @@ const props = defineProps({
   }
 })
 
-const { data: imgPath } = await useAsyncData(() => getImgRelativePath(props.src))
+const { data: imgPath } = await useAsyncData(() => getImgRelativeCurrentPath(props.src))
 </script>
