@@ -8,11 +8,3 @@ export const getImgRelativePath = (src: string, filepath: string) => {
 
     return (src.startsWith('http') || src.startsWith('/')) ? src : `/${getPathname()}/${src}`;
 }
-
-
-export const getImgRelativeCurrentPath = async (src: string) => {
-    const route = useRoute();
-    const { data: content } = await useAsyncData(() => queryContent(route.path).findOne());
-
-    return getImgRelativePath(src, content.value._file);
-}

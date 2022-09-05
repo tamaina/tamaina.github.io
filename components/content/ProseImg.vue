@@ -2,11 +2,14 @@
 
 <template>
   <nuxt-picture
+    v-if="imgPath"
     :src="imgPath"
     :alt="alt"
     :width="width"
     :height="height"
+    quality="98"
     sizes="xs:200px md:500px lg:1024px"
+    :img-attrs="{ class: `img-fluid ${$style['prose-img']}` }"
   />
 </template>
 
@@ -29,6 +32,20 @@ const props = defineProps({
     default: undefined
   }
 })
-
-const { data: imgPath } = await useAsyncData(() => getImgRelativeCurrentPath(props.src))
+const content = useContent();
+const imgPath = computed(() => {
+  return content.page.value && getImgRelativePath(props.src, content.page.value._file)
+});
 </script>
+
+<style module lang="scss">
+.prose-img {
+  display: block;
+  margin: auto;
+  max-height: min(35rem, 70vh);
+
+  @media (min-width: 1400px) {
+    max-width: 70%;
+  }
+}
+</style>

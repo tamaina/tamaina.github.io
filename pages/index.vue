@@ -1,5 +1,7 @@
 <template>
-  <div class="nuxt-page-index">
-    <ContentDoc path="/" />
+  <div>
+    <NuxtLayout>
+      <ContentDoc path="/" />
+    </NuxtLayout>
   </div>
 </template>

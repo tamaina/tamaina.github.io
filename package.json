@@ -10,7 +10,6 @@
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "nuxt": "^3.0.0-rc.4",
-    "sass": "^1.54.8",
-    "vue-virtual-scroller": "^2.0.0-alpha.1"
+    "sass": "^1.54.8"
   }
 }
