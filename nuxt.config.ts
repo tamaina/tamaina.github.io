@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   },
   content: {
     // content config https://content.nuxtjs.org/api/configuration/
-
+    documentDriven: true,
   },
   nitro: {
     // nitro config
