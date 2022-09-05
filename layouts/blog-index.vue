@@ -57,14 +57,25 @@ const pageItems = computed(() => pages.value.slice(start.value, end.value));
 
 onMounted(() => {
   watch(page, (newValue) => {
+    const pushOrReplace = (newValue) => {
+      const curr = router.currentRoute.value.query.page;
+      if (!curr) {
+        return router.replace;
+      }
+      if (newValue === curr) {
+        return router.replace;
+      }
+      return router.push;
+    }
+
     if (Number.isNaN(newValue) || !Number.isInteger(newValue) || Number(newValue) < 1) {
       page.value = 1;
-      router.push({ query: { page: 1 } });
+      router.replace({ query: { page: 1 } });
     } else if (Number(newValue) > totalPages.value) {
       page.value = totalPages.value;
-      router.push({ query: { page: totalPages.value } });
+      router.replace({ query: { page: totalPages.value } });
     } else {
-      router.push({ query: { page: newValue } });
+      pushOrReplace(newValue)({ query: { page: newValue } });
     }
   }, { immediate: true });
 });
