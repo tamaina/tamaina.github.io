@@ -9,4 +9,4 @@ IIJmioのセールで3万2千円程度で販売していて安かったので、
 
 ![](back.JPG)
 
-![](hand1.jpg)
+![](hand2.jpg)
