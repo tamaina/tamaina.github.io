@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="min-vh-100 py-5 container">
+    <div class="min-vh-100 py-5 container" :class="$style.default">
       <slot />
       
-      <div id="blog-index" v-if="pages">
+      <div id="blog-index" v-if="pages && pages.length > 0">
         <div :class="$style['blog-index']" :min-item-size="Math.min(pages.length, 20)" key-field="_id">
-          <div class="card mb-3" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
+          <div class="card mb-3 border-primary" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
             <NuxtLink :to="item._path" class="row g-0 text-reset text-decoration-none">
               <div class="col-md-4">
                 <nuxt-picture
@@ -41,12 +41,15 @@
 </template>
 
 <script setup lang="ts">
+const content = useContent();
+
+const baseQuery = queryContent(content.page.value._path).where(Object.assign({ layout: { $ne: 'blog-index' } }, content.page.value.where || {}));
+const { data: _pages } = await useAsyncData(() => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ published: 1 }).find());
+
+// ignore myself
+const pages = computed(() => _pages.value.filter((page) => page._id !== content.page.value._id));
+
 const router = useRouter();
-const { data: content } = await useAsyncData(() => queryContent(router.currentRoute.value.path).findOne());
-
-const baseQuery = queryContent(content.value._path).where(Object.assign({ layout: { $ne: 'blog-index' } }, content.value.where || {}));
-const { data: pages } = await useAsyncData(() => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ published: 1 }).find());
-
 const page = ref(Number(router.currentRoute.value.query.page) || 1);
 const perPage = ref(20);
 const total = computed(() => pages.value.length);
@@ -82,35 +85,37 @@ onMounted(() => {
 </script>
 
 <style module lang="scss">
-  .blog-index {
-    display: block;
+.default {
+  max-width: 60rem;
+}
+
+.blog-index {
+  display: block;
+}
+
+.blog-index-item-outer {
+  display: block;
+  width: 100%;
+}
+
+.blog-index-item-img {
+  display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.blog-index-pagination {
+  display: flex;
+  justify-content: space-around;
+  &-button {
+    padding: .5rem;
+    width: auto;
   }
 
-  .blog-index-item-outer {
-    display: block;
-    width: 100%;
+  &-input {
+    display: inline-block;
+    height: 100%;
+    width: 5em;
   }
-
-  .blog-index-item-img {
-    display: block;
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
-  }
-
-  .blog-index-pagination {
-    display: flex;
-    justify-content: space-around;
-
-    &-button {
-      padding: .5rem;
-      width: auto;
-    }
-
-    &-input {
-      display: inline-block;
-      height: 100%;
-      width: 5em;
-    }
-  }
-
+}
 </style>
