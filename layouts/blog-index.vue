@@ -44,8 +44,6 @@
 <script setup lang="ts">
 const { page } = useContent();
 
-console.log(page.value);
-
 const baseQuery = queryContent(page.value._path).where(Object.assign({ layout: { $ne: 'blog-index' } }, page.value.where || {}));
 const { data: _pages } = await useAsyncData(`blogIndexPages:${page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ published: 1 }).find());
 
