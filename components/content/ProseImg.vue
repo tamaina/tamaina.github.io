@@ -9,8 +9,9 @@
       :width="width"
       :height="height"
       quality="98"
-      sizes="xs:256px md:512px lg:1024px"
-      :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title, loading: 'lazy' }"
+      loading="lazy"
+      sizes="xs:256px md:512px lg:1024px xxl: 4096px"
+      :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title }"
     />
   </VueViewer>
   <div class="text-center" :class="$style.title" v-text="title" />
