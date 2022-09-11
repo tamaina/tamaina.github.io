@@ -1,5 +1,5 @@
 <template>
-  <nav aria-label="breadcrumb" class="mb-0">
+  <nav aria-label="breadcrumb" class="mb-0" v-if="content.page.value._path !== '/'">
     <ol class="breadcrumb mb-0">
       <li class="breadcrumb-item" v-for="page in pages" :key="page.value._id">
         <NuxtLink v-if="page.value && page.value._path" :href="page.value._path" class="text-decoration-none">{{ page.value.navigation?.title || page.value.title }}

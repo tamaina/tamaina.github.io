@@ -16,7 +16,7 @@
           </div>
         </div>
 
-        <div :class="$style['index-pagination']">
+        <div :class="$style['index-pagination']" v-if="totalPages > 1">
           <button v-if="page !== 1" class="btn btn-primary" :class="$style['index-pagination-button']" @click="page += -1">Prev ＜</button>
           <div>
             <input type="number" v-model="page" min="1" :max="totalPages" step="1" class="form-control" :class="$style['index-pagination-input']" /> / {{ totalPages }}
@@ -33,8 +33,8 @@
 <script setup lang="ts">
 const content = useContent();
 
-const baseQuery = queryContent(content.page.value._path).where(Object.assign({}, content.page.value.where || {}));
-const { data: _pages } = await useAsyncData(`indexPages:${content.page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ published: 1 }).find());
+const baseQuery = queryContent(content.page.value._path).where(content.page.value.where || {});
+const { data: _pages } = await useAsyncData(`indexPages:${content.page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).find());
 
 // 直下のページだけを表示
 const pages = computed(() => _pages.value.filter((page) => page._path.split('/').length === content.page.value._path.split('/').length + 1));

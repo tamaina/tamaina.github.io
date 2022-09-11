@@ -3,7 +3,7 @@
     <div class="min-vh-100 py-5 container" :class="$style.default">
       <BreadCrumb />
       <slot />
-      
+
       <div id="blog-index" v-if="pages && pages.length > 0">
         <div :class="$style['blog-index']" :min-item-size="Math.min(pages.length, 20)" key-field="_id">
           <div class="card mb-3 border-primary" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
@@ -27,7 +27,7 @@
           </div>
         </div>
 
-        <div :class="$style['blog-index-pagination']">
+        <div :class="$style['blog-index-pagination']" v-if="totalPages > 1">
           <button v-if="page !== 1" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="page += -1">Prev ＜</button>
           <div>
             <input type="number" v-model="page" min="1" :max="totalPages" step="1" class="form-control" :class="$style['blog-index-pagination-input']" /> / {{ totalPages }}
@@ -88,6 +88,10 @@ onMounted(() => {
 <style module lang="scss">
 .default {
   max-width: 60rem;
+
+  .h1, h1 {
+    line-height: 1.2;
+  }
 }
 
 .blog-index {
