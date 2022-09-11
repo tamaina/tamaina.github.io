@@ -10,7 +10,7 @@
       :height="height"
       quality="98"
       loading="lazy"
-      sizes="xs:256px md:512px lg:1024px max:8192px"
+      sizes="xs:256px md:512px lg:1024px max:2048px"
       :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title }"
     />
   </VueViewer>
