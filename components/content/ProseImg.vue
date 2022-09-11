@@ -10,7 +10,7 @@
       :height="height"
       quality="98"
       sizes="xs:200px md:500px lg:1024px"
-      :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title }"
+      :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title, loading: 'lazy' }"
     />
   </VueViewer>
   <div class="text-center" :class="$style.title" v-text="title" />

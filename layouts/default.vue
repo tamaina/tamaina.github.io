@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="min-vh-100 py-5 container" :class="$style.default">
-      <NuxtLink v-if="upper" :href="upper._path" class="text-decoration-none">{{ upper.title }} /</NuxtLink>
+      <BreadCrumb />
 
       <slot />
     </div>
@@ -9,12 +9,6 @@
     <BsNavbar />
   </div>
 </template>
-
-<script setup lang="ts">
-const content = useContent();
-
-const { data: upper } = await useAsyncData(() => queryContent(content.page.value._path.split('/').slice(0, -1).join('/')).findOne());
-</script>
 
 <style module lang="scss">
 .default {

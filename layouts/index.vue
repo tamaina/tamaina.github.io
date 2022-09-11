@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="min-vh-100 py-5 container" :class="$style.default">
-      <NuxtLink v-if="upper" :href="upper._path" class="text-decoration-none">{{ upper.title }} /</NuxtLink>
+      <BreadCrumb />
       <slot />
-      
+
       <div id="index" v-if="pages && pages.length > 0">
         <div :class="$style['index']" :min-item-size="Math.min(pages.length, 20)" key-field="_id">
           <div class="mb-3" :class="$style['index-item-outer']" v-for="item in pageItems" :key="item._id">
@@ -34,7 +34,7 @@
 const content = useContent();
 
 const baseQuery = queryContent(content.page.value._path).where(Object.assign({}, content.page.value.where || {}));
-const { data: _pages } = await useAsyncData(() => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ published: 1 }).find());
+const { data: _pages } = await useAsyncData(`indexPages:${content.page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ published: 1 }).find());
 
 // 直下のページだけを表示
 const pages = computed(() => _pages.value.filter((page) => page._path.split('/').length === content.page.value._path.split('/').length + 1));
@@ -47,8 +47,6 @@ const totalPages = computed(() => Math.ceil(total.value / perPage.value));
 const start = computed(() => (page.value - 1) * perPage.value);
 const end = computed(() => Math.min(start.value + perPage.value, total.value));
 const pageItems = computed(() => pages.value.slice(start.value, end.value));
-
-const { data: upper } = await useAsyncData(() => queryContent(content.page.value._path.split('/').slice(0, -1).join('/')).findOne());
 
 onMounted(() => {
   

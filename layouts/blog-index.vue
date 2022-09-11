@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="min-vh-100 py-5 container" :class="$style.default">
+      <BreadCrumb />
       <slot />
       
       <div id="blog-index" v-if="pages && pages.length > 0">
@@ -44,7 +45,7 @@
 const content = useContent();
 
 const baseQuery = queryContent(content.page.value._path).where(Object.assign({ layout: { $ne: 'blog-index' } }, content.page.value.where || {}));
-const { data: _pages } = await useAsyncData(() => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ published: 1 }).find());
+const { data: _pages } = await useAsyncData(`blogIndexPages:${content.page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ published: 1 }).find());
 
 // ignore myself
 const pages = computed(() => _pages.value.filter((page) => page._id !== content.page.value._id));
