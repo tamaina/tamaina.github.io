@@ -1,18 +1,20 @@
 // https://github.com/nuxt/content/blob/ec3c61f3ce6dfd79624551bb3ec9bf3e1330ea59/src/runtime/components/Prose/ProseImg.vue
 
 <template>
-  <VueViewer>
-    <NuxtPicture
-      v-if="imgPath"
-      :src="imgPath"
-      :alt="alt"
-      :width="width"
-      :height="height"
-      quality="98"
-      loading="lazy"
-      sizes="xs:256px md:512px lg:1024px max:2048px"
-      :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title }"
-    />
+  <VueViewer :images="[imgPath]" v-if="imgPath">
+    <template #default="scope">
+      <NuxtPicture
+        v-for="src in scope.images"
+        :src="src"
+        :alt="src"
+        :width="width"
+        :height="height"
+        quality="98"
+        loading="lazy"
+        sizes="xs:256px md:512px lg:1024px"
+        :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title }"
+      />
+    </template>
   </VueViewer>
   <div class="text-center" :class="$style.title" v-text="title" />
 </template>
