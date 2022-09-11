@@ -36,8 +36,13 @@ const content = useContent();
 const baseQuery = queryContent(content.page.value._path).where(content.page.value.where || {});
 const { data: _pages } = await useAsyncData(`indexPages:${content.page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).find());
 
+console.log(_pages.value)
+
 // 直下のページだけを表示
-const pages = computed(() => _pages.value.filter((page) => page._path.split('/').length === content.page.value._path.split('/').length + 1));
+const pages = computed(() => _pages.value.filter((page) =>
+  // ルートページのときだけ違うロジックにする必要がある
+  content.page.value._path === '/' ? (page._path !== '/' && page._path.split('/').length === 2)
+  : page._path.split('/').length === content.page.value._path.split('/').length + 1));
 
 const router = useRouter();
 const page = ref(Number(router.currentRoute.value.query.page) || 1);
