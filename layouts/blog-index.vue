@@ -28,11 +28,11 @@
         </div>
 
         <div :class="$style['blog-index-pagination']" v-if="totalPages > 1">
-          <button v-if="page !== 1" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="page += -1">Prev ＜</button>
+          <button v-if="pagingNumber !== 1" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="pagingNumber += -1">Prev ＜</button>
           <div>
-            <input type="number" v-model="page" min="1" :max="totalPages" step="1" class="form-control" :class="$style['blog-index-pagination-input']" /> / {{ totalPages }}
+            <input type="number" v-model="pagingNumber" min="1" :max="totalPages" step="1" class="form-control" :class="$style['blog-index-pagination-input']" /> / {{ totalPages }}
           </div>
-          <button v-if="page !== totalPages" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="page += -1">＞ Next</button>
+          <button v-if="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="pagingNumber += -1">＞ Next</button>
         </div>
       </div>
     </div>
@@ -42,25 +42,27 @@
 </template>
 
 <script setup lang="ts">
-const content = useContent();
+const { page } = useContent();
 
-const baseQuery = queryContent(content.page.value._path).where(Object.assign({ layout: { $ne: 'blog-index' } }, content.page.value.where || {}));
-const { data: _pages } = await useAsyncData(`blogIndexPages:${content.page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ published: 1 }).find());
+console.log(page.value);
+
+const baseQuery = queryContent(page.value._path).where(Object.assign({ layout: { $ne: 'blog-index' } }, page.value.where || {}));
+const { data: _pages } = await useAsyncData(`blogIndexPages:${page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ published: 1 }).find());
 
 // ignore myself
-const pages = computed(() => _pages.value.filter((page) => page._id !== content.page.value._id));
+const pages = computed(() => _pages.value.filter((p) => p._id !== page.value._id));
 
 const router = useRouter();
-const page = ref(Number(router.currentRoute.value.query.page) || 1);
+const pagingNumber = ref(Number(router.currentRoute.value.query.page) || 1);
 const perPage = ref(20);
 const total = computed(() => pages.value.length);
 const totalPages = computed(() => Math.ceil(total.value / perPage.value));
-const start = computed(() => (page.value - 1) * perPage.value);
+const start = computed(() => (pagingNumber.value - 1) * perPage.value);
 const end = computed(() => Math.min(start.value + perPage.value, total.value));
 const pageItems = computed(() => pages.value.slice(start.value, end.value));
 
 onMounted(() => {
-  watch(page, (newValue) => {
+  watch(pagingNumber, (newValue) => {
     const pushOrReplace = (newValue) => {
       const curr = router.currentRoute.value.query.page;
       if (!curr) {

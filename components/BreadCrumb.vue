@@ -1,8 +1,8 @@
 <template>
-  <nav aria-label="breadcrumb" class="mb-0" v-if="content.page.value._path !== '/'">
+  <nav aria-label="breadcrumb" class="mb-0" v-if="page && page._path !== '/'">
     <ol class="breadcrumb mb-0">
-      <li class="breadcrumb-item" v-for="page in pages" :key="page.value._id">
-        <NuxtLink v-if="page.value && page.value._path" :href="page.value._path" class="text-decoration-none">{{ page.value.navigation?.title || page.value.title }}
+      <li class="breadcrumb-item" v-for="currentPage in pages" :key="page._id">
+        <NuxtLink v-if="currentPage?.value && currentPage.value._path" :href="currentPage.value._path" class="text-decoration-none">{{ currentPage.value.navigation?.title || currentPage.value.title }}
         </NuxtLink>
       </li>
       <li class="breadcrumb-item"></li>
@@ -13,17 +13,19 @@
 <script setup lang="ts">
 import { findAPage } from '~~/composables/findAPage';
 
-const content = useContent();
+const { page } = useContent();
 
 let currentPath = '';
 const paths = [] as string[];
 
-for (const path of content.page.value._path.split('/')) {
-  currentPath += `${path}`;
-  if (currentPath === content.page.value._path) break;
+if (page && page.value && page.value._path) {
+  for (const path of page.value._path.split('/')) {
+    currentPath += `${path}`;
+    if (currentPath === page.value._path) break;
 
-  paths.push(currentPath);
-  currentPath += '/';
+    paths.push(currentPath);
+    currentPath += '/';
+  }
 }
 
 const pages = await Promise.all(paths.map((path) => findAPage(path).then(({ data }) => data)));

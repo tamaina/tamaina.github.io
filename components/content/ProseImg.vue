@@ -43,9 +43,9 @@ const props = defineProps({
   }
 });
 
-const content = useContent();
+const { page } = useContent();
 const imgPath = computed(() => {
-  return content.page.value && getImgRelativePath(props.src, content.page.value._file)
+  return page.value && getImgRelativePath(props.src, page.value._file)
 });
 </script>
 

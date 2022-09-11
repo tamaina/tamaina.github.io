@@ -6,7 +6,7 @@
 <script setup lang="ts">
 import { findAPage } from '~~/composables/findAPage';
 
-const content = useContent();
+const { page } = useContent();
 
-const { data: upper } = await findAPage(content.page.value._path.split('/').slice(0, -1).join('/'));
+const { data: upper } = await findAPage(page.value._path.split('/').slice(0, -1).join('/'));
 </script>
