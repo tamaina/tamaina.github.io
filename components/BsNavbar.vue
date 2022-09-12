@@ -1,7 +1,8 @@
 // ナビゲーションバー
 
 <template>
-  <nav class="navbar navbar-expand-lg sticky-bottom navbar-dark bg-dark">
+  <div style="height: 3.625rem"></div>
+  <nav class="navbar navbar-expand-lg fixed-bottom navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">a9z.dev</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
