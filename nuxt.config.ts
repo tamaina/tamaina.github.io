@@ -13,6 +13,7 @@ export default defineNuxtConfig({
       ],
       script: [
         { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js' },
+        { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1736621122676736', async: true, crossorigin: 'anonymous' }
       ]
     }
   },
