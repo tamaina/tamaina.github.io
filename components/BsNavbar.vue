@@ -1,3 +1,5 @@
+// ナビゲーションバー
+
 <template>
   <nav class="navbar navbar-expand-lg sticky-bottom navbar-dark bg-dark">
     <div class="container">

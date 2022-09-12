@@ -1,3 +1,5 @@
+// 上のディレクトリのリンクを表示（パンくずリストの代わり）
+
 <template>
   <NuxtLink v-if="upper && upper._path !== '/'" :href="upper._path" class="text-decoration-none">{{ upper.title }} /
   </NuxtLink>

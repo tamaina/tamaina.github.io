@@ -1,3 +1,5 @@
+// パンくずリスト
+
 <template>
   <nav aria-label="breadcrumb" class="mb-0" v-if="page && page._path !== '/'">
     <ol class="breadcrumb mb-0">
