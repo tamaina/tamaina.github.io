@@ -33,6 +33,8 @@ export default defineNuxtConfig({
   content: {
     // content config https://content.nuxtjs.org/api/configuration/
     documentDriven: true,
+    locales: ['ja'],
+    defaultLocale: 'ja',
   },
   nitro: {
     // nitro config
