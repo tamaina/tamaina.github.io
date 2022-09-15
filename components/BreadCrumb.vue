@@ -4,8 +4,8 @@
   <nav aria-label="breadcrumb" class="mb-0" v-if="page && page._path !== '/'">
     <ol class="breadcrumb mb-0">
       <li class="breadcrumb-item" v-for="currentPage in pages" :key="page._id">
-        <NuxtLink v-if="currentPage?.value && currentPage.value._path" :href="currentPage.value._path" class="text-decoration-none">{{ currentPage.value.navigation?.title || currentPage.value.title }}
-        </NuxtLink>
+        <a v-if="currentPage?.value && currentPage.value._path" :href="currentPage.value._path" class="text-decoration-none">{{ currentPage.value.navigation?.title || currentPage.value.title }}
+        </a>
       </li>
       <li class="breadcrumb-item"></li>
     </ol>

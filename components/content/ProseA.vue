@@ -27,7 +27,7 @@ const linkTo = computed(() => {
 </script>
 
 <template>
-  <NuxtLink :href="linkTo">
+  <a :href="linkTo">
     <slot />
-  </NuxtLink>
+  </a>
 </template>

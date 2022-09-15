@@ -7,7 +7,7 @@
       <div id="blog-index" v-if="pages && pages.length > 0">
         <div :class="$style['blog-index']" :min-item-size="Math.min(pages.length, 20)" key-field="_id">
           <div class="card mb-3 border-primary" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
-            <NuxtLink :to="item._path" class="row g-0 text-reset text-decoration-none">
+            <a :href="item._path" class="row g-0 text-reset text-decoration-none">
               <div class="col-md-4">
                 <nuxt-picture
                   v-if="item.thumbnail"
@@ -23,7 +23,7 @@
                   <div class="card-text" v-text="item.description" />
                 </div>
               </div>
-            </NuxtLink>
+            </a>
           </div>
         </div>
 

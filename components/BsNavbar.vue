@@ -12,18 +12,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <NuxtLink to="/" class="nav-link">Home</NuxtLink>
+            <a href="/" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <NuxtLink to="/blog" class="nav-link">ブログ</NuxtLink>
+            <a href="/blog" class="nav-link">ブログ</a>
           </li>
           <li class="nav-item">
-            <NuxtLink to="/products" class="nav-link">製品</NuxtLink>
+            <a href="/products" class="nav-link">製品</a>
           </li>
           <!-- ？？？？？？
           <ContentNavigation v-slot="{ navigation }">
             <li v-for="link of navigation" :key="link._path" class="nav-item">
-              <NuxtLink :to="link._path" class="nav-link">{{ link.title }}</NuxtLink>
+              <a :href="link._path" class="nav-link">{{ link.title }}</a>
             </li>
           </ContentNavigation>
           -->
