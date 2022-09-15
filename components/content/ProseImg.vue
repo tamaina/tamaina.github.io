@@ -55,7 +55,7 @@ const viewer = computed(() => {
 
   return new Viewer(img.value, {
     navbar: false,
-    title: () => props.title,
+    title: () => props.title || props.alt,
     url: () => imgPath.value,
   });
 });
