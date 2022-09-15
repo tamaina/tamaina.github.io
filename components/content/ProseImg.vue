@@ -1,27 +1,24 @@
 // https://github.com/nuxt/content/blob/ec3c61f3ce6dfd79624551bb3ec9bf3e1330ea59/src/runtime/components/Prose/ProseImg.vue
 
 <template>
-  <VueViewer :images="[imgPath]" v-if="imgPath">
-    <template #default="scope">
-      <NuxtPicture
-        v-for="src in scope.images"
-        :src="src"
-        :alt="src"
-        :width="width"
-        :height="height"
-        quality="98"
-        loading="lazy"
-        sizes="xs:256px md:512px lg:1024px"
-        :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title }"
-      />
-    </template>
-  </VueViewer>
+  <NuxtPicture
+    :src="imgPath"
+    :alt="alt"
+    :width="width"
+    :height="height"
+    quality="98"
+    loading="lazy"
+    sizes="xs:256px md:512px lg:1024px"
+    ref="picture"
+    @click="viewer?.show()"
+    :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title }"
+  />
   <div class="text-center" :class="$style.title" v-text="title" />
 </template>
 
 <script setup lang="ts">
 import 'viewerjs/dist/viewer.css';
-import { component as VueViewer } from 'v-viewer';
+import Viewer from 'viewerjs';
 
 const props = defineProps({
   src: {
@@ -50,6 +47,19 @@ const { page } = useContent();
 const imgPath = computed(() => {
   return page.value && getImgRelativePath(props.src, page.value._file)
 });
+
+const picture = ref<InstanceType<typeof NuxtPicture>>();
+const img = computed(() => picture.value?.$el.querySelector('img'));
+const viewer = computed(() => {
+  if (!img.value) return;
+
+  return new Viewer(img.value, {
+    navbar: false,
+    title: () => props.title,
+    url: () => imgPath.value,
+  });
+});
+
 </script>
 
 <style module lang="scss">
