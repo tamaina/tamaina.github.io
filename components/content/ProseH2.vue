@@ -9,6 +9,9 @@
       data-ad-client="ca-pub-1736621122676736"
       :data-ad-slot="isDark() ? 5155586462 : 9613706222">
     </ins>
+    <ScriptX>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </ScriptX>
   </div>
 </ClientOnly>
 <h2 :id="id">
@@ -24,10 +27,4 @@ import ScriptX from 'vue-scriptx';
 defineProps<{ id: string }>();
 
 const c_1d3 = computed(() => Math.floor(Math.random() * 3) !== 0);
-if (c_1d3) {
-  (() => {
-    if (typeof window === 'undefined') return;
-    window.adsbygoogle.push({});
-  })();
-}
 </script>

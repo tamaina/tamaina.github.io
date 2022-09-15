@@ -44,6 +44,8 @@
 </template>
 
 <script setup lang="ts">
+import ScriptX from 'vue-scriptx';
+
 const { page } = useContent();
 
 const baseQuery = queryContent(page.value._path).where(page.value.where || {});
