@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="min-vh-100 py-5 container" :class="$style.default">
-      <BreadCrumb />
+      <BreadCrumb :addDividerToEnd="true" />
       <slot />
 
       <div id="index" class="mt-5" v-if="pages && pages.length > 0">

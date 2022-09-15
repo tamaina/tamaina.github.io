@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/NasuM/NasuM.css' },
       ],
       script: [
-        { src: '/boot.js' },
+        { src: '/boot.js', async: true },
         { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js' },
         { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1736621122676736', async: true, crossorigin: 'anonymous' },
         { src: 'https://fundingchoicesmessages.google.com/i/pub-1736621122676736?ers=1', async: true, nonce: 'DFEJYBfAGh4jqCOyxQNkdQ' },
