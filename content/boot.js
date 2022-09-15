@@ -12,3 +12,5 @@ const bootOnReady = () => {
 if (document.readyState !== 'loading') window.addEventListener('DOMContentLoaded', bootOnReady);
 else bootOnReady();
 })();
+
+window.adsbygoogle = window.adsbygoogle || [];

@@ -6,6 +6,19 @@
 
       <div id="blog-index" v-if="pages && pages.length > 0">
         <div :class="$style['blog-index']" :min-item-size="Math.min(pages.length, 20)" key-field="_id">
+          <ClientOnly>
+            <ins
+              class="adsbygoogle mb-3"
+              style="display:block"
+              data-ad-format="fluid"
+              :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].layoutKey"
+              data-ad-client="ca-pub-1736621122676736"
+              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].slot">
+            </ins>
+            <ScriptX>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </ScriptX>
+          </ClientOnly>
           <div class="card mb-3 border-primary" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
             <a :href="item._path" class="row g-0 text-reset text-decoration-none">
               <div class="col-md-4">
@@ -25,6 +38,19 @@
               </div>
             </a>
           </div>
+          <ClientOnly>
+            <ins
+              class="adsbygoogle mb-3"
+              style="display:block"
+              data-ad-format="fluid"
+              :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].layoutKey"
+              data-ad-client="ca-pub-1736621122676736"
+              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].slot">
+            </ins>
+            <ScriptX>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </ScriptX>
+          </ClientOnly>
         </div>
 
         <div :class="$style['blog-index-pagination']" v-if="totalPages > 1">
@@ -35,6 +61,19 @@
           <button v-if="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="pagingNumber += -1">＞ Next</button>
         </div>
       </div>
+
+      <ClientOnly>
+        <ins
+          class="adsbygoogle my-3"
+          style="display:block"
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-1736621122676736"
+          :data-ad-slot="isDark() ? 6544689751 : 7169954832">
+        </ins>
+        <ScriptX>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </ScriptX>
+      </ClientOnly>
     </div>
 
     <BsNavbar />
@@ -42,6 +81,8 @@
 </template>
 
 <script setup lang="ts">
+import ScriptX from 'vue-scriptx';
+
 const { page } = useContent();
 
 const baseQuery = queryContent(page.value._path).where(Object.assign({ layout: { $ne: 'blog-index' } }, page.value.where || {}));
@@ -58,6 +99,30 @@ const totalPages = computed(() => Math.ceil(total.value / perPage.value));
 const start = computed(() => (pagingNumber.value - 1) * perPage.value);
 const end = computed(() => Math.min(start.value + perPage.value, total.value));
 const pageItems = computed(() => pages.value.slice(start.value, end.value));
+
+// ad
+const isMobile = ref<boolean>(true);
+const ads = {
+  'mobile-light': {
+    layoutKey: '-5n+c9-1y-85+x4',
+    slot: '9266469283',
+  },
+  'mobile-dark': {
+    layoutKey: '-5n+c9-1y-85+x4',
+    slot: '7007724188',
+  },
+  'desktop-light': {
+    layoutKey: '-fg-z+7k-5e+h6',
+    slot: '8248901089',
+  },
+  'desktop-dark': {
+    layoutKey: '-fg-z+7k-5e+h6',
+    slot: '4281735911',
+  },
+}
+function onResize() {
+  isMobile.value = window.innerWidth < 768;
+}
 
 onMounted(() => {
   watch(pagingNumber, (newValue) => {
@@ -82,6 +147,17 @@ onMounted(() => {
       pushOrReplace(newValue)({ query: { page: newValue } });
     }
   }, { immediate: true });
+
+  if (window) {
+    window.addEventListener('resize', onResize);
+    onResize();
+  }
+});
+
+onUnmounted(() => {
+  if (window) {
+    window.removeEventListener('resize', onResize);
+  }
 });
 </script>
 

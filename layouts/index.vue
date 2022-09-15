@@ -24,6 +24,19 @@
           <button v-if="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['index-pagination-button']" @click="pagingNumber += -1">＞ Next</button>
         </div>
       </div>
+
+      <ClientOnly>
+        <ins
+          class="adsbygoogle my-3"
+          style="display:block"
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-1736621122676736"
+          :data-ad-slot="isDark() ? 6544689751 : 7169954832">
+        </ins>
+        <ScriptX>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </ScriptX>
+      </ClientOnly>
     </div>
 
     <BsNavbar />
