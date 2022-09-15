@@ -1,6 +1,6 @@
 <template>
 <ClientOnly>
-  <div v-if="c_1d3">
+  <div v-if="c_1d2">
     <ins
       class="adsbygoogle"
       style="display:block; text-align:center;"
@@ -26,5 +26,5 @@ import ScriptX from 'vue-scriptx';
 
 defineProps<{ id: string }>();
 
-const c_1d3 = computed(() => Math.floor(Math.random() * 3) !== 0);
+const c_1d2 = computed(() => Math.floor(Math.random() * 2) !== 0);
 </script>
