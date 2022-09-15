@@ -6,7 +6,8 @@
 *,
 html,
 body {
-  font-family: YakuHanJP, GenEiUniverSans-w, SourceHanSans-w, sans-serif,  -apple-system;
+  --bs-font-sans-serif: YakuHanJP, GenEiUniverSans-w, SourceHanSans-w, sans-serif,  -apple-system;
+  font-family: var(--bs-font-sans-serif);
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -19,5 +20,17 @@ body {
 
 :root {
   --bs-body-line-height: 1.6;
+}
+
+html.dark {
+  --bs-body-color: #f8f9fa;
+  --bs-body-color-rgb: 248,249,250;
+  --bs-body-bg: #16191c;
+  --bs-body-bg-rgb: 22,25,28;
+
+  .card {
+    --bs-card-color: #f8f9fa;
+    --bs-card-bg: #16191c;
+  }
 }
 </style>

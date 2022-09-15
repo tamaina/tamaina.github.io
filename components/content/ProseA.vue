@@ -1,18 +1,13 @@
 // https://github.com/nuxt/content/blob/ec3c61f3ce6dfd79624551bb3ec9bf3e1330ea59/src/runtime/components/Prose/ProseA.vue
 
 <script setup lang="ts">
-const props = defineProps({
-  href: {
-    type: String,
-    default: ''
-  },
-  blank: {
-    type: Boolean,
-    default: false
-  }
-});
+const props = defineProps<{
+  href: string;
+  blank?: boolean;
+}>();
 
 const { page } = useContent();
+const target = computed(() => props.blank === true ? '_blank' : (props.blank !== false && props.href.startsWith('http')) ? '_blank' : '_self');
 
 const linkTo = computed(() => {
   if (props.href.startsWith('http') || props.href.startsWith('/') || !page.value) {
@@ -27,7 +22,7 @@ const linkTo = computed(() => {
 </script>
 
 <template>
-  <a :href="linkTo">
+  <a :href="linkTo" :target="target">
     <slot />
   </a>
 </template>
