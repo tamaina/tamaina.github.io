@@ -14,8 +14,6 @@ export default defineNuxtConfig({
       script: [
         { src: '/boot.js', async: true },
         { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js' },
-        { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1736621122676736', async: true, crossorigin: 'anonymous' },
-        { src: 'https://fundingchoicesmessages.google.com/i/pub-1736621122676736?ers=1', async: true, nonce: 'DFEJYBfAGh4jqCOyxQNkdQ' },
       ]
     }
   },
