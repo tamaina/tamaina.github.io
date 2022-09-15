@@ -1,7 +1,7 @@
 // パンくずリスト
 
 <template>
-  <nav aria-label="breadcrumb" class="mb-0" v-if="page && page._path !== '/'">
+  <nav aria-label="breadcrumb" class="mb-0" v-show="page && page._path !== '/'">
     <ol class="breadcrumb mb-0">
       <li class="breadcrumb-item" v-for="currentPage in pages" :key="page._id" :class="{ [$style['with-end-divider']]: addDividerToEnd }">
         <a v-if="currentPage?.value && currentPage.value._path" :href="currentPage.value._path" class="text-decoration-none">
@@ -37,11 +37,8 @@ watch(page, async (newPage) => {
     currentPath += '/';
   }
 
-  console.log(currentPath)
-
   pages.value = await Promise.all(paths.map((path) => findAPage(path).then(({ data }) => data)));
 
-  console.log(pages.value)
 }, { immediate: true });
 </script>
 
