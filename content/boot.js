@@ -1,3 +1,4 @@
+(() => {
 const bootOnReady = () => {
   if (typeof window === 'undefined') return;
 
@@ -10,3 +11,4 @@ const bootOnReady = () => {
 
 if (document.readyState !== 'loading') window.addEventListener('DOMContentLoaded', bootOnReady);
 else bootOnReady();
+})();
