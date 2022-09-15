@@ -1,6 +1,7 @@
 // ナビゲーションバー
 
 <template>
+  <div>
   <div style="height: 3.625rem"></div>
   <nav class="navbar navbar-expand-lg fixed-bottom navbar-dark bg-dark">
     <div class="container">
@@ -31,4 +32,5 @@
       </div>
     </div>
   </nav>
+  </div>
 </template>
