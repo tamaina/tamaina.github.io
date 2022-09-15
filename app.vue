@@ -27,6 +27,7 @@ html.dark {
   --bs-body-color-rgb: 248,249,250;
   --bs-body-bg: #16191c;
   --bs-body-bg-rgb: 22,25,28;
+  --bs-link-color: #4a7aff;
 
   .card {
     --bs-card-color: #f8f9fa;
