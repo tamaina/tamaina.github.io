@@ -10,11 +10,11 @@ export default defineNuxtPlugin((nuxtApp) => {
             while (el.firstChild) {
                 el.removeChild(el.firstChild);
             }
-            el.attributes.removeNamedItem('style');
-            el.attributes.removeNamedItem('data-adsbygoogle-status');
-            el.attributes.removeNamedItem('data-ad-status');
+            if (el.attributes.getNamedItem('style')) el.attributes.removeNamedItem('style');
+            if (el.attributes.getNamedItem('data-adsbygoogle-status')) el.attributes.removeNamedItem('data-adsbygoogle-status');
+            if (el.attributes.getNamedItem('data-ad-status')) el.attributes.removeNamedItem('data-ad-status');
 
-            if (typeof window !== 'undefined' && window.adsbygoogle) window.adsbygoogle.push({});
+            window.adsbygoogle.push({});
         },
     })
 });
