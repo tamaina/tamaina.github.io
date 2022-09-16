@@ -11,7 +11,6 @@
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "nuxt": "^3.0.0-rc.4",
     "sass": "^1.54.8",
-    "viewerjs": "^1.10.5",
-    "vue-scriptx": "^0.2.5"
+    "viewerjs": "^1.10.5"
   }
 }

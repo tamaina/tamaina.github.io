@@ -13,11 +13,9 @@
               data-ad-format="fluid"
               :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].layoutKey"
               data-ad-client="ca-pub-1736621122676736"
-              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].slot">
+              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].slot"
+              v-push-ad>
             </ins>
-            <ScriptX>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </ScriptX>
           </ClientOnly>
           <div class="card mb-3 border-primary" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
             <a :href="item._path" class="row g-0 text-reset text-decoration-none">
@@ -45,11 +43,9 @@
               data-ad-format="fluid"
               :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].layoutKey"
               data-ad-client="ca-pub-1736621122676736"
-              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].slot">
+              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].slot"
+              v-push-ad>
             </ins>
-            <ScriptX>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </ScriptX>
           </ClientOnly>
         </div>
 
@@ -68,11 +64,9 @@
           style="display:block"
           data-ad-format="autorelaxed"
           data-ad-client="ca-pub-1736621122676736"
-          :data-ad-slot="isDark() ? 6544689751 : 7169954832">
+          :data-ad-slot="isDark() ? 6544689751 : 7169954832"
+          v-push-ad>
         </ins>
-        <ScriptX>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </ScriptX>
       </ClientOnly>
     </div>
 
@@ -81,8 +75,6 @@
 </template>
 
 <script setup lang="ts">
-import ScriptX from 'vue-scriptx';
-
 const { page } = useContent();
 
 const baseQuery = queryContent(page.value._path).where(Object.assign({ layout: { $ne: 'blog-index' } }, page.value.where || {}));

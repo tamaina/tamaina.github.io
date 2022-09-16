@@ -11,21 +11,15 @@
           style="display:block"
           data-ad-format="autorelaxed"
           data-ad-client="ca-pub-1736621122676736"
-          :data-ad-slot="isDark() ? 6544689751 : 7169954832">
+          :data-ad-slot="isDark() ? 6544689751 : 7169954832"
+          v-push-ad>
         </ins>
-        <ScriptX>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </ScriptX>
       </ClientOnly>
     </div>
 
     <BsNavbar />
   </div>
 </template>
-
-<script setup lang="ts">
-import ScriptX from 'vue-scriptx';
-</script>
 
 <style module lang="scss">
 .default {

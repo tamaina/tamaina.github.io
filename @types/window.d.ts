@@ -1,4 +1,4 @@
 interface Window {
-    adsbygoogle: any[];
+    adsbygoogle: any[] | { push: (p: any) => void };
 }
 declare var window: Window;

@@ -7,11 +7,9 @@
       data-ad-layout="in-article"
       data-ad-format="fluid"
       data-ad-client="ca-pub-1736621122676736"
-      :data-ad-slot="isDark() ? 5155586462 : 9613706222">
+      :data-ad-slot="isDark() ? 5155586462 : 9613706222"
+      v-push-ad>
     </ins>
-    <ScriptX>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </ScriptX>
   </div>
 </ClientOnly>
 <h2 :id="id">
@@ -22,7 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import ScriptX from 'vue-scriptx';
 
 defineProps<{ id: string }>();
 
