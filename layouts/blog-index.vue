@@ -19,7 +19,7 @@
           </ClientOnly>
           <div class="card mb-3 border-primary" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
             <a :href="item._path" class="row g-0 text-reset text-decoration-none">
-              <div class="col-md-4">
+              <div class="col-sm-4">
                 <nuxt-picture
                   v-if="item.thumbnail"
                   :src="getImgRelativePath(item.thumbnail, item._file)"
@@ -28,7 +28,7 @@
                   :img-attrs="{ class: `img-fluid w-100 rounded ${$style['blog-index-item-img']}` }"
                 ></nuxt-picture>
               </div>
-              <div class="col-md-8">
+              <div class="col-sm-8">
                 <div class="card-body">
                   <h5 class="card-title fw-bold" :class="{ 'mb-0': !item.description }" v-text="item.title" />
                   <div class="card-text" v-text="item.description" />
@@ -104,16 +104,16 @@ const ads = {
     slot: '7007724188',
   },
   'desktop-light': {
-    layoutKey: '-fg-z+7k-5e+h6',
+    layoutKey: '-fk-19+6t-41+ij',
     slot: '8248901089',
   },
   'desktop-dark': {
-    layoutKey: '-fg-z+7k-5e+h6',
+    layoutKey: '-fk-19+6t-41+ij',
     slot: '4281735911',
   },
 }
 function onResize() {
-  isMobile.value = window.innerWidth < 768;
+  isMobile.value = window.innerWidth < 576;
 }
 
 onMounted(() => {
@@ -173,8 +173,13 @@ onUnmounted(() => {
 
 .blog-index-item-img {
   display: block;
-  aspect-ratio: 3 / 2;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+
+  @media (max-width: 575.98px) {
+    aspect-ratio: 3 / 2;
+  }
 }
 
 .blog-index-pagination {
