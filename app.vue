@@ -34,4 +34,8 @@ html.dark {
     --bs-card-bg: #16191c;
   }
 }
+
+a.google-anno {
+  color: var(--bs-body-color);
+}
 </style>
