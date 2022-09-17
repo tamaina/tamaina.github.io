@@ -38,7 +38,11 @@ export default defineNuxtConfig({
   },
   nitro: {
     // nitro config
-
+    prerender: {
+      routes: [
+        '/sitemap.xml', // https://content.nuxtjs.org/guide/recipes/sitemap
+      ]
+    }
   },
   image: {
     // image config https://v1.image.nuxtjs.org/configuration

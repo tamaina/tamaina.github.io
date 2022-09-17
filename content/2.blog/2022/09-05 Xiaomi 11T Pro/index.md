@@ -1,5 +1,6 @@
 ---
-published: 2022-09-05
+publishedAt: 2022-09-05
+updatedAt: 2022-09-18
 thumbnail: back.JPG
 category: smartphone
 ---

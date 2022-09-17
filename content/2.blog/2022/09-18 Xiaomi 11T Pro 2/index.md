@@ -1,5 +1,5 @@
 ---
-published: 2022-09-18
+publishedAt: 2022-09-18
 thumbnail: kuroneko%20xiaomi.jpg
 ---
 # Xiaomi 11T Pro をいろいろ深堀り

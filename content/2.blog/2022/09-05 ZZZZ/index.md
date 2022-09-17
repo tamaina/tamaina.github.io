@@ -1,5 +1,5 @@
 ---
-published: 2022-09-05
+publishedAt: 2022-09-05
 ---
 # 新a9z.dev始動
 
