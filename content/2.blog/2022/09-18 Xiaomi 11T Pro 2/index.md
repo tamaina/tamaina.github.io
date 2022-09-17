@@ -70,7 +70,7 @@ Xiaomi 11T Proはゴーストが目立ちません。筐体のカメラ部が平
 
 ![](super%20fail.png "FAILED (remote: 'failed to check sparse crc')")
 
-CRC云々とのことでCRCまわりのコマンドを削除しましたが、そうしても起動しません（ブートローダーしか表示されない）。
+CRC云々とのことでCRCまわりのコマンドを削除しましたが、起動してくれません（ブートローダーしか表示されない）。
 
 TWRPでブートしてRecovery ROMをADBサイドロードすれば復旧はできます。
 
