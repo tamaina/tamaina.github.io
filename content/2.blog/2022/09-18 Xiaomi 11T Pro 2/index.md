@@ -49,7 +49,7 @@ Xiaomi 11T ProはOIS（光学式手ぶれ補正）は搭載されていません
 
 今度はもう少し明るい場面をiPhone 13 miniと比較してみます。
 
-![](kuroneko%20iphone13.heic "iPhone 13 mini")
+![](kuroneko%20iphone13.jpg "iPhone 13 mini")
 
 ![](kuroneko%20xiaomi.jpg "Xiaomi 11T Pro")
 
