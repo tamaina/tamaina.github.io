@@ -6,12 +6,15 @@ category: smartphone
 
 # Xiaomi 11T Pro ざっくりレビュー
 
-IIJmioのセールで3万2千円程度で販売しており、これは安いぞと思ったのでXiaomi 11T Proを購入しました。  
+IIJmioのセールで3万2千円程度で販売しており、これは安いぞと思ったのでXiaomi 11T Proを購入しました。
+
 Xiaomi 11T 無印（Dimensity 1200）も2万7千円程度で販売していましたが、5000円の違いならProを選んだほうが幸せになれるはずです。
 
 ![画像](back.JPG "シルバーブラックにしました。")
 
 Xiaomi端末なので、キッチキチのTPUクリアケースが付属しています。
+
+[（つづきの記事はこちら）](../09-18-xiaomi-11t-pro-2)
 
 ## ディスプレイ
 ![](display.JPG "画面はこんな感じ。")
@@ -101,3 +104,6 @@ Boooooooooooooooooooooooo!!
 
 Bootloader Unlockはwipeを伴うため、現状はあまりアプリを入れていません。  
 アプリを入れて何か気づいたことがあれば、また記事を書くかもしれません。
+
+## つづき
+[→つづき記事](../09-18-xiaomi-11t-pro-2)
