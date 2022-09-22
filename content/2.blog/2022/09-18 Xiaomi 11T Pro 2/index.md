@@ -1,5 +1,6 @@
 ---
 publishedAt: 2022-09-18
+updatedAt: 2022-09-22
 thumbnail: kuroneko%20xiaomi.jpg
 ---
 # Xiaomi 11T Pro をいろいろ深堀り
@@ -12,6 +13,7 @@ Xiaomi 11T Proの写真・動画撮影、テザリング、ルート化につい
 
 - **WPA3-Personal**に**対応**
 - **中継**に**対応**（上流のWi-Fiに接続したままホットスポットとして機能する）
+- **Wi-Fi 6** (IEEE802.11ax)に対応 （周波数帯は2.4GHz）
 
 iPhoneからMIUIのホットスポットを見ると、iOSのインターネット共有と同じ🔗アイコンで表示されました。  
 Androidのテザリングが🔗アイコンになるのはかなり新鮮に感じました。
