@@ -223,9 +223,10 @@ Rakuten MiniやRakuten HandはTINNO Mobileが製造者であると明かされ�
 
 根強い人気のあるAQUOS senseやAQUOS wishシリーズは6インチ前後ですから、一回り小さいので比較するのは微妙です。
 
-TONE e22に近いと思われるのは、OPPO Reno5 AやOPPO Reno7 Aだと思います。
+TONE e22に近いと思われるのは、OPPO Reno5 AやOPPO Reno7 Aだと思います。  
+moto g52j 5Gはベゼルが太いぶん余分に縦に大きいので微妙に思いました。
 
-特にOPPO Reno5 Aは、現在Y!mobileにMNP（Webは手数料なし）すると1円で購入できるので、とても買いやすい端末です。  
+特にOPPO Reno5 Aは、現在Y!mobileにMNP（Webは手数料なし）すると1円で購入できるので、とても買いやすい端末です。特に動画性能は段違いでしょうね。  
 ただOPPO Reno5 Aは側面が丸いデザインなのが気に入らず、個人的に少し避けていました。OPPO Reno5 Aをきちんと使ってみて比較してみるのはいいかもしれませんね。
 
 OPPO Reno5 Aの話をすれば必然的にMi 11 Lite 5Gが引き合いに出されます。  
