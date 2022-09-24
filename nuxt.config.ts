@@ -35,6 +35,10 @@ export default defineNuxtConfig({
     documentDriven: true,
     locales: ['ja'],
     defaultLocale: 'ja',
+    ignores: [
+      '\\.', '-',
+      '.(jpg|jpeg|png|webp|heif|gif|JPG|JPEG|PNG|WEBP|HEIF|GIF)$',
+    ],
   },
   nitro: {
     // nitro config
