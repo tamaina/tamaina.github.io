@@ -5,7 +5,7 @@ thumbnail: back.JPG
 category: smartphone
 ---
 
-# Xiaomi 11T Pro ざっくりハンズオンレビュー
+# Xiaomi 11T Pro [#1] ざっくりハンズオンレビュー
 
 IIJmioのセールで3万2千円程度で販売しており、これは安いぞと思ったのでXiaomi 11T Proを購入しました。
 
