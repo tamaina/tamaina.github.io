@@ -1,7 +1,5 @@
 [credential]
 	helper = netlify
-[lfs]
-	url = https://316c0314-dc3f-424b-9424-aef91fd998bf.netlify.app/.netlify/large-media
 [lfs "https://316c0314-dc3f-424b-9424-aef91fd998bf.netlify.app/.netlify/large-media"]
 	access = basic
 	locksverify = false
