@@ -4,7 +4,7 @@ publishedAt: 2022-09-25
 
 # Netlify Large Mediaのリポジトリをクローンする
 
-私は他のマシンでNetlify Large Mediaを使用したリポジトリを何も考えずVS Codeでクローンしようとしてしまいました。
+私はNetlify Large Mediaを使用したリポジトリを何も考えずVS Codeでクローンしようとしてしまいました。
 
 ところが次のようなダイアログが表示され、<kbd>Esc</kbd>を押しても無限に出続けます。
 
