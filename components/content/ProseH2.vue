@@ -13,7 +13,7 @@
   </div>
 </ClientOnly>
 <h2 :id="id">
-  <a :href="`#${id}`" class="text-reset">
+  <a :href="`#${id}`" class="text-reset text-decoration-none">
     <slot />
   </a>
 </h2>
