@@ -23,5 +23,5 @@
 
 defineProps<{ id: string }>();
 
-const c_1d2 = computed(() => Math.floor(Math.random() * 3) === 0);
+const c_1d2 = computed(() => Math.floor(Math.random() * 2) === 0);
 </script>
