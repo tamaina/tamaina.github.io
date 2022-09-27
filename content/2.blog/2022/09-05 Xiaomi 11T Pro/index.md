@@ -1,6 +1,6 @@
 ---
 publishedAt: 2022-09-05
-updatedAt: 2022-09-18
+updatedAt: 2022-09-27
 thumbnail: back.JPG
 category: smartphone
 ---
@@ -37,6 +37,23 @@ SOUND BY Harman Kardon・Dolby Atmos® 対応・ハイレゾオーディオ認�
 Dolby Atmosのイコライザーで低音をもっと頑張らせるようにするとより幸せな感じがしました。なんか滅茶苦茶操作しにくいですが……。
 
 ![](eq.jpg "EQ設定")
+
+## Bluetoothコーデック
+開発者向けオプションでリストに載っているBluetoothコーデックは、以下の通りです。  
+（他端末では必ずしも全てがスマートフォン側で利用できるわけではないので要注意）
+
+- SBC
+- AAC
+- aptX
+- aptX HD
+- LDAC
+- aptX Adaptive
+- aptX TWS+
+- LHDC V3/V4
+- LHDC V2
+- LHDC V1
+
+![](bt.jpg "開発者向けオプションのBluetoothコーデックの内容（他端末では必ずしも全てがスマートフォン側で利用できるわけではないので要注意）")
 
 ## おサイフケータイ
 Proはおサイフケータイが付いています。  
