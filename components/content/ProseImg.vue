@@ -1,6 +1,19 @@
 // https://github.com/nuxt/content/blob/ec3c61f3ce6dfd79624551bb3ec9bf3e1330ea59/src/runtime/components/Prose/ProseImg.vue
 
 <template>
+  <ClientOnly>
+    <div v-if="showAd">
+      <ins
+        class="adsbygoogle"
+        style="display:block; text-align:center;"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-1736621122676736"
+        :data-ad-slot="isDark() ? 5155586462 : 9613706222"
+        v-push-ad>
+      </ins>
+    </div>
+  </ClientOnly>
   <NuxtPicture
     :src="imgPath"
     :alt="alt"
@@ -60,6 +73,7 @@ const viewer = computed(() => {
   });
 });
 
+const showAd = computed(() => Math.floor(Math.random() * 4) === 0); // 1/4 chance of showing ad
 </script>
 
 <style module lang="scss">
