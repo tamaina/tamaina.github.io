@@ -1,15 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "build": "node ./nublog/setup-docs.mjs && nuxt build",
+    "dev": "node ./nublog/watch-docs.mjs & nuxt dev",
+    "generate": "node ./nublog/setup-docs.mjs && nuxt generate",
     "preview": "nuxt preview"
   },
   "devDependencies": {
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "@types/glob": "^8.0.0",
+    "chokidar": "^3.5.3",
     "glob": "^8.0.3",
     "nuxt": "^3.0.0-rc.4",
     "sass": "^1.54.8",

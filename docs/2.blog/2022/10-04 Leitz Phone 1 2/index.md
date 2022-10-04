@@ -21,7 +21,7 @@ Leitz Phone 1のカメラ比較です。より安価に購入できるマイク�
 
 レンズはF1.9です。かなり明るいと言えるでしょう。ただし絞り羽はありません。
 
-![](lp01_arnd.png "darktableでdngを開くと、歪みは確認できないが、周辺減光がすごい。")
+![](lp01_arnd.png "darktableでdngを開くと、歪みは確認できないが周辺減光がすごい")
 
 歪みがないのはiPhoneのカメラでも同じでしたね。
 
@@ -33,7 +33,7 @@ Leitz Phone 1（中古10万）と比較するのは、マイクロフォーサ�
 
 所持していたのがLUMIXなのと同じLeicaレンズなので比較対象をLUMIXにしましたが、SONY αのZV-E10などのAPS-CボディとE 11mm F1.8 SEL11F18の組み合わせもよさそうです（ちょっと広角過ぎる気はします）。
 
-![](thumbnail.jpg "GX7MK2 + 20mm/F1.7で比較 9mm/F1.7はこれよりもう少し長いはず")
+![](thumbnail.jpg "GX7MK2 + 20mm/F1.7で比較　9mm/F1.7はこれよりもう少し長いはず")
 
 #### LEICA DG SUMMILUX 9mm/F1.7 ASPH. H-X09 の特徴
 
