@@ -67,7 +67,7 @@ Leitz Phone 1（中古10万）と比較するのは、マイクロフォーサ�
 
 ![](lp01_hdr_l-false.JPG "HDR有効 明るさ強調無効")
 
-![](lp01_hdr_l-false.JPG "HDR有効 明るさ強調有効")
+![](lp01_hdr_l-true.JPG "HDR有効 明るさ強調有効")
 
 ![](lp01_manual.JPG "HDR無効（マニュアル・数値は自動か初期値・RAW記録有効）")
 
