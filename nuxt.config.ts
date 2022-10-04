@@ -30,7 +30,9 @@ export default defineNuxtConfig({
   },
   content: {
     // content config https://content.nuxtjs.org/api/configuration/
-    documentDriven: true,
+    documentDriven: {
+      layoutFallbacks: ['default'],
+    },
     locales: ['ja'],
     defaultLocale: 'ja',
     ignores: [
