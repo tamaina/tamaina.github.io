@@ -5,7 +5,7 @@
       <slot />
 
       <div id="blog-index" v-if="pages && pages.length > 0">
-        <div :class="$style['blog-index']" :min-item-size="Math.min(pages.length, 20)" key-field="_id">
+        <div :class="$style['blog-index']">
           <ClientOnly>
             <ins
               class="adsbygoogle mb-3"
