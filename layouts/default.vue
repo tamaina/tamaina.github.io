@@ -21,6 +21,13 @@
   </div>
 </template>
 
+<script setup>
+onMounted(() => {
+  console.log('mounted default');
+  initAd();
+});
+</script>
+
 <style module lang="scss">
 .default {
   max-width: 60rem;

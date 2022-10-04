@@ -63,7 +63,9 @@ const end = computed(() => Math.min(start.value + perPage.value, total.value));
 const pageItems = computed(() => pages.value.slice(start.value, end.value));
 
 onMounted(() => {
-  
+  console.log('mounted index');
+  initAd();
+
   watch(pagingNumber, (newValue) => {
     const pushOrReplace = (newValue) => {
       const curr = router.currentRoute.value.query.page;

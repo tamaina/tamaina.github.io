@@ -3,3 +3,10 @@
     <slot />
   </div>
 </template>
+
+<script setup>
+onMounted(() => {
+  console.log('mounted plain');
+  initAd();
+})
+</script>

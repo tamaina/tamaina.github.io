@@ -117,12 +117,10 @@ function onResize() {
 }
 
 onMounted(() => {
-  watch(pagingNumber, (newValue) => {
-    if (totalPages.value <= 1) {
-      router.replace({ query: { page: undefined } });
-      return;
-    }
+  console.log('mounted blog-index');
+  initAd();
 
+  watch(pagingNumber, (newValue) => {
     const pushOrReplace = (newValue) => {
       const curr = router.currentRoute.value.query.page;
       if (!curr) {
@@ -136,12 +134,13 @@ onMounted(() => {
 
     if (Number.isNaN(newValue) || !Number.isInteger(newValue) || Number(newValue) < 1) {
       page.value = 1;
-      router.replace({ query: { page: 1 } });
+      router.replace({ query: { page: totalPages.value <= 1 ? undefined : 1 } });
     } else if (Number(newValue) > totalPages.value) {
       page.value = totalPages.value;
-      router.replace({ query: { page: totalPages.value } });
+      router.replace({ query: { page: totalPages.value <= 1 ? undefined : totalPages.value } });
     } else {
-      pushOrReplace(newValue)({ query: { page: newValue } });
+      if (totalPages.value <= 1) router.replace({ query: { page: undefined } });
+      else pushOrReplace(newValue)({ query: { page: newValue } });
     }
   }, { immediate: true });
 
