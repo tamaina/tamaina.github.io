@@ -3,7 +3,6 @@ import path from 'node:path';
 import { homeDir } from './constants.mjs';
 
 export const symlinkDocsToContent = async file => { // file is starts with docs/
-  console.log(file)
   // create symlink under content
   const target = file.replace(/^docs/, 'content');
   // create directory if it doesn't exist
