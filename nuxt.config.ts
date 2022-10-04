@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     }
   },
   css: [
+    '~/assets/style.scss',
   ],
   dir: {
     public: 'docs',

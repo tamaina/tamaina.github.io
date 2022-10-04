@@ -118,6 +118,11 @@ function onResize() {
 
 onMounted(() => {
   watch(pagingNumber, (newValue) => {
+    if (totalPages.value <= 1) {
+      router.replace({ query: { page: undefined } });
+      return;
+    }
+
     const pushOrReplace = (newValue) => {
       const curr = router.currentRoute.value.query.page;
       if (!curr) {

@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import path from 'node:path';
 import * as chokidar from 'chokidar';
 import { documentGlob, contentDir, homeDir } from './constants.mjs';
 import { symlinkDocsToContent } from './symlink-docs-content.mjs';
