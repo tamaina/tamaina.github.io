@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     defaultLocale: 'ja',
     ignores: [
       '\\.', '-',
-      '.(jpg|jpeg|png|webp|heif|gif|JPG|JPEG|PNG|WEBP|HEIF|GIF)$',
+      '.(jpg|jpeg|png|webp|heif|gif|dng|JPG|JPEG|PNG|WEBP|HEIF|GIF|DNG)$',
     ],
   },
   nitro: {
