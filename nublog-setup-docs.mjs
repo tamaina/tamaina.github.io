@@ -1,21 +1,19 @@
 import glob from 'glob';
 import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { documentExts } from './nublog-constants.mjs';
 
-await fs.rmdir('content', { recursive: true }).catch(() => {});
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+await fs.rm('content', { recursive: true }).catch(() => {});
 await fs.mkdir('content');
-await fs.rmdir('public', { recursive: true }).catch(() => {});
-await fs.mkdir('public');
 
-const documentExts = 'md|yml|yaml|json|csv';
-
-glob.sync(`docs/**/*.+(${documentExts})`, { nodir: true }).forEach((file) => {
+glob.sync(`docs/**/*.+(${documentExts})`, { nodir: true }).forEach(async (file) => {
   // create symlink under content
   const target = file.replace(/^docs/, 'content');
-  fs.symlink(file, target, 'file');
-});
-
-glob.sync(`docs/**/*.!(${documentExts})`, { nodir: true }).forEach((file) => {
-  // create symlink under public
-  const target = file.replace(/^docs/, 'public');
-  fs.symlink(file, target, 'file');
+  // create directory if it doesn't exist
+  await fs.mkdir(target.replace(/\/[^/]+$/, ''), { recursive: true }).catch(() => {});
+  await fs.symlink(path.resolve(__dirname, file), target, 'file');
 });
