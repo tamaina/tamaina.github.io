@@ -21,13 +21,6 @@
           <li class="nav-item">
             <a href="/products" class="nav-link">製品</a>
           </li>
-          <!-- ？？？？？？
-          <ContentNavigation v-slot="{ navigation }">
-            <li v-for="link of navigation" :key="link._path" class="nav-item">
-              <a :href="link._path" class="nav-link">{{ link.title }}</a>
-            </li>
-          </ContentNavigation>
-          -->
         </ul>
       </div>
     </div>
