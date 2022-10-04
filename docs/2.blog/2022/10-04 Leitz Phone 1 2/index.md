@@ -3,7 +3,7 @@ publishedAt: 2022-10-04
 thumbnail: thumbnail.jpg
 ---
 
-# Leitz Phone 1 [#2] カメラ編ですが……スマホカメラはスマホカメラ！
+# Leitz Phone 1 [#2] カメラ編　スマホカメラはスマホカメラでした……
 
 Leitz Phone 1のカメラ比較です。より安価に購入できるマイクロフォーサーズ機（LUMIX GX7MK2）と比較するとお勧めできません。
 
