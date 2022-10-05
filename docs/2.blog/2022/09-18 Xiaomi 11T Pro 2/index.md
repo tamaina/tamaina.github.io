@@ -67,12 +67,14 @@ Xiaomi 11T Proはゴーストが目立ちません。筐体のカメラ部が平
 ## ROM焼き
 結論を言うと、安定性が損なわれるのを恐れてROMは変えていません。
 
-ところで、Fastboot ROMでsuperパーティションイメージを焼くときに`failed to check sparse crc`エラーが出て先に進めないのに困りました。  
-`fastboot erase super`をしましたがダメ。
+~~ところで、Fastboot ROMでsuperパーティションイメージを焼くときに`failed to check sparse crc`エラーが出て先に進めないのに困りました。~~  
+~~`fastboot erase super`をしましたがダメ。~~
 
 ![](super%20fail.png "FAILED (remote: 'failed to check sparse crc')")
 
-CRC云々とのことでCRCまわりのコマンドを削除しましたが、起動してくれません（ブートローダーしか表示されない）。
+~~CRC云々とのことでCRCまわりのコマンドを削除しましたが、起動してくれません（ブートローダーしか表示されない）。~~
+
+fastboot (platform-tools)が古かったためでした。最新のfastbootにするとすんなり焼けました。
 
 TWRPでブートしてRecovery ROMをADBサイドロードすれば復旧はできます。
 
