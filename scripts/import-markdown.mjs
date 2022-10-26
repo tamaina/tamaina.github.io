@@ -58,8 +58,10 @@ const processor = remark()
     .use(function() {
         return function(tree) {
             selectAll('image', tree).forEach((node/*: Image*/) => {
-                qs.push(q.push(node.url));
-                node.url = getFileNameFromUrl(node.url);
+                if (node.url.startsWith('http') || node.url.startsWith('//')) {
+                    qs.push(q.push(node.url));
+                    node.url = getFileNameFromUrl(node.url);
+                }
             });
         }
     });
