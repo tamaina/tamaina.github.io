@@ -1,5 +1,6 @@
 ---
 publishedAt: 2022-05-27
+thumbnail: 0.png
 ---
 
 # Multipassを使ってmacOSでMisskey開発をはじめよう
