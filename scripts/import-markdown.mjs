@@ -1,9 +1,12 @@
 import path from 'node:path';
 import fs from 'node:fs';
 import fsp from 'node:fs/promises';
-import remarkStringify from 'remark-stringify';
 import async from 'async';
 import { homeDir } from '../nublog/constants.mjs';
+import { selectAll } from 'unist-util-select';
+import { stream } from 'unified-stream';
+import { remark } from 'remark';
+//import type { Image } from '@types/mdast';
 
 //#region parsing argument
 const arg = process.argv[2];
@@ -15,20 +18,52 @@ const argPath = path.parse(path.isAbsolute(arg) ? arg : path.resolve(homeDir, ar
 if (argPath.name === 'index') Error('You should name the source file other than `index.md`.');
 //#endregion
 
+const files = new Map();
+
+let fileNumber = 0;
+
 function getFileNameFromUrl(urlStr) {
+    if (files.has(urlStr)) return files.get(urlStr);
+
     const url = new URL(urlStr);
-    const path = url.pathname.split('/')[url.pathname.split('/').length - 1];
+    const ext = url.pathname.split('.').pop();
+    const name = `${fileNumber}.${ext}`;
+    fileNumber++;
+    files.set(urlStr, name);
+    return name;
 }
 
-const file = await fsp.readFile(path.format(argPath), { encoding: 'utf8' });
-const outPath = Object.assign({}, argPath, { base: 'index.md' });
+const inputPath = path.format(argPath);
+const outPath = path.format(Object.assign({}, argPath, { base: 'index.md' }));
 
 const q = async.queue(async (fileUrl, cb) => {
-    const fetched = await fetch(fileUrl);
     const filePath = path.format(Object.assign({}, argPath, { base: getFileNameFromUrl(fileUrl) }));
-    return fsp.writeFile(filePath, fetched.arrayBuffer()).then(() => {
-        cb(null, filePath);
-    }).catch(cb);
+    console.log(`start fetching ${fileUrl} as ${filePath}`);
+    const fetched = await fetch(fileUrl);
+    const ab = await fetched.arrayBuffer();
+    return fsp.writeFile(filePath, Buffer.from(ab))
+        .then(() => {
+            console.log(`finish fetching ${fileUrl}`);
+            cb(null, filePath);
+        }, reason => {
+            console.log(`failed to fetch ${fileUrl}`);
+            console.log(JSON.stringify(reason));
+            cb(reason);
+        });
 }, 3);
 
+const qs = [];
 
+const processor = remark()
+    .use(function() {
+        return function(tree) {
+            selectAll('image', tree).forEach((node/*: Image*/) => {
+                qs.push(q.push(node.url));
+                node.url = getFileNameFromUrl(node.url);
+            });
+        }
+    });
+
+fs.createReadStream(inputPath).pipe(stream(processor)).pipe(fs.createWriteStream(outPath));
+
+await Promise.allSettled(qs);

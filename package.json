@@ -4,23 +4,26 @@
     "build": "node ./nublog/setup-docs.mjs && nuxt build",
     "dev": "node ./nublog/watch-docs.mjs & nuxt dev",
     "generate": "node ./nublog/setup-docs.mjs && nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "hide": "node ./scripts/import-markdown.mjs"
   },
-  "devDependencies": {
+  "dependencies": {
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "@types/glob": "^8.0.0",
-    "async": "^3.2.4",
     "chokidar": "^3.5.3",
     "glob": "^8.0.3",
     "nuxt": "^3.0.0-rc.4",
-    "remark": "^14.0.2",
-    "remark-parse": "^10.0.1",
-    "remark-stringify": "^10.0.2",
     "sass": "^1.54.8",
     "sitemap": "^7.1.1",
-    "unified": "^10.1.2",
-    "unist-util-select": "^4.0.1",
     "viewerjs": "^1.10.5"
+  },
+  "devDependencies": {
+    "@types/mdast": "^3.0.10",
+    "async": "^3.2.4",
+    "remark": "^14.0.2",
+    "unified": "^10.1.2",
+    "unified-stream": "^2.0.0",
+    "unist-util-select": "^4.0.1"
   }
 }
