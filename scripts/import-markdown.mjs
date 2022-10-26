@@ -18,8 +18,8 @@ const argPath = path.parse(path.isAbsolute(arg) ? arg : path.resolve(homeDir, ar
 if (argPath.name === 'index') Error('You should name the source file other than `index.md`.');
 //#endregion
 
+//#region getFileNameFromUrl
 const files = new Map();
-
 let fileNumber = 0;
 
 function getFileNameFromUrl(urlStr) {
@@ -32,10 +32,9 @@ function getFileNameFromUrl(urlStr) {
     files.set(urlStr, name);
     return name;
 }
+//#endregion
 
-const inputPath = path.format(argPath);
-const outPath = path.format(Object.assign({}, argPath, { base: 'index.md' }));
-
+//#region queueing file download
 const q = async.queue(async (fileUrl, cb) => {
     const filePath = path.format(Object.assign({}, argPath, { base: getFileNameFromUrl(fileUrl) }));
     console.log(`start fetching ${fileUrl} as ${filePath}`);
@@ -53,18 +52,25 @@ const q = async.queue(async (fileUrl, cb) => {
 }, 3);
 
 const qs = [];
+//#endregion
 
 const processor = remark()
     .use(function() {
         return function(tree) {
             selectAll('image', tree).forEach((node/*: Image*/) => {
+                if (!node.url) return;
                 if (node.url.startsWith('http') || node.url.startsWith('//')) {
                     qs.push(q.push(node.url));
                     node.url = getFileNameFromUrl(node.url);
+                } else {
+                    console.log(`SKIPPED ${node.url}`);
                 }
             });
         }
     });
+
+const inputPath = path.format(argPath);
+const outPath = path.format(Object.assign({}, argPath, { base: 'index.md' }));
 
 fs.createReadStream(inputPath).pipe(stream(processor)).pipe(fs.createWriteStream(outPath));
 
