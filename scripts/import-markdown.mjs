@@ -1,3 +1,16 @@
+/*
+ * Process markdown files and download images
+ *
+ * Execute with path to markdown file as argument on node.js
+ * e.g. `node import-markdown.mjs '~/docs/2022/05-20 AWESOME ARTICLE NAME/_source.md'`
+ * 
+ * and following files will generate in the same directory (e.g. ~/docs/2022/05-20 AWESOME ARTICLE NAME/):
+ * - index.md (urls in image syntax will be replaced with local paths)
+ * - 1.png
+ * - 2.jpg
+ * - 3.gif...
+ */
+
 import path from 'node:path';
 import fs from 'node:fs';
 import fsp from 'node:fs/promises';
