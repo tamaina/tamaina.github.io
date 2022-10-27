@@ -7,7 +7,7 @@ const props = defineProps<{
 }>();
 
 const { page } = useContent();
-const target = computed(() => props.blank === true ? '_blank' : (props.blank !== false && props.href.startsWith('http')) ? '_blank' : '_self');
+const target = computed(() => props.blank === true ? '_blank' : props.href.startsWith('http') ? '_blank' : props.blank ? '_blank' : '_self');
 
 const linkTo = computed(() => {
   if (props.href.startsWith('http') || props.href.startsWith('/') || !page.value) {
