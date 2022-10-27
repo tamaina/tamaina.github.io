@@ -1,5 +1,6 @@
 ---
 publishedAt: 2022-05-23
+thumbnail: 18.png
 ---
 
 # M1 MacBook Air レビュー #4 メモリは8GBで十分?16GBが必要?

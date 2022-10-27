@@ -1,5 +1,6 @@
 ---
 publishedAt: 2022-05-21
+thumbnail: 3.png
 ---
 
 # M1 MacBook Air レビュー #2 M1をベンチマーク！7コアGPUの性能を解明！

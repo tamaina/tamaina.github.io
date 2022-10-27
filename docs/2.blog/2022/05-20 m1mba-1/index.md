@@ -1,5 +1,6 @@
 ---
 publishedAt: 2022-05-20
+thumbnail: 12.png
 ---
 
 # M1 MacBook Air レビュー #1 開封編

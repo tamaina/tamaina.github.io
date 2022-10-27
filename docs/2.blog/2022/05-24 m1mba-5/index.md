@@ -1,5 +1,6 @@
 ---
 publishedAt: 2022-05-24
+thumbnail: 0.png
 ---
 
 # M1 MacBook Air レビュー #5 Surface Pro 7と対決！
