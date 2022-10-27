@@ -83,7 +83,7 @@ const pages = computed(() => _pages.value.filter((p) => p._id !== page.value._id
 
 const router = useRouter();
 const pagingNumber = ref(Number(router.currentRoute.value.query.page) || 1);
-const perPage = ref(20);
+const perPage = ref(10);
 const total = computed(() => pages.value.length);
 const totalPages = computed(() => Math.ceil(total.value / perPage.value));
 const start = computed(() => (pagingNumber.value - 1) * perPage.value);
