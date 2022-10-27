@@ -80,12 +80,12 @@ onMounted(() => {
 
     if (Number.isNaN(newValue) || !Number.isInteger(newValue) || Number(newValue) < 1) {
       pagingNumber.value = 1;
-      //router.replace({ query: { page: 1 } });
+      router.replace({ query: { page: 1 } });
     } else if (Number(newValue) > totalPages.value) {
       pagingNumber.value = totalPages.value;
-      //router.replace({ query: { page: totalPages.value } });
+      router.replace({ query: { page: totalPages.value } });
     } else {
-      //pushOrReplace(newValue)({ query: { page: newValue } });
+      pushOrReplace(newValue)({ query: { page: newValue } });
     }
   }, { immediate: true });
 });
