@@ -21,7 +21,7 @@
           <div>
             <input type="number" v-model="pagingNumber" min="1" :max="totalPages" step="1" class="form-control" :class="$style['index-pagination-input']" /> / {{ totalPages }}
           </div>
-          <button v-if="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['index-pagination-button']" @click="pagingNumber += -1">＞ Next</button>
+          <button v-if="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['index-pagination-button']" @click="pagingNumber += 1">＞ Next</button>
         </div>
       </div>
 
