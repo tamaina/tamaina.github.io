@@ -87,6 +87,8 @@ onMounted(() => {
     } else {
       pushOrReplace(newValue)({ query: { page: newValue } });
     }
+
+    window.scrollTo(0, 0);
   }, { immediate: true });
 });
 </script>
