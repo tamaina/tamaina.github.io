@@ -87,4 +87,6 @@ const outPath = path.format(Object.assign({}, argPath, { base: 'index.md' }));
 
 fs.createReadStream(inputPath).pipe(stream(processor)).pipe(fs.createWriteStream(outPath));
 
-await Promise.allSettled(qs);
+await Promise.allSettled(qs).then(() => {
+    console.log(`Finished!`)
+});
