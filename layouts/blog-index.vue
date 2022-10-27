@@ -73,6 +73,9 @@
 </template>
 
 <script setup lang="ts">
+const perPage = 10;
+
+
 const { page } = useContent();
 
 const baseQuery = queryContent(page.value._path).where(Object.assign({ publishedAt: { $gt: '' } }, page.value.where || {}));
@@ -83,11 +86,10 @@ const pages = computed(() => _pages.value.filter((p) => p._id !== page.value._id
 
 const router = useRouter();
 const pagingNumber = ref(Number(router.currentRoute.value.query.page) || 1);
-const perPage = ref(10);
 const total = computed(() => pages.value.length);
-const totalPages = computed(() => Math.ceil(total.value / perPage.value));
-const start = computed(() => (pagingNumber.value - 1) * perPage.value);
-const end = computed(() => Math.min(start.value + perPage.value, total.value));
+const totalPages = computed(() => Math.ceil(total.value / perPage));
+const start = computed(() => (pagingNumber.value - 1) * perPage);
+const end = computed(() => Math.min(start.value + perPage, total.value));
 const pageItems = computed(() => pages.value.slice(start.value, end.value));
 
 // ad
