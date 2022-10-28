@@ -59,7 +59,7 @@ thumbnail: open-14.jpg
 
 ![](open-13.jpg "ﾃﾞｪｰﾝ")
 
-![](open-14.jpg "/ｺﾝﾆﾁﾊ\")
+![](open-14.jpg "／ｺﾝﾆﾁﾊ＼")
 
 ## TimeMachineで復元
 さて、M1 MacBook Airの時作ったTimeMachineを復元して、さっさか使えるようにしちゃいましょう！
