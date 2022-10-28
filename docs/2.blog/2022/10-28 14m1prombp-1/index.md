@@ -1,8 +1,9 @@
 ---
 publishedAt: 2022-10-28
+thumbnail: open-14.jpg
 ---
 
-# 14インチMacBook Pro (M1 Pro) 購入・開封編
+# 14インチMacBook Pro (M1 Pro) #1 購入・開封編
 
 5ヶ月前にお届けした[M1 MacBook Air編](../05-20-m1mba-1)でM1 Pro MacBook Proが欲しいと言っていましたが、この度14インチMacBook Pro最廉価モデルの整備済製品を購入しました。破産寸前です。  
 **[自作PC](https://jp.mercari.com/item/m94773153380)も[Surface Pro 7](https://jp.mercari.com/item/m64059316994)も両方売ってしまったので、もう後には引けません。**
