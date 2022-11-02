@@ -35,7 +35,7 @@ thumbnail: open-14.jpg
 
 リーベイツへ新規登録＆条件達成で500ポイントもらえる ⇨ https://www.rebates.jp/referrer?referrerid=ztj18cE/D9k=
 
-![](rebats.png "唐突なアフィリエイト　今回は1%だった")
+![](rebates.png "唐突なアフィリエイト　今回は1%だった")
 
 ## 開封の儀
 とりあえず開けるだけ開けてしまいましょう（古いパソコンは売らなければなりませんからね）。
