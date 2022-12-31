@@ -3,8 +3,15 @@ publishedAt: 2022-05-27
 thumbnail: 0.png
 ---
 
-# Multipassを使ってmacOSでMisskey開発をはじめよう
+# Multipassを使ってmacOSでMisskey開発はやめておこう
+Multipassは私の環境ではどうも不安定になってしまったため、お勧めできません！
 
+## Multipassは不安定なのでやめました
+「Multipassを使ってmacOSでMisskey開発をはじめよう」という題名で記事を書いていましたが、**Multipassは私の環境ではどうも不安定になってしまったため、お勧めできません！**
+
+[UTM](https://mac.getutm.app/)を使う方が安定しているかと思います。
+
+## それでもMultipassを使いたい方は以下をお読みください
 macOSにはHomebrewもありますが、いろいろ面倒なのでLinuxを使うのが好ましいと思っています。\
 簡単にUbuntuバーチャルマシンを実行できる「Multipass」でMisskey開発を行います。\
 MultipassやMisskeyはApple Silicon (ARM64)でも動作します。
