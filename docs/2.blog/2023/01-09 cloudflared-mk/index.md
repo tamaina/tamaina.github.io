@@ -10,7 +10,8 @@ cloudflared (Cloudflare Zero Trust, Cloudflare Tunnels)でMisskeyサーバーを
 ## Cloudflare Tunnels 特徴
 
 ### 利点
-- ポート解放しなくて良い（クラウドサービスのエグレスルール以外のルールは弄らなくて良さそう）
+- ポート解放しなくて良い  
+  自宅サーバーではルーターの設定を変更しなくて済むし、クラウドサービスはエグレス以外弄らなくて良い
 - IPアドレスが変わっても平気
 
 ### 欠点？
