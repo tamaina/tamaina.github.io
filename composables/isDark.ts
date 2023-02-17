@@ -1,1 +1,1 @@
-export const isDark = () => document.documentElement.classList.contains('dark');
+export const isDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
