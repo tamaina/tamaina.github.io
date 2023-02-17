@@ -22,8 +22,9 @@ const q = async.queue(async (filePath, cb) => {
         : false;
     const avifPath = splited.join('.') + '.webp';
 
-    await sharp(filePath, { animated: true }).toFormat('avif', {
-        quality: 80,
+    await sharp(filePath, { animated: true }).toFormat('webp', {
+        quality: 90,
+        smartSubsample: true,
         effort: 6,
         lossless,
     }).toFile(avifPath);
