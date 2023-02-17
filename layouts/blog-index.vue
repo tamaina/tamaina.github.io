@@ -48,11 +48,11 @@
         </div>
 
         <div :class="$style['blog-index-pagination']" v-if="totalPages > 1">
-          <button v-show="pagingNumber !== 1" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="prevPage()">Prev ＜</button>
+          <button v-show="pagingNumber !== 1" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="prevPage">Prev ＜</button>
           <div>
             <input type="number" v-model="pagingNumber" min="1" :max="totalPages" step="1" class="form-control" :class="$style['blog-index-pagination-input']" /> / {{ totalPages }}
           </div>
-          <button v-show="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="nextPage()">＞ Next</button>
+          <button v-show="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="nextPage">＞ Next</button>
         </div>
       </div>
 
@@ -116,16 +116,16 @@ function onResize() {
   isMobile.value = window.innerWidth < 576;
 }
 
-function prevPage() {
-  console.log('prev')
+async function prevPage() {
   pagingNumber.value += -1;
-  nextTick(() => window.scrollTo(0, 0));
+  await nextTick();
+  window.scrollTo(0, 0);
 }
 
-function nextPage() {
-  console.log('next')
+async function nextPage() {
   pagingNumber.value += 1;
-  nextTick(() => window.scrollTo(0, 0));
+  await nextTick();
+  window.scrollTo(0, 0);
 }
 
 onMounted(() => {

@@ -17,11 +17,11 @@
         </div>
 
         <div :class="$style['index-pagination']" v-if="totalPages > 1">
-          <button v-if="pagingNumber !== 1" class="btn btn-primary" :class="$style['index-pagination-button']" @click="pagingNumber += -1">Prev ＜</button>
+          <button v-if="pagingNumber !== 1" class="btn btn-primary" :class="$style['index-pagination-button']" @click="prevPage">Prev ＜</button>
           <div>
             <input type="number" v-model="pagingNumber" min="1" :max="totalPages" step="1" class="form-control" :class="$style['index-pagination-input']" /> / {{ totalPages }}
           </div>
-          <button v-if="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['index-pagination-button']" @click="pagingNumber += 1">＞ Next</button>
+          <button v-if="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['index-pagination-button']" @click="nextPage">＞ Next</button>
         </div>
       </div>
 
@@ -61,6 +61,18 @@ const totalPages = computed(() => Math.ceil(total.value / perPage.value));
 const start = computed(() => (pagingNumber.value - 1) * perPage.value);
 const end = computed(() => Math.min(start.value + perPage.value, total.value));
 const pageItems = computed(() => pages.value.slice(start.value, end.value));
+
+async function prevPage() {
+  pagingNumber.value += -1;
+  await nextTick();
+  window.scrollTo(0, 0);
+}
+
+async function nextPage() {
+  pagingNumber.value += 1;
+  await nextTick();
+  window.scrollTo(0, 0);
+}
 
 onMounted(() => {
   console.log('mounted index');
