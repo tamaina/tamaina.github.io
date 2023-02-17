@@ -9,7 +9,7 @@ import { contentDir, homeDir } from '../nublog/constants.mjs';
 
 const exec = util.promisify(childProcess.exec);
 
-const q = async.queue(async ([filePath, i, length], cb) => {
+const q = async.queue(async (filePath, cb) => {
     console.log(`start converting ${filePath}`);
 
     const start = Date.now();
@@ -23,15 +23,15 @@ const q = async.queue(async ([filePath, i, length], cb) => {
     const avifPath = splited.join('.') + '.avif';
 
     await sharp(filePath, { animated: true }).toFormat('avif', {
-        quality: 65,
-        effort: 4,
+        quality: 80,
+        effort: 7,
         lossless,
     }).toFile(avifPath);
     await fs.rm(filePath);
 
     const statAfter = await fs.stat(avifPath);
 
-    console.log(`finish converting ${filePath} (${i+1}/${length})`);
+    console.log(`finish converting ${filePath}`);
     console.log(`time: ${Date.now() - start}ms, before: ${statBefore.size / 1024} KiB, after: ${statAfter.size / 1024} KiB`);
     cb(null, avifPath);
 }, 1);
@@ -39,7 +39,7 @@ const q = async.queue(async ([filePath, i, length], cb) => {
 export const imageGlob = `docs/**/*.+(jpg|jpeg|png|gif|webp|JPG|JPEG|PNG|GIF|WEBP)`;
 
 const filesPaths = glob.sync(imageGlob, { nodir: true, cwd: homeDir });
+console.log(`found ${filesPaths.length} files`);
+await Promise.all(filesPaths.map((path, i, arr) => q.push(path)));
 
-await Promise.all(filesPaths.map((path, i, arr) => q.push([path, i, arr.length])));
-
-await exec(`git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch ${filesPaths.map(x => `"${x.replace(homeDir, '')}"`).join(' ')}' --prune-empty --tag-name-filter cat -- --all`)
+//await exec(`git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch ${filesPaths.map(x => `"${x.replace(homeDir, '')}"`).join(' ')}' --prune-empty --tag-name-filter cat -- --all`)
