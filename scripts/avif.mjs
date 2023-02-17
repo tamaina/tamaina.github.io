@@ -20,7 +20,7 @@ const q = async.queue(async (filePath, cb) => {
 
     await sharp(filePath, { animated: true }).toFormat('avif', {
         quality: 90,
-        effort: 9,
+        effort: 6,
         lossless,
     }).toFile(avifPath);
     await fs.rm(filePath);
@@ -37,3 +37,5 @@ export const imageGlob = `docs/**/*.+(jpg|jpeg|png|gif|webp|JPG|JPEG|PNG|GIF|WEB
 const filesPaths = glob.sync(imageGlob, { nodir: true, cwd: homeDir });
 
 await Promise.all(filesPaths.map(path => q.push(path)));
+
+exec(`git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch ${filesPaths.map(x => `"${x}"`).join(' ')}' --prune-empty --tag-name-filter cat -- --all`)
