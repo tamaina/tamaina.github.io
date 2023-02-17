@@ -67,18 +67,21 @@ onMounted(() => {
   initAd();
 
   watch(pagingNumber, (newValue) => {
-    const pushOrReplace = (newValue) => {
-      const curr = router.currentRoute.value.query.page;
+    const pushOrReplace = (newValue: number) => {
+      const curr = router.currentRoute.value.query.page as string | undefined;
       if (!curr) {
         return router.replace;
       }
-      if (newValue === curr) {
+      if (newValue.toString() === curr) {
         return router.replace;
       }
       return router.push;
     }
 
-    if (Number.isNaN(newValue) || !Number.isInteger(newValue) || Number(newValue) < 1) {
+    if (perPage.value >= total.value) {
+      pagingNumber.value = 1;
+      router.replace({ query: {} });
+    } else if (Number.isNaN(newValue) || !Number.isInteger(newValue) || Number(newValue) < 1) {
       pagingNumber.value = 1;
       router.replace({ query: { page: 1 } });
     } else if (Number(newValue) > totalPages.value) {

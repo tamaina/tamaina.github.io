@@ -146,7 +146,10 @@ onMounted(() => {
       return router.push;
     }
 
-    if (Number.isNaN(newValue) || !Number.isInteger(newValue) || Number(newValue) < 1) {
+    if (perPage >= total.value) {
+      pagingNumber.value = 1;
+      router.replace({ query: {} });
+    } else if (Number.isNaN(newValue) || !Number.isInteger(newValue) || Number(newValue) < 1) {
       page.value = 1;
       router.replace({ query: { page: totalPages.value <= 1 ? undefined : 1 } });
     } else if (Number(newValue) > totalPages.value) {
