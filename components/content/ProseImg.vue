@@ -22,7 +22,6 @@
     quality="90"
     loading="lazy"
     sizes="xs:256px md:512px lg:720px"
-    ref="picture"
     @click="viewer?.show()"
     :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title }"
   />
@@ -32,7 +31,6 @@
 <script setup lang="ts">
 import 'viewerjs/dist/viewer.css';
 import Viewer from 'viewerjs';
-import { NuxtPicture } from '~~/.nuxt/components';
 
 const props = defineProps({
   src: {
@@ -62,7 +60,6 @@ const imgPath = computed(() => {
   return page.value && getImgRelativePath(props.src, page.value._file)
 });
 
-const picture = ref<InstanceType<typeof NuxtPicture>>();
 const viewer = computed(() => {
   const img = new Image();
   img.src = imgPath.value;
