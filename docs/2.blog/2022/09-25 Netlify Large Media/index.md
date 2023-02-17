@@ -8,7 +8,7 @@ publishedAt: 2022-09-25
 
 ところが次のようなダイアログが表示され、<kbd>Esc</kbd>を押しても無限に出続けます。
 
-![](vscode.avif "Escを押してもUsernameとPasswordを延々と聞かれ続ける")
+![](vscode.webp "Escを押してもUsernameとPasswordを延々と聞かれ続ける")
 
 クローンしてしまったディレクトリはいちど削除して、順番通りにクローンしましょう。
 
@@ -43,7 +43,7 @@ Netlifyの認証ヘルパー(Netlify's Git Credential Helper)が導入されま�
 netlify lm:install
 ```
 
-![](lm%20install.avif)
+![](lm%20install.webp)
 
 枠の中の`source /home/...`をコピーして実行してください。
 

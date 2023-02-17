@@ -20,7 +20,7 @@ const q = async.queue(async (filePath, cb) => {
     const lossless = ext === 'png' || ext === 'gif' ? true
         : ext === 'webp' ? await WebPInfo.from(filePath).then(info => info.lossless)
         : false;
-    const avifPath = splited.join('.') + '.avif';
+    const avifPath = splited.join('.') + '.webp';
 
     await sharp(filePath, { animated: true }).toFormat('avif', {
         quality: 80,

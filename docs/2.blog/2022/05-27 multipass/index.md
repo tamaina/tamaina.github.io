@@ -1,6 +1,6 @@
 ---
 publishedAt: 2022-05-27
-thumbnail: 0.avif
+thumbnail: 0.webp
 ---
 
 # Multipassを使ってmacOSでMisskey開発はやめておこう
@@ -20,7 +20,7 @@ Visual Studio Codeを使用する前提で説明します。
 
 [Windowsの場合はWSL2を使うことをお勧めしています。](https://hide.ac/articles/t6Gdoxdfh)
 
-![](0.avif)
+![](0.webp)
 
 ## Multipassのインストールとダウンロード
 
@@ -36,7 +36,7 @@ CPUスレッド数(cpus)、ディスクサイズ(disk)、メモリ上限(mem)を
 
 しばらくすると、見慣れたシェルが出てきます。
 
-![](1.avif)
+![](1.webp)
 
 後で使用するので、IPアドレス(IPv4 address for enp0s1)は控えておいてください。\
 スクリーンショットは以前にインスタンスを作成したことがあるため`192.168.64.4`となっていますが、通常は`192.168.64.2`になると思いますので、説明文は`192.168.64.2`とします。
@@ -103,46 +103,46 @@ macOSのシェル(zshなど)を開き、次のコマンドを実行します。
 
 VS Codeを開き、拡張機能「Remote - SSH」をインストールします。
 
-![](2.avif)
+![](2.webp)
 
 「リモートエクスプローラー」のタブが追加されるので、開きます。\
 （既にリモート拡張機能を使用していた場合は、「SSH Targets」を選択します。）
 
-![](3.avif)
+![](3.webp)
 
 「SSH TARGETS」の横の＋アイコンを選択します。
 
-![](4.avif)
+![](4.webp)
 
 ダイアログが出てくるので、`ssh ubuntu@192.168.64.2 -i ~/.ssh/multipass.id_rsa` と入力します。\
 （`192.168.64.2`が自分のインスタンスのIPを指すようにしてください。`multipass list`で確認可能です。）
 
-![](5.avif)
+![](5.webp)
 
 `/Users/(ユーザー名)/.ssh/config`を選択します。
 
-![](6.avif)
+![](6.webp)
 
 ## MultipassインスタンスにVS CodeでSSH接続する
 
 192.168.64.2が追加されたので、その右側の「ウィンドウに+が付いたアイコン」を選択します。
 
-![](7.avif)
+![](7.webp)
 
 新しいウィンドウが開きます。\
 初回の起動はセットアップが必要なためしばらく時間がかかります。\
 リモートに接続している間は、左下に接続先が表示されます。
 
-![](8.avif)
+![](8.webp)
 
 Misskeyのリポジトリをgit cloneします。\
 例えば、開始 / Gitリポジトリのクローン - Clone from GitHubからmisskey-dev/misskeyを選択します。ディレクトリ選択ダイアログはそのままEnterで良いでしょう。ダウンロードが終わったら右下のOpenを選択するとクローンしたディレクトリを開けます。
 
-![](9.avif)
+![](9.webp)
 
 control + shift + ^ でターミナルを開きます。
 
-[![](10.avif)](https://hide.ac/articles/t6Gdoxdfh#title-18)
+[![](10.webp)](https://hide.ac/articles/t6Gdoxdfh#title-18)
 
 submodule updateを実行してください。
 
