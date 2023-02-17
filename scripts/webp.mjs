@@ -20,22 +20,22 @@ const q = async.queue(async (filePath, cb) => {
     const lossless = ext === 'png' || ext === 'gif' ? true
         : ext === 'webp' ? await WebPInfo.from(filePath).then(info => info.lossless)
         : false;
-    const avifPath = splited.join('.') + '.webp';
+    const webpPath = splited.join('.') + '.webp';
 
     await sharp(filePath, { animated: true }).toFormat('webp', {
         quality: 90,
         smartSubsample: true,
         effort: 6,
         lossless,
-    }).toFile(avifPath);
+    }).toFile(webpPath);
     await fs.rm(filePath);
 
-    const statAfter = await fs.stat(avifPath);
+    const statAfter = await fs.stat(webpPath);
 
     console.log(`finish converting ${filePath}`);
     console.log(`time: ${Date.now() - start}ms, before: ${statBefore.size / 1024} KiB, after: ${statAfter.size / 1024} KiB`);
-    cb(null, avifPath);
-}, 2);
+    cb(null, webpPath);
+}, 6);
 
 export const imageGlob = `docs/**/*.+(jpg|jpeg|png|gif|webp|JPG|JPEG|PNG|GIF|WEBP)`;
 
