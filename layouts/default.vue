@@ -32,22 +32,24 @@ onMounted(() => {
 .default {
   max-width: 60rem;
 
-  .h1,
-  h1 {
-    line-height: 1.2;
-  }
+  &:global {
+    .h1,
+    h1 {
+      line-height: 1.2;
+    }
 
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 1.25rem;
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 1.25rem;
+    }
   }
 }
 </style>
