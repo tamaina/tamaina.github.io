@@ -1,6 +1,7 @@
 // https://github.com/nuxt/content/blob/ec3c61f3ce6dfd79624551bb3ec9bf3e1330ea59/src/runtime/components/Prose/ProseImg.vue
 
 <template>
+<div>
   <ClientOnly>
     <div v-if="showAd">
       <ins
@@ -26,6 +27,7 @@
     :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title }"
   />
   <div class="text-center" :class="$style.title" v-text="title" />
+</div>
 </template>
 
 <script setup lang="ts">
@@ -56,9 +58,7 @@ const props = defineProps({
 });
 
 const { page } = useContent();
-const imgPath = computed(() => {
-  return page.value && getImgRelativePath(props.src, page.value._file)
-});
+const imgPath = computed(() => page.value && getImgRelativePath(props.src, page.value._file));
 
 const viewer = computed(() => {
   const img = new Image();
