@@ -32,7 +32,7 @@ onMounted(() => {
 .default {
   max-width: 60rem;
 
-  &:global {
+  :global {
     .h1,
     h1 {
       line-height: 1.2;
