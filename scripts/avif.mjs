@@ -38,4 +38,4 @@ const filesPaths = glob.sync(imageGlob, { nodir: true, cwd: homeDir });
 
 await Promise.all(filesPaths.map(path => q.push(path)));
 
-exec(`git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch ${filesPaths.map(x => `"${x}"`).join(' ')}' --prune-empty --tag-name-filter cat -- --all`)
+exec(`git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch ${filesPaths.map(x => `"${x.replace(homeDir, '')}"`).join(' ')}' --prune-empty --tag-name-filter cat -- --all`)
