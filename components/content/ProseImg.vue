@@ -32,6 +32,7 @@
 <script setup lang="ts">
 import 'viewerjs/dist/viewer.css';
 import Viewer from 'viewerjs';
+import { NuxtPicture } from '~~/.nuxt/components';
 
 const props = defineProps({
   src: {
@@ -62,11 +63,11 @@ const imgPath = computed(() => {
 });
 
 const picture = ref<InstanceType<typeof NuxtPicture>>();
-const img = computed(() => picture.value?.$el.querySelector('img'));
 const viewer = computed(() => {
-  if (!img.value) return;
+  const img = new Image();
+  img.src = imgPath.value;
 
-  return new Viewer(img.value, {
+  return new Viewer(img, {
     navbar: false,
     title: () => props.title || props.alt,
     url: () => imgPath.value,
