@@ -1,6 +1,6 @@
 ---
 publishedAt: 2022-10-16
-thumbnail: back.JPG
+thumbnail: back.avif
 ---
 
 # OPPO Reno5 A (eSIM) 超ざっくりハンズオンレビュー
@@ -8,9 +8,9 @@ Y!mobileにMNPすると1円で購入できる「OPPO Reno5 A (eSIM)」につい�
 
 ## 背面外観・筐体
 
-![](back.jpg "背面　シルバーブラック")
+![](back.avif "背面　シルバーブラック")
 
-![](front.jpg "前面")
+![](front.avif "前面")
 
 カラーは「シルバーブラック」「アイスブルー」の2色です。
 
@@ -80,7 +80,7 @@ docomo・auのプラチナバンドにも対応していますので、4社す�
 OPPO Reno5 Aは、SoCとしてQualcomm Snapdragon 765Gを搭載し、6GBのRAMを搭載しています。  
 AnTuTuベンチマークの結果は39万点でした（AnTuTu v9ベンチマークは30万点が及第点とされています）。
 
-![](antutu.png "OPPO Reno5 A AnTuTuベンチマーク結果")
+![](antutu.avif "OPPO Reno5 A AnTuTuベンチマーク結果")
 
 3万円で39万点のスマホが買えるのは、超お買い得と言えます。RAM6GB/ROM128GBはミドルローの標準スペックの時代になりつつありますね。
 

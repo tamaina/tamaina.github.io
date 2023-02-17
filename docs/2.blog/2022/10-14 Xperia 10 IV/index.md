@@ -1,32 +1,32 @@
 ---
 publishedAt: 2022-10-14
-thumbnail: back.JPG
+thumbnail: back.avif
 ---
 
 # Xperia 10 IV ざっくりハンズオンレビュー
 Xperia 10 IVがSoftbankで一括1円なのは前から知っていたのですが、この度、機会があったため購入しました。
 
-![](1yen.JPG "レシート　無制限プランもしくはスマホデビュープランへのMNP限定とかだった気がする")
+![](1yen.avif "レシート　無制限プランもしくはスマホデビュープランへのMNP限定とかだった気がする")
 
 [**Xperia 10 IV Softbank版 スペックシート**](https://xperia.sony.jp/xperia/xperia10m4/spec_softbank.html)
 
 ## 開封・付属品
-![](open-1.jpg "箱です")
+![](open-1.avif "箱です")
 
-![](open-2.jpg "開けました")
+![](open-2.avif "開けました")
 
-![](open-3.jpg "これ完全にパンツですよね？？？？？")
+![](open-3.avif "これ完全にパンツですよね？？？？？")
 
-![](open-4.jpg "付属品は説明書2通のみとなっています")
+![](open-4.avif "付属品は説明書2通のみとなっています")
 
 ## 背面外観・筐体・サイズ感
 
 まずは外観や筐体・サイズ感について見ていきます。  
 今回はブラックを購入しました。
 
-![](back.jpg "背面")
+![](back.avif "背面")
 
-![](front.jpg "前面")
+![](front.avif "前面")
 
 カラーは「ブラック」「ホワイト」「ミント」「ラベンダー」から選択できますが、Softbankではラベンダーの取り扱いがありません。
 
@@ -46,9 +46,9 @@ Xperiaらしい21:9の縦長のディスプレイと筐体が特徴的です。
 Xperia 10 IVは「幅約67mmのスリムなハンドフィットサイズ」とのことですので、まずは小さいスマホとサイズ感を比べてみます。  
 左から「iPhone SE (2020年 第2世代)」「iPhone 13 mini」「Xperia 10 IV」「Rakuten Hand 5G」を並べてみました。
 
-![](compere-back.jpg)
+![](compere-back.avif)
 
-![](compere-front.jpg)
+![](compere-front.avif)
 
 **厚さ:** 7.3mm, 7.65mm, 約8.3mm, 約9.5mm  
 **幅:** 67.3mm, 64.2mm, 約67mm, 約63mm  
@@ -116,7 +116,7 @@ Appleに対抗してなのか、SONYには臨場感豊かな音場を実現す�
 
 ところで、Xperia 10 IVでは、Apple Musicのイコライザを開こうとするとXperiaのオーディオ設定が開く仕様のようです。
 
-![](eq.png "Apple Musicでイコライザを開こうとしたところ、Xperiaのオーディオ設定が出てきた")
+![](eq.avif "Apple Musicでイコライザを開こうとしたところ、Xperiaのオーディオ設定が出てきた")
 
 （オーディオ沼にちょっと足を踏み入れたい気もしているのですが、M1 Pro 14インチ MacBook Proを買う予定があるため今は無理です。でもBose QuietComfort Earbuds IIってAACなんだよな……。）
 
@@ -188,7 +188,7 @@ Cellmapperでの基地局収集用に使用していたmoto g50 5Gは近く売�
 Xperia 10 IVは、SoCとしてQualcomm Snapdragon 695 5Gを搭載し、6GBのRAMを搭載しています。  
 AnTuTuベンチマークの結果は39万点でした（AnTuTu v9ベンチマークは30万点が及第点とされています）。
 
-![](antutu.png "Xperia 10 IV AnTuTuベンチマーク結果")
+![](antutu.avif "Xperia 10 IV AnTuTuベンチマーク結果")
 
 Rakuten Hand 5G(Snapdragon 480 5G)は29万点、Dimensity 700搭載端末は30万点前後ですので、それよりはスペックが良いかと思います。  
 30万点前後の端末と比べて「サクサク感」に大きな違いは感じられません。ゲーム性能が少しは良いのかもしれませんが、個人的にゲームをしないので評価はここではやめておきます。  
@@ -205,7 +205,7 @@ Wi-FiはWi-Fi 5までの対応です。Wi-Fi 6には対応していません。�
 - Wi-Fi 5 (IEEE802.11ac)に対応？（テザリングオプション未加入のため確認できず）  
   5GHz帯の使用を優先するか2.4GHz帯のみ使用するかの設定があります。  
 
-![](tethering.png "Wi-Fiテザリング設定画面")
+![](tethering.avif "Wi-Fiテザリング設定画面")
 
 ## OS
 OSはAndroid 12を搭載しています。  
@@ -216,7 +216,7 @@ Softbank版でしたので、プリインストールアプリは相変わらず
 Xperiaの21:9画面の端末では、縦長な画面を生かした「ウィンドウマネージャー」が利用でき、アプリをポップアップ表示もしくは画面分割表示できます。  
 画面上に常時表示される[サイドセンスバー](https://xperia.sony.jp/myxperia/howtoxperia/basic/function36.html)がマルチタスク機能を呼び出すときにわりと便利に感じたのですが、ゲームをメインで使われている方からは邪魔という声があるとのことです。
 
-![](wm.png "Googleニュースの上にMisskeyをポップアップ表示した")
+![](wm.avif "Googleニュースの上にMisskeyをポップアップ表示した")
 
 画面分割表示では、無段階で分割の割合を調整できます（片方のアプリが極端に小さくならないようストップはかかります）。
 

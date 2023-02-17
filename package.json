@@ -5,7 +5,8 @@
     "dev": "node ./nublog/watch-docs.mjs & nuxt dev",
     "generate": "node ./nublog/setup-docs.mjs && nuxt generate",
     "preview": "nuxt preview",
-    "hide": "node ./scripts/import-markdown.mjs"
+    "hide": "node ./scripts/import-markdown.mjs",
+    "avif": "node ./scripts/avif.mjs"
   },
   "dependencies": {
     "@nuxt/content": "npm:@nuxt/content-edge@^2.4.3-27929782.246bad9",
@@ -22,8 +23,10 @@
     "@types/mdast": "^3.0.10",
     "async": "^3.2.4",
     "remark": "^14.0.2",
+    "sharp": "^0.31.3",
     "unified": "^10.1.2",
     "unified-stream": "^2.0.0",
-    "unist-util-select": "^4.0.3"
+    "unist-util-select": "^4.0.3",
+    "webpinfo": "^2.0.0"
   }
 }

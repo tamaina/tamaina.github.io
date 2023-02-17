@@ -1,7 +1,7 @@
 ---
 publishedAt: 2022-09-18
 updatedAt: 2022-09-22
-thumbnail: kuroneko%20xiaomi.jpg
+thumbnail: kuroneko%20xiaomi.avif
 ---
 # Xiaomi 11T Pro [#2] いろいろ深掘り
 
@@ -18,9 +18,9 @@ Xiaomi 11T Proの写真・動画撮影、テザリング、ルート化につい
 iPhoneからMIUIのホットスポットを見ると、iOSのインターネット共有と同じ🔗アイコンで表示されました。  
 Androidのテザリングが🔗アイコンになるのはかなり新鮮に感じました。
 
-![](portable-hotspot-setting.jpg "MIUIで「デバイス識別」を「モバイルホットスポット」に設定する")
+![](portable-hotspot-setting.avif "MIUIで「デバイス識別」を「モバイルホットスポット」に設定する")
 
-![](portable-hotspot-iphone.png "iPhoneで🔗アイコンが表示される（TONE e22は通常の扇形アイコン）")
+![](portable-hotspot-iphone.avif "iPhoneで🔗アイコンが表示される（TONE e22は通常の扇形アイコン）")
 
 ## 動画撮影
 Xiaomi 11T ProはOIS（光学式手ぶれ補正）は搭載されていませんが、EIS（電子式手ぶれ補正）のみでiPhone並の手ぶれ補正効果が得られています。安い端末と比べると、動画手ぶれ補正だけでも相当な価値があると思います。  
@@ -43,17 +43,17 @@ Xiaomi 11T ProはOIS（光学式手ぶれ補正）は搭載されていません
 ## 暗所静止画撮影比較
 まずはLUMIX G 20mm/F1.7とフルサイズ換算40mmの画角で暗所撮影を比較してみます。
 
-![](denchu%20mft.jpg "LUMIX GX7MK2 + LUMIX G 20mm/F1.7, ISO1600, 1/4s")
+![](denchu%20mft.avif "LUMIX GX7MK2 + LUMIX G 20mm/F1.7, ISO1600, 1/4s")
 
-![](denchu%20xiaomi.jpg "Xiaomi 11T Pro (クロップ)")
+![](denchu%20xiaomi.avif "Xiaomi 11T Pro (クロップ)")
 
 **これは少し意地悪過ぎましたね。**
 
 今度はもう少し明るい場面をiPhone 13 miniと比較してみます。
 
-![](kuroneko%20iphone13.jpg "iPhone 13 mini")
+![](kuroneko%20iphone13.avif "iPhone 13 mini")
 
-![](kuroneko%20xiaomi.jpg "Xiaomi 11T Pro")
+![](kuroneko%20xiaomi.avif "Xiaomi 11T Pro")
 
 両機種とも、手ぶれ補正の打率はまあまあ良好です。
 
@@ -70,7 +70,7 @@ Xiaomi 11T Proはゴーストが目立ちません。筐体のカメラ部が平
 ~~ところで、Fastboot ROMでsuperパーティションイメージを焼くときに`failed to check sparse crc`エラーが出て先に進めないのに困りました。~~  
 ~~`fastboot erase super`をしましたがダメ。~~
 
-![](super%20fail.png "FAILED (remote: 'failed to check sparse crc')")
+![](super%20fail.avif "FAILED (remote: 'failed to check sparse crc')")
 
 ~~CRC云々とのことでCRCまわりのコマンドを削除しましたが、起動してくれません（ブートローダーしか表示されない）。~~
 
@@ -86,7 +86,7 @@ Android標準で日本語バリアブルフォントが導入される日はい�
 
 さて、ルート化したのがGoogle Payにバレてしまいました。
 
-![](google%20pay%20root.jpg "ルート化したのがGoogle Payにバレた")
+![](google%20pay%20root.avif "ルート化したのがGoogle Payにバレた")
 
 この端末でGoogle Payを使うつもりはないので、MagiskHideなどを導入するつもりはありません。
 
@@ -94,11 +94,11 @@ Android標準で日本語バリアブルフォントが導入される日はい�
 今回も5G SAを掴もうと試みます。  
 MIUIの場合はルート化不要だそうです。
 
-![](726633.jpg "電話アプリのダイヤルパッドに *#*#726633#*#*と入力します。")
+![](726633.avif "電話アプリのダイヤルパッドに *#*#726633#*#*と入力します。")
 
-![](show-5g-network-mode-selection.jpg "Show 5G network mode selectionと表示されます。")
+![](show-5g-network-mode-selection.avif "Show 5G network mode selectionと表示されます。")
 
-![](sa-toggle.jpg "スタンドアローンモードトグル")
+![](sa-toggle.avif "スタンドアローンモードトグル")
 
 設定アプリ - SIMカードとモバイルネットワーク - 高度な設定 の中にスタンドアローンモードトグルが追加されているので、これを有効にします。
 
