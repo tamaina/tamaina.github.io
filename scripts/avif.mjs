@@ -2,8 +2,12 @@ import glob from 'glob';
 import async from 'async';
 import sharp from 'sharp';
 import fs from 'node:fs/promises';
+import util from 'node:util';
+import childProcess from 'node:child_process';
 import { WebPInfo } from "webpinfo";
 import { contentDir, homeDir } from '../nublog/constants.mjs';
+
+const exec = util.promisify(childProcess.exec);
 
 const q = async.queue(async (filePath, cb) => {
     console.log(`start converting ${filePath}`);
@@ -19,8 +23,8 @@ const q = async.queue(async (filePath, cb) => {
     const avifPath = splited.join('.') + '.avif';
 
     await sharp(filePath, { animated: true }).toFormat('avif', {
-        quality: 90,
-        effort: 6,
+        quality: 65,
+        effort: 4,
         lossless,
     }).toFile(avifPath);
     await fs.rm(filePath);
@@ -38,4 +42,4 @@ const filesPaths = glob.sync(imageGlob, { nodir: true, cwd: homeDir });
 
 await Promise.all(filesPaths.map(path => q.push(path)));
 
-exec(`git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch ${filesPaths.map(x => `"${x.replace(homeDir, '')}"`).join(' ')}' --prune-empty --tag-name-filter cat -- --all`)
+await exec(`git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch ${filesPaths.map(x => `"${x.replace(homeDir, '')}"`).join(' ')}' --prune-empty --tag-name-filter cat -- --all`)
