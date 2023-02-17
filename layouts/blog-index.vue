@@ -48,11 +48,11 @@
         </div>
 
         <div :class="$style['blog-index-pagination']" v-if="totalPages > 1">
-          <button v-if="pagingNumber !== 1" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="pagingNumber += -1">Prev ＜</button>
+          <button v-if="pagingNumber !== 1" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="prevPage">Prev ＜</button>
           <div>
             <input type="number" v-model="pagingNumber" min="1" :max="totalPages" step="1" class="form-control" :class="$style['blog-index-pagination-input']" /> / {{ totalPages }}
           </div>
-          <button v-if="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="pagingNumber += 1">＞ Next</button>
+          <button v-if="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="nextPage">＞ Next</button>
         </div>
       </div>
 
@@ -75,14 +75,13 @@
 <script setup lang="ts">
 const perPage = 10;
 
-
 const { page } = useContent();
 
 const baseQuery = queryContent(page.value._path).where(Object.assign({ publishedAt: { $gt: '' } }, page.value.where || {}));
 const { data: _pages } = await useAsyncData(`blogIndexPages:${page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ publishedAt: -1 }).find());
 
 // ignore myself
-const pages = computed(() => _pages.value.filter((p) => p._id !== page.value._id));
+const pages = computed(() => _pages.value?.filter((p) => p._id !== page.value._id) || []);
 
 const router = useRouter();
 const pagingNumber = ref(Number(router.currentRoute.value.query.page) || 1);
@@ -112,8 +111,23 @@ const ads = {
     slot: '4281735911',
   },
 }
+
 function onResize() {
   isMobile.value = window.innerWidth < 576;
+}
+
+function prevPage() {
+  if (pagingNumber.value > 1) {
+    pagingNumber.value -= 1;
+  }
+  window.scrollTo(0, 0);
+}
+
+function nextPage() {
+  if (pagingNumber.value < totalPages.value) {
+    pagingNumber.value += 1;
+  }
+  window.scrollTo(0, 0);
 }
 
 onMounted(() => {
@@ -121,12 +135,12 @@ onMounted(() => {
   initAd();
 
   watch(pagingNumber, (newValue) => {
-    const pushOrReplace = (newValue) => {
-      const curr = router.currentRoute.value.query.page;
+    const pushOrReplace = (newValue: number) => {
+      const curr = router.currentRoute.value.query.page as string | undefined;
       if (!curr) {
         return router.replace;
       }
-      if (newValue === curr) {
+      if (newValue.toString() === curr) {
         return router.replace;
       }
       return router.push;
