@@ -24,7 +24,7 @@ const q = async.queue(async (filePath, cb) => {
 
     await sharp(filePath, { animated: true }).toFormat('avif', {
         quality: 80,
-        effort: 7,
+        effort: 6,
         lossless,
     }).toFile(avifPath);
     await fs.rm(filePath);
