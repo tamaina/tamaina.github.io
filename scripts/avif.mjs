@@ -34,7 +34,7 @@ const q = async.queue(async (filePath, cb) => {
     console.log(`finish converting ${filePath}`);
     console.log(`time: ${Date.now() - start}ms, before: ${statBefore.size / 1024} KiB, after: ${statAfter.size / 1024} KiB`);
     cb(null, avifPath);
-}, 1);
+}, 2);
 
 export const imageGlob = `docs/**/*.+(jpg|jpeg|png|gif|webp|JPG|JPEG|PNG|GIF|WEBP)`;
 
