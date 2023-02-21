@@ -23,7 +23,7 @@ const q = async.queue(async (filePath, cb) => {
     const webpPath = splited.join('.') + '.webp';
 
     await sharp(filePath, { animated: true }).toFormat('webp', {
-        quality: 94,
+        quality: 90,
         smartSubsample: true,
         effort: 6,
         lossless,
