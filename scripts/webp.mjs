@@ -27,8 +27,8 @@ const q = async.queue(async (filePath, cb) => {
         smartSubsample: true,
         effort: 6,
         lossless,
-    }).withMetadata().toFile(webpPath);
-    await fs.rm(filePath);
+    }).toFile(webpPath);
+    // await fs.rm(filePath);
 
     const statAfter = await fs.stat(webpPath);
 
