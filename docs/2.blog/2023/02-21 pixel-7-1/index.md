@@ -1,6 +1,6 @@
 ---
 publishedAt: 2023-02-21
-thumbnail: thumb.webp
+thumbnail: thumb2.webp
 ---
 # Pixel 7（即povoレンタル1円）超適当ハンズオンレビュー #1 開封と静止画撮影
 
@@ -42,13 +42,13 @@ thumbnail: thumb.webp
 ## 外観
 今回は、レモングラス（イエロー）を購入しました。
 
-![](thumb.webp)
+![](thumb2.webp)
 
-![](yoko-ura.webp)
+![](yoko-omote.webp)
 
 ![](omote.webp)
 
-![](yoko-omote.webp)
+![](yoko-ura.webp)
 
 ## 静止画撮影
 とりあえずMcCafeのオレオクッキー バニラフラッペ Mがあったので、撮ってみました。

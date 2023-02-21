@@ -17,10 +17,17 @@ const q = async.queue(async (filePath, cb) => {
 
     const splited = filePath.split('.');
     const ext = splited.pop().toLowerCase();
+    const webpPath = splited.join('.') + '.webp';
+
+    try {
+        await fs.stat(webpPath);
+        console.log(`skip converting ${filePath}`);
+        return;
+    } catch (e) {}
+
     const lossless = ext === 'png' || ext === 'gif' ? true
         : ext === 'webp' ? await WebPInfo.from(filePath).then(info => info.lossless)
         : false;
-    const webpPath = splited.join('.') + '.webp';
 
     await sharp(filePath, { animated: true }).toFormat('webp', {
         quality: 90,
