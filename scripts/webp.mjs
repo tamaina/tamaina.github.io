@@ -6,7 +6,6 @@ import util from 'node:util';
 import childProcess from 'node:child_process';
 import { WebPInfo } from "webpinfo";
 import { contentDir, homeDir } from '../nublog/constants.mjs';
-import EXIF from 'exif-reader';
 
 const exec = util.promisify(childProcess.exec);
 
@@ -25,28 +24,23 @@ const q = async.queue(async (filePath, cb) => {
 
     const si = await sharp(filePath, { animated: true });
     const { exif } = await si.metadata();
-    try {
-        await si.withMetadata({
-            orientation: 1,
-            exif: exif ? EXIF(exif) : {},
-        }).toFormat('webp', {
-            quality: 90,
-            smartSubsample: true,
-            effort: 6,
-            lossless,
-        }).toFile(webpPath);
-        await fs.rm(filePath);
-    } catch (e) {
-        console.error(e);
-        throw e;
-    }
+    await si.withMetadata({
+        orientation: 1,
+        exif,
+    }).toFormat('webp', {
+        quality: 90,
+        smartSubsample: true,
+        effort: 6,
+        lossless,
+    }).toFile(webpPath)
+    await fs.rm(filePath);
 
     const statAfter = await fs.stat(webpPath);
 
     console.log(`finish converting ${filePath}`);
     console.log(`time: ${Date.now() - start}ms, before: ${statBefore.size / 1024} KiB, after: ${statAfter.size / 1024} KiB`);
     cb(null, webpPath);
-}, 4);
+}, 6);
 
 export const imageGlob = `docs/**/*.+(jpg|jpeg|png|gif|webp|JPG|JPEG|PNG|GIF|WEBP)`;
 

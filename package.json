@@ -22,12 +22,11 @@
     "@types/glob": "^8.0.0",
     "@types/mdast": "^3.0.10",
     "async": "^3.2.4",
-    "exif-reader": "^1.1.0",
     "remark": "^14.0.2",
     "sharp": "^0.31.3",
     "unified": "^10.1.2",
     "unified-stream": "^2.0.0",
     "unist-util-select": "^4.0.3",
-    "webpinfo": "^1.0.4"
+    "webpinfo": "^2.0.0"
   }
 }
