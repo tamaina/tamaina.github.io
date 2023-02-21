@@ -22,19 +22,22 @@ const q = async.queue(async (filePath, cb) => {
     try {
         await fs.stat(webpPath);
         console.log(`skip converting ${filePath}`);
-        return;
+        //return;
     } catch (e) {}
 
     const lossless = ext === 'png' || ext === 'gif' ? true
         : ext === 'webp' ? await WebPInfo.from(filePath).then(info => info.lossless)
         : false;
 
-    await sharp(filePath, { animated: true }).toFormat('webp', {
-        quality: 90,
-        smartSubsample: true,
-        effort: 6,
-        lossless,
-    }).toFile(webpPath);
+    await sharp(filePath, { animated: true })
+        .rotate()
+        .toFormat('webp', {
+            quality: 90,
+            smartSubsample: true,
+            effort: 6,
+            lossless,
+        })
+        .toFile(webpPath);
     // await fs.rm(filePath);
 
     const statAfter = await fs.stat(webpPath);
