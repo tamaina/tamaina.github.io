@@ -22,12 +22,17 @@ const q = async.queue(async (filePath, cb) => {
         : false;
     const webpPath = splited.join('.') + '.webp';
 
-    await sharp(filePath, { animated: true }).toFormat('webp', {
+    const si = await sharp(filePath, { animated: true });
+    const { exif } = await si.metadata();
+    await si.withMetadata({
+        orientation: 1,
+        exif,
+    }).toFormat('webp', {
         quality: 90,
         smartSubsample: true,
         effort: 6,
         lossless,
-    }).withMetadata().toFile(webpPath);
+    }).toFile(webpPath)
     await fs.rm(filePath);
 
     const statAfter = await fs.stat(webpPath);
