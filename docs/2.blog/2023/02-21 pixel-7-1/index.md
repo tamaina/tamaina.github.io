@@ -2,7 +2,7 @@
 publishedAt: 2023-02-21
 thumbnail: thumb.webp
 ---
-# Pixel 7（即povoレンタル1円）超適当ハンズオンレビュー 1.開封と写真
+# Pixel 7（即povoレンタル1円）超適当ハンズオンレビュー #1 開封と静止画撮影
 
 ## 購入
 2022年2月18日にauからiPhone 13 miniをレンタル1円で購入しました。
@@ -50,7 +50,7 @@ thumbnail: thumb.webp
 
 ![](yoko-omote.webp)
 
-## カメラ？
+## 静止画撮影
 とりあえずMcCafeのオレオクッキー バニラフラッペ Mがあったので、撮ってみました。
 
 ![](px7-potrait.webp "Pixel 7 ポートレート 1.3x")
