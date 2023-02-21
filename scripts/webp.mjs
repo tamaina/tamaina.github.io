@@ -22,7 +22,7 @@ const q = async.queue(async (filePath, cb) => {
     try {
         await fs.stat(webpPath);
         console.log(`skip converting ${filePath}`);
-        //return;
+        return;
     } catch (e) {}
 
     const lossless = ext === 'png' || ext === 'gif' ? true
