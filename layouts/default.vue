@@ -48,7 +48,7 @@ onMounted(() => {
     h4,
     h5,
     h6 {
-      margin-top: 1.25rem;
+      margin-top: 1.5rem;
     }
   }
 }

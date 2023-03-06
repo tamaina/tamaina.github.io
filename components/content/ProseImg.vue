@@ -3,7 +3,7 @@
 <template>
 <div>
   <ClientOnly>
-    <div v-if="showAd">
+    <div v-if="showAd" class="my-4">
       <ins
         class="adsbygoogle"
         style="display:block; text-align:center;"
@@ -71,7 +71,7 @@ const viewer = computed(() => {
   });
 });
 
-const showAd = computed(() => Math.floor(Math.random() * 4) === 0); // 1/4 chance of showing ad
+const showAd = computed(() => Math.floor(Math.random() * 7) === 0); // 1/7 chance of showing ad
 </script>
 
 <style module lang="scss">

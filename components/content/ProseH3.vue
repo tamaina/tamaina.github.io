@@ -1,7 +1,7 @@
 <template>
 <div :id="id">
   <ClientOnly>
-    <div v-if="showAd">
+    <div v-if="showAd" class="my-4">
       <ins
         class="adsbygoogle"
         style="display:block; text-align:center;"
@@ -24,5 +24,5 @@
 <script setup lang="ts">
 defineProps<{ id: string }>();
 
-const showAd = computed(() => Math.floor(Math.random() * 4) === 0); // 1/4 chance of showing ad
+const showAd = computed(() => Math.floor(Math.random() * 7) === 0); // 1/7 chance of showing ad
 </script>

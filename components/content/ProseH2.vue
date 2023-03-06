@@ -1,7 +1,7 @@
 <template>
 <div :id="id">
   <ClientOnly>
-    <div v-if="showAd">
+    <div v-if="showAd" class="my-4">
       <ins
         class="adsbygoogle"
         style="display:block; text-align:center;"

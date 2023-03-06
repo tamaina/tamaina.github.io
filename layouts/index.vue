@@ -2,7 +2,9 @@
   <div>
     <div class="min-vh-100 py-5 container" :class="$style.default">
       <BreadCrumb :addDividerToEnd="true" />
-      <slot />
+      <div id="body" :class="$style.content">
+        <slot />
+      </div>
 
       <div id="index" class="mt-5" v-if="pages && pages.length > 0">
         <div :class="$style['index']" :min-item-size="Math.min(pages.length, 20)" key-field="_id">
@@ -48,7 +50,7 @@ const baseQuery = queryContent(page.value._path).where(page.value.where || {});
 const { data: _pages } = await useAsyncData(`indexPages:${page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).find());
 
 // 直下のページだけを表示
-const pages = computed(() => _pages.value.filter((p) =>
+const pages = computed(() => (_pages.value ?? []).filter((p) =>
   // ルートページのときだけ違うロジックにする必要がある
   page.value._path === '/' ? (p._path !== '/' && p._path.split('/').length === 2)
   : p._path.split('/').length === page.value._path.split('/').length + 1));
@@ -111,6 +113,25 @@ onMounted(() => {
 <style module lang="scss">
 .default {
   max-width: 60rem;
+}
+
+.content {
+  .h1, h1 {
+    line-height: 1.2;
+  }
+
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5rem;
+  }
 }
 
 .index {

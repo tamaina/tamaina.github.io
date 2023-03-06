@@ -2,7 +2,9 @@
   <div>
     <div class="min-vh-100 py-5 container" :class="$style.default">
       <BreadCrumb :addDividerToEnd="true" />
-      <slot />
+      <div id="body" :class="$style.content">
+        <slot />
+      </div>
 
       <div id="blog-index" v-if="pages && pages.length > 0">
         <div :class="$style['blog-index']">
@@ -178,6 +180,21 @@ onUnmounted(() => {
 
   .h1, h1 {
     line-height: 1.2;
+  }
+}
+
+.content {
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5rem;
   }
 }
 
