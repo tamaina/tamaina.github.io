@@ -14,7 +14,7 @@ layout: default
 ## 今回使用するモデルについて
 2021年版M1 Pro搭載14インチ MacBook Proのうち、一番下のスペックを使用します。
 
-- 8コアCPU (2E6H8T)
+- 8コアCPU (2E6P8T)
 - 14コアGPU
 - RAM 16GB
 - SSD 512GB
