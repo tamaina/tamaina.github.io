@@ -1,6 +1,7 @@
 ---
 publishedAt: 2022-05-20
 thumbnail: 12.webp
+layout: default
 ---
 
 # M1 MacBook Air レビュー #1 開封編

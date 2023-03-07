@@ -1,6 +1,7 @@
 ---
 publishedAt: 2022-10-28
 thumbnail: open-14.webp
+layout: default
 ---
 
 # 14インチMacBook Pro (M1 Pro) #1 購入・開封編

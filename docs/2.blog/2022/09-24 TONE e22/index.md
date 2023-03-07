@@ -1,6 +1,7 @@
 ---
 publishedAt: 2022-09-24
 thumbnail: thumbnail.webp
+layout: default
 ---
 
 # TONE e22 ざっくりハンズオンレビュー

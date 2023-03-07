@@ -1,5 +1,6 @@
 ---
 publishedAt: 2023-01-09
+layout: default
 ---
 
 # cloudflaredでMisskeyサーバーを立ち上げるメモ

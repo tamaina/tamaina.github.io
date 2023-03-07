@@ -1,6 +1,7 @@
 ---
 publishedAt: 2023-03-08
 thumbnail: open-14.webp
+layout: default
 ---
 
 # 14インチMacBook Pro (M1 Pro) #2 ベンチマーク/使用感

@@ -1,6 +1,7 @@
 ---
 publishedAt: 2022-09-26
 thumbnail: thumbnail.webp
+layout: default
 ---
 
 # Leitz Phone 1 #0 開封・外観編

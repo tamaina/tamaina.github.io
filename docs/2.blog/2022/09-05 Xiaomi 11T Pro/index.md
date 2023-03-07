@@ -3,6 +3,7 @@ publishedAt: 2022-09-05
 updatedAt: 2022-09-27
 thumbnail: back.webp
 category: smartphone
+layout: default
 ---
 
 # Xiaomi 11T Pro [#1] ざっくりハンズオンレビュー

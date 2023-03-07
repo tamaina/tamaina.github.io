@@ -1,6 +1,7 @@
 ---
 publishedAt: 2022-09-29
 thumbnail: thumbnail.webp
+layout: default
 ---
 
 # Leitz Phone 1 [#1] ざっくりハンズオンレビュー（カメラ以外）

@@ -1,5 +1,6 @@
 ---
 publishedAt: 2022-09-25
+layout: default
 ---
 
 # Netlify Large Mediaのリポジトリをクローンする

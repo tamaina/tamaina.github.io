@@ -1,6 +1,7 @@
 ---
 publishedAt: 2022-10-16
 thumbnail: back.webp
+layout: default
 ---
 
 # OPPO Reno5 A (eSIM) 超ざっくりハンズオンレビュー

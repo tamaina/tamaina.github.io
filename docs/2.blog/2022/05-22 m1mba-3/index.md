@@ -1,6 +1,7 @@
 ---
 publishedAt: 2022-05-22
 thumbnail: 13.webp
+layout: default
 ---
 
 # M1 MacBook Air レビュー #3 macOSを快適に使うために色々設定してみた

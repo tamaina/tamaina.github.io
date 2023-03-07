@@ -1,5 +1,6 @@
 ---
 publishedAt: 2022-09-05
+layout: default
 ---
 # 新a9z.dev始動
 

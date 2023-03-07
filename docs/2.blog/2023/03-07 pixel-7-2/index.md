@@ -1,6 +1,7 @@
 ---
 publishedAt: 2023-03-07
 thumbnail: yoko-ura.webp
+layout: default
 ---
 
 # Pixel 7 超適当ハンズオンレビュー #2 使用感/ベンチマーク/独自機能

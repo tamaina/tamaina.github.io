@@ -1,6 +1,7 @@
 ---
 publishedAt: 2023-02-21
 thumbnail: thumb2.webp
+layout: default
 ---
 # Pixel 7 超適当ハンズオンレビュー #1 開封と静止画撮影
 

@@ -1,6 +1,7 @@
 ---
 publishedAt: 2022-10-14
 thumbnail: back.webp
+layout: default
 ---
 
 # Xperia 10 IV ざっくりハンズオンレビュー

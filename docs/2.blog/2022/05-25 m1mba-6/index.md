@@ -1,5 +1,6 @@
 ---
 publishedAt: 2022-05-25
+layout: default
 ---
 
 # M1 MacBook Air レビュー #6 返品します。ごめんなさい。

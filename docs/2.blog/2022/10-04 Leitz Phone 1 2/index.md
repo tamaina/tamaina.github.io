@@ -1,6 +1,7 @@
 ---
 publishedAt: 2022-10-04
 thumbnail: thumbnail.webp
+layout: default
 ---
 
 # Leitz Phone 1 [#2] カメラ編　スマホカメラはスマホカメラでした……
