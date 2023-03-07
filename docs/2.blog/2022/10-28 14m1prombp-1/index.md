@@ -5,12 +5,12 @@ thumbnail: open-14.webp
 
 # 14インチMacBook Pro (M1 Pro) #1 購入・開封編
 
-[**#2 ベンチマーク・使用編**](../../2023/03-08-14m1prombp-2)
-
 5ヶ月前にお届けした[M1 MacBook Air編](./05-20-m1mba-1)でM1 Pro MacBook Proが欲しいと言っていましたが、この度14インチMacBook Pro最廉価モデルの整備済製品を購入しました。破産寸前です。  
 **[自作PC](https://jp.mercari.com/item/m94773153380)も[Surface Pro 7](https://jp.mercari.com/item/m64059316994)も両方売ってしまったので、もう後には引けません。**
 
 [**14インチMacBook Pro [整備済製品] 8コアCPUと14コアGPUを搭載したApple M1 Proチップ** - シルバー](https://www.apple.com/jp/shop/product/FKGR3J/A/14%E3%82%A4%E3%83%B3%E3%83%81macbook-pro-%E6%95%B4%E5%82%99%E6%B8%88%E8%A3%BD%E5%93%81-8%E3%82%B3%E3%82%A2cpu%E3%81%A814%E3%82%B3%E3%82%A2gpu%E3%82%92%E6%90%AD%E8%BC%89%E3%81%97%E3%81%9Fapple-m1-pro%E3%83%81%E3%83%83%E3%83%97-%E3%82%B7%E3%83%AB%E3%83%90%E3%83%BC?fnode=eb0c46b730f71b9e74205f9b2ebde184362e98e6c0683f79ad95b450ee6e8fef251041152e1f143363aea891d32ee3b7691dcf6e5b65bb0d8578eb7e34bc429ba7f9f9364388fdcc8e7c9dd9adb2afa0)  / [スペースグレイ](https://www.apple.com/jp/shop/product/FKGP3J/A/14%E3%82%A4%E3%83%B3%E3%83%81macbook-pro-%E6%95%B4%E5%82%99%E6%B8%88%E8%A3%BD%E5%93%81-8%E3%82%B3%E3%82%A2cpu%E3%81%A814%E3%82%B3%E3%82%A2gpu%E3%82%92%E6%90%AD%E8%BC%89%E3%81%97%E3%81%9Fapple-m1-pro%E3%83%81%E3%83%83%E3%83%97-%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9%E3%82%B0%E3%83%AC%E3%82%A4?fnode=2ad00a1588962e1d91c8a0946daaf651fd08cf85905a709f601179b065f0bbf896ba15cb9ab6d5419aaf4a22f69a3f54fbe60259bea2238d475accef3c2ccd3040b478bb09a74e188ef26c1eb4f4dcaf)
+
+[**#2 ベンチマーク・使用編**](../../2023/03-08-14m1prombp-2)
 
 ## 整備済製品の価格変化
 さて、まず14インチMacBook Pro最廉価モデル整備済製品の価格の推移について見ていきます。
