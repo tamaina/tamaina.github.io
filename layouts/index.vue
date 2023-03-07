@@ -112,7 +112,7 @@ onMounted(() => {
 
 <style module lang="scss">
 .default {
-  max-width: 60rem;
+  max-width: 50rem;
 }
 
 .content {
