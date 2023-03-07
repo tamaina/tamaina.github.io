@@ -7,7 +7,7 @@ thumbnail: yoko-ura.webp
 
 Google謹製スマートフォンのフラッグシップPixel 7をざっくり紹介。独自機能、使用感やベンチマークなど。
 
-[**#1 開封と静止画撮影編**](../02-01-pixel-7-1)
+前→ [**#1 開封と静止画撮影編**](../02-21-pixel-7-1)
 
 正確な情報については公式の仕様表をご覧ください。  
 https://store.google.com/jp/product/pixel_7_specs?hl=ja
