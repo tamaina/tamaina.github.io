@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :data-bs-theme="darkOrLight">
     <div class="min-vh-100 py-5 container" :class="$style.default">
       <BreadCrumb :addDividerToEnd="true" />
       <div id="body" :class="$style.content">
@@ -44,6 +44,8 @@
 </template>
 
 <script setup lang="ts">
+const darkOrLight = ref('dark');
+
 const { page } = useContent();
 
 const baseQuery = queryContent(page.value._path).where(page.value.where || {});
@@ -79,6 +81,7 @@ async function nextPage() {
 onMounted(() => {
   console.log('mounted index');
   initAd();
+  darkOrLight.value = isDark() ? 'dark' : 'light';
 
   watch(pagingNumber, (newValue) => {
     const pushOrReplace = (newValue: number) => {
