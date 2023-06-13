@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :data-bs-theme="darkOrLight">
     <div class="min-vh-100 py-5 container" :class="$style.default">
       <BreadCrumb :addDividerToEnd="true" />
       <div id="body" :class="$style.content">
@@ -13,9 +13,9 @@
               class="adsbygoogle mb-3"
               style="display:block"
               data-ad-format="fluid"
-              :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].layoutKey"
+              :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].layoutKey"
               data-ad-client="ca-pub-1736621122676736"
-              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].slot"
+              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].slot"
               v-push-ad>
             </ins>
             <div class="card mb-3 border-primary" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
@@ -41,9 +41,9 @@
               class="adsbygoogle mb-3"
               style="display:block"
               data-ad-format="fluid"
-              :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].layoutKey"
+              :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].layoutKey"
               data-ad-client="ca-pub-1736621122676736"
-              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${isDark() ? 'dark' : 'light'}`].slot"
+              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].slot"
               v-push-ad>
             </ins>
           </ClientOnly>
@@ -75,6 +75,7 @@
 </template>
 
 <script setup lang="ts">
+const darkOrLight = ref<'dark' | 'light'>('dark');
 const perPage = 10;
 
 const { page } = useContent();
@@ -133,6 +134,7 @@ async function nextPage() {
 onMounted(() => {
   console.log('mounted blog-index');
   initAd();
+  darkOrLight.value = isDark() ? 'dark' : 'light';
 
   watch(pagingNumber, (newValue) => {
     const pushOrReplace = (newValue: number) => {
