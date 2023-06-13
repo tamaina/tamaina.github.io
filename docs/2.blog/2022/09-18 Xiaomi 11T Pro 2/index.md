@@ -1,7 +1,7 @@
 ---
 publishedAt: 2022-09-18
 updatedAt: 2022-09-22
-thumbnail: kuroneko%20xiaomi.webp
+thumbnail: "kuroneko xiaomi.webp"
 layout: default
 ---
 # Xiaomi 11T Pro [#2] いろいろ深掘り

@@ -1,6 +1,7 @@
 ---
 publishedAt: 2022-05-25
 layout: default
+thumbnail: 0.webp
 ---
 
 # M1 MacBook Air レビュー #6 返品します。ごめんなさい。
