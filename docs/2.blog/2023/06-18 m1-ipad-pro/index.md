@@ -6,7 +6,7 @@ layout: default
 
 # 11インチiPad Pro（第3世代,2021,M1） 開封と軽いレビュー
 
-14インチMacBook Proを購入した直後、M2搭載iPad Proが発表されたことも相まってiPadが欲しくなったため、11インチiPad Pro（第3世代）Wi-Fiモデル スペースグレイ(MHQR3J/A)を購入しました。
+[14インチMacBook Proを購入した](/blog/2022/10-28-14m1prombp-1)直後、M2搭載iPad Proが発表されたことも相まってiPadが欲しくなったため、11インチiPad Pro（第3世代）Wi-Fiモデル スペースグレイ(MHQR3J/A)を購入しました。
 
 11インチiPad Pro（第3世代）は、現行（第4世代）の1世代前のモデルで、Apple M1チップを搭載しています。
 
