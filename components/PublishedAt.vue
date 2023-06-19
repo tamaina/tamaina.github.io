@@ -1,0 +1,19 @@
+// パンくずリスト
+
+<template>
+  <template v-if="page.publishedAt">{{ dateFormatter.format(new Date(page.publishedAt)) }} </template>
+  <template v-if="page.publishedAt && page.updatedAt"> / </template>
+  <template v-if="page.updatedAt">更新 {{ dateFormatter.format(new Date(page.updatedAt)) }} </template>
+</template>
+
+<script lang="ts">
+const dateFormatter = new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' });
+</script>
+
+<script setup lang="ts">
+const props = defineProps<{
+  pageDefined?: Record<string, any>;
+}>()
+
+const page = computed(() => props.pageDefined ?? useContent().page.value );
+</script>

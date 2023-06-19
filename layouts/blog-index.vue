@@ -31,6 +31,9 @@
                 </div>
                 <div class="col-sm-8">
                   <div class="card-body">
+                    <div class="card-text">
+                      <small class="text-body-secondary"><PublishedAt :pageDefined="item" /></small>
+                    </div>
                     <h5 class="card-title fw-bold" :class="{ 'mb-0': !item.description }" v-text="item.title" />
                     <div class="card-text" v-text="item.description" />
                   </div>
@@ -81,7 +84,7 @@ const perPage = 10;
 const { page } = useContent();
 
 const baseQuery = queryContent(page.value._path).where(Object.assign({ publishedAt: { $gt: '' } }, page.value.where || {}));
-const { data: _pages } = await useAsyncData(`blogIndexPages:${page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail']).sort({ publishedAt: -1 }).find());
+const { data: _pages } = await useAsyncData(`blogIndexPages:${page.value._id}`, () => baseQuery.only(['_id', '_path', '_file', 'title', 'description', 'thumbnail', 'publishedAt', 'updatedAt']).sort({ publishedAt: -1 }).find());
 
 // ignore myself
 const pages = computed(() => _pages.value?.filter((p) => p._id !== page.value._id) || []);
