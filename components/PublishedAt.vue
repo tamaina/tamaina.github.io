@@ -1,4 +1,4 @@
-// パンくずリスト
+// publishedAt/updatedAt表示
 
 <template>
   <template v-if="page.publishedAt">{{ dateFormatter.format(new Date(page.publishedAt)) }} </template>
