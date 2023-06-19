@@ -3,7 +3,7 @@
 <template>
   <template v-if="page.publishedAt">{{ dateFormatter.format(new Date(page.publishedAt)) }} </template>
   <template v-if="page.publishedAt && page.updatedAt"> / </template>
-  <template v-if="page.updatedAt">更新 {{ dateFormatter.format(new Date(page.updatedAt)) }} </template>
+  <template v-if="page.updatedAt">{{ dateFormatter.format(new Date(page.updatedAt)) }}更新</template>
 </template>
 
 <script lang="ts">

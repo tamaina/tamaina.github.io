@@ -1,7 +1,7 @@
 <template>
   <div :data-bs-theme="darkOrLight">
     <div class="min-vh-100 py-5 container" :class="$style.default">
-      <div class="d-flex flex-wrap justify-content-between">
+      <div class="d-flex flex-wrap-reverse justify-content-between">
         <BreadCrumb :addDividerToEnd="true" />
         <p class="text-end small ms-auto ps-4 mb-0">
           <PublishedAt />
