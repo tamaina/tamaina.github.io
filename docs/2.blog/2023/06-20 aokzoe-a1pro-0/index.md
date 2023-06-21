@@ -4,8 +4,8 @@ publishedAt: 2023-06-21
 layout: default
 ---
 
-# AOKZOE A1Pro #0 座学と購入編
-自称世界初のRyzen 7 7840U搭載ゲーミングハンドヘルド機であるAOKZOE A1ProをIndiegogoで出資しました。この記事では、実機を手に取る前に、このジャンルやAOKZOEについての解説、Ryzen 7040シリーズの特徴紹介、他の機種との比較、そしてFedExの追跡をします。
+# AOKZOE A1Proレビュー #0 座学と購入編
+自称世界初のRyzen 7 7840U搭載ゲーミングハンドヘルド機「AOKZOE A1Pro」をIndiegogoで出資しました。この記事では、実機を手に取る前に、ゲーミングハンドヘルドAOKZOEについての解説、Ryzen 7040シリーズの特徴紹介、他の機種との比較、そしてFedExの追跡をします。
 
 ## 座学
 
