@@ -1,7 +1,7 @@
 ---
 publishedAt: 2023-06-21
 updatedAt: 2023-06-22
-#thumbnail: 
+thumbnail: ship1.webp
 layout: default
 ---
 
