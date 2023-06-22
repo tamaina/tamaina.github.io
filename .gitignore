@@ -9,4 +9,4 @@ dist
 # Local Netlify folder
 .netlify
 #
-content
+/content
