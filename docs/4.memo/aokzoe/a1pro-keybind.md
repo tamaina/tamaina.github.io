@@ -12,6 +12,6 @@
 |<kbd>-</kbd> / <kbd>+</kbd>|<kbd>VolumeDown</kbd> / <kbd>VolumeUp</kbd>|Volume Up/Down|
 |`Home`+<kbd>+</kbd>| - |Change LED|
 |`Home`+<kbd>+</kbd>(long)| - |Turn Off LED|
-|`Home`+<kbd>-</kbd>|Mash <kbd>F7</kbd>|Enter to boot menu (while booting)|
+|`Home`+<kbd>-</kbd>|Mash <kbd>F7</kbd>||
 |Charger Disconnected|<kbd>F24</kbd>| - |
 |`Start`+`Back`(5s)| - |Joystick calibration https://www.youtube.com/watch?v=JeTSe2ZFv3w |
