@@ -4,7 +4,7 @@
 |:--|:--|:--|
 |`Home`|<kbd>Win</kbd><kbd>D</kbd>|Show Desktop|
 |`Home`(1.5s)|<kbd>Win</kbd><kbd>G</kbd>|Show Xbox Gamebar|
-|`Turbo`|<kbd>Ctrl</kbd><kbd>Win</kbd><kbd>Alt</kbd>|OneXConsole Game |
+|`Turbo`|<kbd>Ctrl</kbd><kbd>Win</kbd><kbd>Alt</kbd>|Show OneXConsole Game Center|
 |`Home`+`Turbo`|<kbd>Win</kbd><kbd>PrtScr</kbd>|Take a Screenshot|
 |`Kbd`|<kbd>Ctrl</kbd><kbd>Win</kbd><kbd>O</kbd> then <kbd>Ctrl</kbd><kbd>Win</kbd><kbd>K</kbd>|Show Screen Keyboard|
 |`Kbd`(1.5s)| - |Toggle Keyboard & Mouse Mode|
