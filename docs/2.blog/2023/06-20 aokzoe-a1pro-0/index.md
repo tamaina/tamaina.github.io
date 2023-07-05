@@ -1,6 +1,6 @@
 ---
 publishedAt: 2023-06-21
-updatedAt: 2023-06-26
+updatedAt: 2023-07-05
 thumbnail: ship1.webp
 layout: default
 ---
@@ -142,9 +142,9 @@ Ryzen 7 7840Uがすごい……と言い続けて……いるわけではあり�
 Apple Siliconにデスクトップ版Zen4のRyzen 7 7700~~X~~を加えた比較表を作ってみました。  
 ただしAppleチップは公式の情報が少ないため、情報が不正確である可能性があります。
 
-![](cpu0626.webp "APU比較表その1 CPUとメモリ ※初出記事から修正あり")
+![](cputeisei2.webp "APU比較表その1 CPUとメモリ ※初出記事から修正あり")
 
-<small>【修正】1. Ryzen 7 7840UのCinebench R23マルチスコアを下方修正 / 2. 7700XのTDPが65Wであることを発見、比較対象を7700に修正 / 3. ROG Ally (Z1 Extreme)は電源接続時最大TDP45Wで動作しているらしいため追記</small>
+<small>【修正】1. Ryzen 7 7840UのCinebench R23マルチスコアを下方修正 / 2. 7700XのTDPが65Wであることを発見、比較対象を7700に修正 / 3. ROG Ally (Z1 Extreme)は電源接続時最大TDP45Wで動作しているらしいため追記 / 4. 7840Uの最大TDPを訂正 28→30 (7/5)</small>
 
 色々ごちゃごちゃ書いていますが、**Geekbench 6やCinebench R23のスコア**で強さを比較できます。表に書いてベンチマーク結果はインターネットから拾ったおおよその値です。  
 だいたいの雰囲気はつかめますが、実ゲーム性能とは必ずしも一致しないことには留意してください。  

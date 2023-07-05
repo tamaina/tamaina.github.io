@@ -1,12 +1,12 @@
 ---
 publishedAt: 2023-06-26
-updatedAt: 2023-06-29
+updatedAt: 2023-07-05
 thumbnail: 1425.webp
 layout: default
 ---
 
-# AOKZOE A1Proレビュー #2.1 ベンチマークとゲーム動かしてみた編
-CPU-Zなどのハードウェアの情報や、今までのベンチマークやゲーム動作の感想を掲載します。
+# AOKZOE A1Proレビュー #2.1 ベンチマークとゲーム動かしてみた編（情報は古い）
+6/26時点での、CPU-Zなどのハードウェアの情報や、今までのベンチマークやゲーム動作の感想を掲載します。
 
 [**#0 座学と購入編**](../06-20%20aokzoe-a1pro-0)  
 [**#1 開封・外観・操作編**](../06-23%20aokzoe-a1pro-1)
@@ -87,7 +87,9 @@ Geekbench 6 CPUベンチで優秀だったのは28W・電源接続・バラン�
 ## 3. CPU-Z Bench, Cinebench R23
 CPU-ZベンチとCinebench R23でもCPU性能を計測しました。
 
-![](CPU.webp "CPU-Z Bench, Cinebench R23")
+![](cineteisei.webp "CPU-Z Bench, Cinebench R23")
+
+※7/5訂正: バランス・バッテリー時のシングルコアブーストが間違っていたのを修正（電源接続時の5.1GHzではなく、4GHzまでしか出ない）。
 
 Multi Freq.はマルチコア性能計測時の全コアの平均的な周波数、Single Freq.はシングルコア性能計測時の最大周波数を示しています。
 
