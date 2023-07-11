@@ -20,7 +20,7 @@
     :alt="alt"
     :width="width"
     :height="height"
-    quality="90"
+    quality="85"
     loading="lazy"
     sizes="xs:256px md:512px lg:720px"
     @click="viewer?.show()"
@@ -78,6 +78,7 @@ const showAd = computed(() => Math.floor(Math.random() * 7) === 0); // 1/7 chanc
 .prose-img {
   display: block;
   margin: .5rem auto auto;
+  min-height: 5em;
   max-height: min(30rem, 70vh);
   cursor: pointer;
 

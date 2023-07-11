@@ -25,7 +25,8 @@
                     v-if="item.thumbnail"
                     :src="getImgRelativePath(item.thumbnail, item._file)"
                     quality="80"
-                    sizes="md:256vw lg:512px"
+                    sizes="md:256px lg:512px"
+                    loading="eager"
                     :img-attrs="{ class: `img-fluid w-100 rounded ${$style['blog-index-item-img']}` }"
                   ></nuxt-picture>
                 </div>
