@@ -1,5 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  ssr: true,
   app: {
     head: {
       link: [
@@ -22,12 +23,11 @@ export default defineNuxtConfig({
     public: 'docs',
   },
   modules: [
-    '@nuxt/image-edge',
+    '@nuxt/image',
     '@nuxt/content',
   ],
   router: {
-    // router config https://nuxtjs.org/docs/configuration-glossary/configuration-router/
-    trailingSlash: false,
+
   },
   content: {
     // content config https://content.nuxtjs.org/api/configuration/
@@ -36,10 +36,6 @@ export default defineNuxtConfig({
     },
     locales: ['ja'],
     defaultLocale: 'ja',
-    ignores: [
-      '\\.', '-',
-      '.(jpg|jpeg|png|webp|heif|gif|dng|JPG|JPEG|PNG|WEBP|HEIF|GIF|DNG)$',
-    ],
   },
   nitro: {
     // nitro config
@@ -50,7 +46,7 @@ export default defineNuxtConfig({
     }
   },
   image: {
-    // image config https://v1.image.nuxtjs.org/configuration
+    // image config https://image.nuxtjs.org/configuration
     //provider: 'netlify',
     screens: { xs: 320, sm: 640, md: 768, lg: 1024, xl: 1280, xxl: 1536, '2xl': 1536, max: 8192 },
   },

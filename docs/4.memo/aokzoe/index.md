@@ -1,6 +1,6 @@
 ---
 title: AOKZOE
-layout: index
+layout: default-index
 navigation: false
 ---
 

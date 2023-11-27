@@ -1,6 +1,6 @@
 ---
 description: The Japanese Web Fontsは、フリーフォントを集めたWebフォントセットです。
-layout: index
+layout: default-index
 ---
 # The Japanese Web Fonts
 

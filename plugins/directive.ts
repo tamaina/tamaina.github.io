@@ -1,7 +1,13 @@
 export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.directive('push-ad', {
         mounted() {
-            if (typeof window !== 'undefined' && window.adsbygoogle) window.adsbygoogle.push({});
+            if (typeof window !== 'undefined' && window.adsbygoogle) {
+                try {
+                    window.adsbygoogle.push({});
+                } catch (e) {
+                    console.error('window.adsbygoogle.push({}) failed (mounted)', e);
+                }
+            }
         },
         updated(el: HTMLDivElement, binding, vnode, prevNode) {
             if (typeof window === 'undefined' || !window.adsbygoogle) return;
@@ -14,7 +20,11 @@ export default defineNuxtPlugin((nuxtApp) => {
             if (el.attributes.getNamedItem('data-adsbygoogle-status')) el.attributes.removeNamedItem('data-adsbygoogle-status');
             if (el.attributes.getNamedItem('data-ad-status')) el.attributes.removeNamedItem('data-ad-status');
 
-            window.adsbygoogle.push({});
+            try {
+                window.adsbygoogle.push({});
+            } catch (e) {
+                console.error('window.adsbygoogle.push({}) failed (updated)', e);
+            }
         },
     })
 });

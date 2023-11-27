@@ -1,4 +1,4 @@
-import glob from 'glob';
+import { glob } from 'glob';
 import fs from 'node:fs/promises';
 import { documentGlob, contentDir, homeDir } from './constants.mjs';
 import { symlinkDocsToContent } from './symlink-docs-content.mjs';

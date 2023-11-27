@@ -1,6 +1,6 @@
 ---
 title: 製品
-layout: index
+layout: default-index
 navigation: false
 ---
 
