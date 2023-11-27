@@ -58,7 +58,7 @@ const props = defineProps({
 });
 
 const { page } = useContent();
-const imgPath = computed(() => page.value && getImgRelativePath(props.src, page.value._file));
+const imgPath = computed(() => page.value && getImgRelativePath(decodeURIComponent(props.src), page.value._file));
 
 const viewer = computed(() => {
   const img = new Image();
