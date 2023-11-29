@@ -19,7 +19,7 @@ const _imgPath = computed(() => page.value && page.value.thumbnail && getImgRela
 const img = useImage();
 const imgPath = computed(() =>
     _imgPath.value &&
-    new URL(img(_imgPath.value, { fit: 'crop', width: 1200, height: 630 }), HOST).pathname);
+    new URL(img(_imgPath.value, { width: 1200, height: 630 }), HOST).pathname);
 
 useHead({
     titleTemplate: (titleChunk) => {
