@@ -28,8 +28,11 @@ useHead({
     meta: [
         ...(imgPath.value ? [
             { property: 'og:img', content: imgPath.value },
+            { property: 'twitte:card', content: 'summary_large_image'},
             { property: 'twitter:img', content: imgPath.value },
-        ] : [])
+        ] : [
+            { property: 'twitte:card', content: 'summary'},
+        ])
     ],
 });
 </script>
