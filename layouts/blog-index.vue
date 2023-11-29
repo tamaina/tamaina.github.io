@@ -79,7 +79,7 @@
 </template>
 
 <script setup lang="ts">
-const darkOrLight = ref<'dark' | 'light'>('dark');
+const darkOrLight = inject<Ref<'dark' | 'light'>>('darkOrLight', ref('dark'));
 const perPage = 10;
 
 const { page } = useContent();
@@ -137,8 +137,6 @@ async function nextPage() {
 
 onMounted(() => {
   console.log('mounted blog-index');
-  initAd();
-  darkOrLight.value = isDark() ? 'dark' : 'light';
 
   watch(pagingNumber, (newValue) => {
     const pushOrReplace = (newValue: number) => {

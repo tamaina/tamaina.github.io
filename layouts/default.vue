@@ -1,5 +1,5 @@
 <template>
-  <div :data-bs-theme="darkOrLight">
+  <div>
     <div class="min-vh-100 py-5 container" :class="$style.default">
       <div class="d-flex flex-wrap-reverse justify-content-between">
         <BreadCrumb :addDividerToEnd="true" />
@@ -27,12 +27,8 @@
 </template>
 
 <script setup>
-const darkOrLight = ref('dark');
-
 onMounted(() => {
   console.log('mounted default');
-  initAd();
-  darkOrLight.value = isDark() ? 'dark' : 'light';
 });
 </script>
 
