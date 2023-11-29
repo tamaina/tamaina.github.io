@@ -21,12 +21,9 @@ const imgPath = computed(() =>
     _imgPath.value &&
     ((new URL(img(_imgPath.value, { width: 1200, height: 630 }), HOST)) ?? '').toString());
 
-useContentHead(page.value);
 useHead({
     htmlAttrs: { lang: 'ja' },
-    titleTemplate: (titleChunk) => {
-        return titleChunk ? `${titleChunk} - aqz/tamaina's homepage` : `a9z.dev - aqz/tamaina's homepage`;
-    },
+    title: page.value.title ? `${page.value.title} - aqz/tamaina's homepage` : `a9z.dev - aqz/tamaina's homepage`,
     meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width,initial-scale=1' },
@@ -36,7 +33,10 @@ useHead({
             { property: 'twitter:img', content: imgPath.value },
         ] : [
             { property: 'twitte:card', content: 'summary' },
-        ])
+        ]),
+        { property: 'og:title', content: page.value.title },
+        { property: 'description', content: page.value.description },
+        { property: 'og:description', content: page.value.description },
     ],
     link: [
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' },

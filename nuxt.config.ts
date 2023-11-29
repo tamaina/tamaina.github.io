@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     },
     locales: ['ja'],
     defaultLocale: 'ja',
-    //contentHead: true,
+    contentHead: false,
   },
   nitro: {
     // nitro config
