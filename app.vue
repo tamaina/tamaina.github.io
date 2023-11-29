@@ -19,7 +19,7 @@ const _imgPath = computed(() => page.value && page.value.thumbnail && getImgRela
 const img = useImage();
 const imgPath = computed(() =>
     _imgPath.value &&
-    new URL(img(_imgPath.value, { width: 1200, height: 630 }), HOST).pathname);
+    ((new URL(img(_imgPath.value, { width: 1200, height: 630 }), HOST)) ?? '').toString());
 
 useHead({
     titleTemplate: (titleChunk) => {
@@ -27,8 +27,8 @@ useHead({
     },
     meta: [
         ...(imgPath.value ? [
-            { property: 'og:img', content: `${HOST}${imgPath.value}` },
-            { property: 'twitter:img', content: `${HOST}${imgPath.value}` },
+            { property: 'og:img', content: imgPath.value },
+            { property: 'twitter:img', content: imgPath.value },
         ] : [])
     ],
 });
