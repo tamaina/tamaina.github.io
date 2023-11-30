@@ -1,17 +1,19 @@
 <template>
-    <div :data-bs-theme="darkOrLight">
-        <NuxtPage />
-    </div>
+    <NuxtPage />
 </template>
 
 <script setup lang="ts">
-const darkOrLight = ref('dark');
+const darkOrLight = ref(isDark() ? 'dark' : 'light');
+if (process.browser) {
+    watch(darkOrLight, () => {
+        document.body.dataset.bsTheme = darkOrLight.value;
+    });
+}
 provide('darkOrLight', darkOrLight);
 
 onMounted(() => {
     console.log('mounted app');
     initAd();
-    darkOrLight.value = isDark() ? 'dark' : 'light';
 })
 
 const { page } = useContent();
@@ -50,7 +52,7 @@ useHead({
         { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js' },
     ],
     bodyAttrs: {
-        //'data-bs-theme': darkOrLight.value,
+        'data-bs-theme': darkOrLight.value,
     }
 });
 </script>

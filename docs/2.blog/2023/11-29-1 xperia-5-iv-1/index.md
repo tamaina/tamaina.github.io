@@ -55,4 +55,5 @@ Pixel 7及びiPhone 13 miniとサイズを比較してみます。
 https://p1.a9z.dev/notes/9lryxy4x66
 
 ##　使い勝手については次の記事へ
+
 [**→ 次の記事(諸々の使い勝手編)**](../11-29-2%20xperia-5-iv-2)

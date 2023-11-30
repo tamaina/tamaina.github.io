@@ -1,36 +1,52 @@
-
 *,
 html,
 body {
-  --bs-font-sans-serif: YakuHanJP, GenEiUniverSans-w, SourceHanSans-w, sans-serif,  -apple-system;
+  --bs-font-sans-serif: YakuHanJP, GenEiUniverSans-w, SourceHanSans-w, sans-serif, -apple-system;
   font-family: var(--bs-font-sans-serif);
   word-wrap: break-word;
   overflow-wrap: break-word;
-}
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  font-feature-settings: "palt";
-  line-height: 1.6;
 }
 
 :root {
   --bs-body-line-height: 1.8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bs-body-color: #f8f9fa;
-    --bs-body-color-rgb: 248,249,250;
-    --bs-body-bg: #16191c;
-    --bs-body-bg-rgb: 22,25,28;
-    --bs-link-color: #4a7aff;
-  }
+body[data-bs-theme="dark"] {
+  --bs-body-color: #e8e9ea;
+  --bs-body-color-rgb: 232,233,234;
+  --bs-body-bg: #202020;
+  --bs-body-bg-rgb: 32,32,32;
+  --bs-link-color: #4a7aff;
 
   .card {
-    --bs-card-color: #f8f9fa;
+    --bs-card-color: var(--bs-light);
     --bs-card-bg: #16191c;
   }
+}
+
+body[data-bs-theme="light"] {
+  --bs-body-color: #000;
+  --bs-body-color-rgb: 0,0,0;
+  --bs-body-bg: #e8e8e8;
+  --bs-body-bg-rgb: 232,232,232;
+  --bs-link-color: #0851fb;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-feature-settings: "palt";
+  line-height: 1.6;
 }
 
 a.google-anno {
