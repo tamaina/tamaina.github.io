@@ -31,10 +31,10 @@ useHead({
         { name: 'viewport', content: 'width=device-width,initial-scale=1' },
         ...(imgPath.value ? [
             { property: 'og:img', content: imgPath.value },
-            { property: 'twitte:card', content: 'summary_large_image' },
-            { property: 'twitter:img', content: imgPath.value },
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:img', content: imgPath.value },
         ] : [
-            { property: 'twitte:card', content: 'summary' },
+            { name: 'twitter:card', content: 'summary' },
         ]),
         { property: 'og:title', content: page.value.title },
         { property: 'description', content: page.value.description },
