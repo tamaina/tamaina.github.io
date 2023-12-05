@@ -30,9 +30,9 @@ useHead({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width,initial-scale=1' },
         ...(imgPath.value ? [
-            { property: 'og:img', content: imgPath.value },
+            { property: 'og:image', content: imgPath.value },
             { name: 'twitter:card', content: 'summary_large_image' },
-            { name: 'twitter:img', content: imgPath.value },
+            { name: 'twitter:image', content: imgPath.value },
         ] : [
             { name: 'twitter:card', content: 'summary' },
         ]),
