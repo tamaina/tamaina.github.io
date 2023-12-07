@@ -183,8 +183,13 @@ APEX Legendsは、ROG Allyとかの配信で散々擦られていますが、中
 
 ただ、レイトレーシングを有効にすると解像度を落としても30fps出ません。
 
-### Minecraft Java
-wip
+### Minecraft Java (w/ shaders)
+シェーダー（影Mod）「Complementary Shaders v4.7.2」でM1Pro搭載14インチMacBook Proとフレームレートを対決させてみました。
+
+<embed-youtube video-id="g2VytOgIum8"></embed-youtube>
+
+AOKZOE A1Proの28Wでは53fps程度、M1Proでは28fps程度となりました。シェーダーにもよると思いますので、一概にこのような差が生まれるとは言い切れません。
+
 
 ## 9. で
 FSR3と正式ドライバいつ？
