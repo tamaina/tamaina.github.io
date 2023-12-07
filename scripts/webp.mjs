@@ -1,4 +1,4 @@
-import glob from 'glob';
+import { glob } from 'glob';
 import async from 'async';
 import sharp from 'sharp';
 import fs from 'node:fs/promises';
@@ -22,6 +22,7 @@ const q = async.queue(async (filePath, cb) => {
     try {
         await fs.stat(webpPath);
         console.log(`skip converting ${filePath}`);
+        if (!filePath.endsWith('.webp')) await fs.rm(filePath);
         return;
     } catch (e) {}
 
@@ -38,7 +39,7 @@ const q = async.queue(async (filePath, cb) => {
             lossless,
         })
         .toFile(webpPath);
-    // await fs.rm(filePath);
+    await fs.rm(filePath);
 
     const statAfter = await fs.stat(webpPath);
 

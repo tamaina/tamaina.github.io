@@ -134,7 +134,7 @@ Rakuten Handでは暗くならないので、回り込みの量や角度が大�
 
 ![](leitz-g.webp "まずはLeitz Phone 1。6倍")
 
-![](iphone-g.jpeg "次にiPhone 13 mini。5倍")
+![](iphone-g.webp "次にiPhone 13 mini。5倍")
 
 一枚きりの比較ですが、望遠はiPhone 13 miniに分がありそうです。
 
