@@ -1,6 +1,6 @@
 ---
 publishedAt: 2023-12-01T11:59:00+0900
-thumbnail: home.wepb
+thumbnail: home.webp
 layout: default
 ---
 # Blackview Tab 18 超適当ハンズオンレビュー #2 諸々の使い勝手編
@@ -97,7 +97,7 @@ Wi-FiはWi-Fi 5止まりで、少々おしいポイントです。SoC(Helio G99)
 Blackview Tab 18は、SoCがHelio G99、RAMは12GBを搭載しており、スワップを12GB指定可能です。  
 スワップ4GB設定時のAnTuTu v10ベンチマークスコアは41万点でした。
 
-![](antutu.wepb "Blackview Tab 18 w/ swap 4GB AnTuTu v10.1.5")
+![](antutu.webp "Blackview Tab 18 w/ swap 4GB AnTuTu v10.1.5")
 
 Dimensity 700(=Dimensity 6020)と同等程度で、Snapdragon 695 5Gのやや下ぐらいといったところでしょうか。
 
@@ -124,7 +124,7 @@ HDR合成が下手くそです。Lightroom CameraではDNGで保存できませ�
 ## ストレージ
 256GBのUFS2.1ストレージを搭載しています。
 
-![](storage.wepb "AnTuTu Benchmarkのストレージテスト結果")
+![](storage.webp "AnTuTu Benchmarkのストレージテスト結果")
 
 microSDカードは1TBまでの容量に対応しており、内蔵ストレージの拡張が可能です。
 
@@ -138,9 +138,9 @@ DokeOSには次のような機能があります。
 
 また、タブレット用にカスタマイズされたDokeOS_PではタスクバーとPCモードが特徴です。
 
-![](nav.wepb "タスクバー")
+![](nav.webp "タスクバー")
 
-![](pcmode.wepb "PCモード")
+![](pcmode.webp "PCモード")
 
 タスクバーはMicrosoft Launcherを使っていると変な挙動になります。実質的には標準ランチャーしか使えないかと思います。自分好みのランチャーを使いたい方はご注意ください。
 
@@ -163,7 +163,7 @@ Androidでは**完全版のGboardが使えます**。iPadOS/iOSのIMEは私に�
 
 ただ、本体に近接センサーはついているので、カバーを閉じるとロックするようにはなっています。
 
-![](cover.wepb "このように立てるとやや安定はするがそれでも容易に倒れてしまう")
+![](cover.webp "このように立てるとやや安定はするがそれでも容易に倒れてしまう")
 
 ## いかがでしたか？
 個人的には「タブレットならこれを買っておけば正解」と言い切れる端末だと思います。

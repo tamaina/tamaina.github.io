@@ -1,6 +1,6 @@
 ---
 publishedAt: 2023-11-29T23:59:00+0900
-thumbnail: p1.wepb
+thumbnail: p1.webp
 layout: default
 ---
 # Xperia 5 IV 超適当ハンズオンレビュー #2 諸々の使い勝手編
@@ -93,7 +93,7 @@ Wi-FiはしっかりWi-Fi 6対応です。10 IVは5止まりでしたね。
 Xperia 5 IVは、SoCがSnapdragon 8 Gen 1、RAMは8GBを搭載しています。  
 AnTuTu v10ベンチマークスコアは103万点でした。
 
-![](xperia5ivantutuv10.wepb "Xperia 5 IV AnTuTu v10.1.2")
+![](xperia5ivantutuv10.webp "Xperia 5 IV AnTuTu v10.1.2")
 
 AnTuTu v10スコアは今までのAnTuTu v9スコアとは比較できないためご注意ください。
 
