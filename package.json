@@ -12,6 +12,7 @@
     "@nuxt/content": "npm:@nuxt/content-edge@2.9.0-28344318.76dc891",
     "@nuxt/image": "^1.0.0",
     "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.2",
     "chokidar": "^3.5.3",
     "glob": "^10.3.10",
     "ipx": "^2.0.2",
