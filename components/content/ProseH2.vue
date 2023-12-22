@@ -16,5 +16,5 @@
 <script setup lang="ts">
 defineProps<{ id: string }>();
 
-const showAd = computed(() => Math.floor(Math.random() * 2) === 0); // 1/2 chance of showing ad
+const showAd = computed(() => Math.floor(Math.random() * 4) === 0); // 1/2 chance of showing ad
 </script>
