@@ -60,14 +60,16 @@
         </div>
       </div>
 
-      <ins
-        class="adsbygoogle my-3"
-        style="display:block"
-        data-ad-format="autorelaxed"
-        data-ad-client="ca-pub-1736621122676736"
-        :data-ad-slot="isDark() ? 6544689751 : 7169954832"
-        v-push-ad>
-      </ins>
+      <ClientOnly>
+        <ins
+          class="adsbygoogle my-3"
+          style="display:block"
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-1736621122676736"
+          :data-ad-slot="isDark() ? 6544689751 : 7169954832"
+          v-push-ad>
+        </ins>
+      </ClientOnly>
     </div>
 
     <BsNavbar />

@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
   ],
   router: {
-
+    
   },
   content: {
     // content config https://content.nuxtjs.org/api/configuration/
