@@ -110,7 +110,7 @@ const ads = {
     slot: '7007724188',
   },
   'desktop-light': {
-    layoutKey: '-fk-19+6t-41+ij',
+    layoutKey: '-ff-1f+7f-3n+fo',
     slot: '8248901089',
   },
   'desktop-dark': {
