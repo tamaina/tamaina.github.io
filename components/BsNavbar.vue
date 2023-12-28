@@ -13,19 +13,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a href="/" class="nav-link">Home</a>
+            <NuxtLink to="/" class="nav-link">Home</NuxtLink>
           </li>
           <li class="nav-item">
-            <a href="/blog" class="nav-link">ブログ</a>
+            <NuxtLink to="/blog" class="nav-link">ブログ</NuxtLink>
           </li>
           <li class="nav-item">
-            <a href="/products" class="nav-link">製品</a>
+            <NuxtLink to="/products" class="nav-link">製品</NuxtLink>
           </li>
           <li class="nav-item">
-            <a href="/memo" class="nav-link">Memo</a>
+            <NuxtLink to="/memo" class="nav-link">Memo</NuxtLink>
           </li>
           <li class="nav-item">
-            <a href="/privacypolicy" class="nav-link">プライバシーポリシー</a>
+            <NuxtLink to="/privacypolicy" class="nav-link">プライバシーポリシー</NuxtLink>
           </li>
         </ul>
       </div>

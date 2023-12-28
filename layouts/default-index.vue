@@ -9,12 +9,12 @@
       <div id="index" class="mt-5" v-if="pages && pages.length > 0">
         <div :class="$style['index']" :min-item-size="Math.min(pages.length, 20)" key-field="_id">
           <div class="mb-3" :class="$style['index-item-outer']" v-for="item in pageItems" :key="item._id">
-            <a :href="item._path" class="text-decoration-none">
+            <NuxtLink :to="item._path" class="text-decoration-none">
               <div class="">
                 <div :class="{ 'mb-0': !item.description, [$style['index-item-title']]: true }" v-text="item.title" />
                 <div :class="$style['index-item-description']" v-text="item.description" />
               </div>
-            </a>
+            </NuxtLink>
           </div>
         </div>
 
