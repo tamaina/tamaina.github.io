@@ -2,11 +2,9 @@
 
 <template>
 <div>
-  <ClientOnly>
-    <div v-if="showAd" class="my-4">
-      <AdInArticle />
-    </div>
-  </ClientOnly>
+  <div v-if="showAd" class="my-4">
+    <AdInArticle />
+  </div>
   <NuxtPicture
     :src="imgPath"
     :alt="alt"
@@ -63,7 +61,8 @@ const viewer = computed(() => {
   });
 });
 
-const showAd = computed(() => Math.floor(Math.random() * 7) === 0); // 1/7 chance of showing ad
+const salt = (props.src ?? 'aaa').split('').reduce((sum, c) => sum + c.charCodeAt(0), 0);
+const showAd = salt % 7 === 0;
 </script>
 
 <style module lang="scss">

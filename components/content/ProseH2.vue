@@ -1,10 +1,8 @@
 <template>
 <div :id="id">
-  <ClientOnly>
-    <div v-if="showAd" class="my-4">
-      <AdInArticle />
-    </div>
-  </ClientOnly>
+  <div v-if="showAd" class="my-4">
+    <AdInArticle />
+  </div>
   <h2>
     <a :href="`#${id}`" class="text-reset text-decoration-none">
       <slot />
@@ -14,7 +12,8 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ id: string }>();
+const props = defineProps<{ id: string }>();
 
-const showAd = computed(() => Math.floor(Math.random() * 4) === 0); // 1/2 chance of showing ad
+const salt = (props.id ?? 'aaa').split('').reduce((sum, c) => sum + c.charCodeAt(0), 0);
+const showAd = salt % 4 === 0;
 </script>

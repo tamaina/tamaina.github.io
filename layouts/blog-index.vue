@@ -8,49 +8,47 @@
 
       <div id="blog-index" v-if="pages && pages.length > 0">
         <div :class="$style['blog-index']">
-          <ClientOnly>
-            <ins
-              class="adsbygoogle mb-3"
-              style="display:block"
-              data-ad-format="fluid"
-              :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].layoutKey"
-              data-ad-client="ca-pub-1736621122676736"
-              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].slot"
-              v-push-ad>
-            </ins>
-            <div class="card mb-3 border-primary" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
-              <a :href="item._path" class="row g-0 text-reset text-decoration-none" :class="$style['blog-index-item-inner']">
-                <div class="col-sm-4" :class="$style['blog-index-item-img-outer']">
-                  <nuxt-picture
-                    v-if="item.thumbnail"
-                    :src="getImgRelativePath(item.thumbnail, item._file)"
-                    quality="80"
-                    sizes="400 smp:560 sm:280 lg:312"
-                    loading="eager"
-                    :img-attrs="{ class: `w-100 rounded ${$style['blog-index-item-img']}` }"
-                  ></nuxt-picture>
-                </div>
-                <div class="col-sm-8">
-                  <div class="card-body">
-                    <div class="card-text">
-                      <small class="text-body-secondary"><PublishedAt :pageDefined="item" /></small>
-                    </div>
-                    <h5 class="card-title fw-bold" :class="{ 'mb-0': !item.description, [$style['blog-index-item-title']]: true }" v-text="item.title" />
-                    <div class="card-text" :class="$style['blog-index-item-description']" v-text="item.description" />
+          <ins
+            class="adsbygoogle mb-3"
+            style="display:block"
+            data-ad-format="fluid"
+            :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].layoutKey"
+            data-ad-client="ca-pub-1736621122676736"
+            :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].slot"
+            v-push-ad>
+          </ins>
+          <div class="card mb-3 border-primary" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
+            <a :href="item._path" class="row g-0 text-reset text-decoration-none" :class="$style['blog-index-item-inner']">
+              <div class="col-sm-4" :class="$style['blog-index-item-img-outer']">
+                <nuxt-picture
+                  v-if="item.thumbnail"
+                  :src="getImgRelativePath(item.thumbnail, item._file)"
+                  quality="80"
+                  sizes="400 smp:560 sm:280 lg:312"
+                  loading="eager"
+                  :img-attrs="{ class: `w-100 rounded ${$style['blog-index-item-img']}` }"
+                ></nuxt-picture>
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <div class="card-text">
+                    <small class="text-body-secondary"><PublishedAt :pageDefined="item" /></small>
                   </div>
+                  <h5 class="card-title fw-bold" :class="{ 'mb-0': !item.description, [$style['blog-index-item-title']]: true }" v-text="item.title" />
+                  <div class="card-text" :class="$style['blog-index-item-description']" v-text="item.description" />
                 </div>
-              </a>
-            </div>
-            <ins
-              class="adsbygoogle mb-3"
-              style="display:block"
-              data-ad-format="fluid"
-              :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].layoutKey"
-              data-ad-client="ca-pub-1736621122676736"
-              :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].slot"
-              v-push-ad>
-            </ins>
-          </ClientOnly>
+              </div>
+            </a>
+          </div>
+          <ins
+            class="adsbygoogle mb-3"
+            style="display:block"
+            data-ad-format="fluid"
+            :data-ad-layout-key="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].layoutKey"
+            data-ad-client="ca-pub-1736621122676736"
+            :data-ad-slot="ads[`${isMobile ? 'mobile' : 'desktop'}-${darkOrLight}`].slot"
+            v-push-ad>
+          </ins>
         </div>
 
         <div :class="$style['blog-index-pagination']" v-if="totalPages > 1">
@@ -62,16 +60,14 @@
         </div>
       </div>
 
-      <ClientOnly>
-        <ins
-          class="adsbygoogle my-3"
-          style="display:block"
-          data-ad-format="autorelaxed"
-          data-ad-client="ca-pub-1736621122676736"
-          :data-ad-slot="isDark() ? 6544689751 : 7169954832"
-          v-push-ad>
-        </ins>
-      </ClientOnly>
+      <ins
+        class="adsbygoogle my-3"
+        style="display:block"
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-1736621122676736"
+        :data-ad-slot="isDark() ? 6544689751 : 7169954832"
+        v-push-ad>
+      </ins>
     </div>
 
     <BsNavbar />
@@ -126,28 +122,26 @@ function onResize() {
 async function prevPage() {
   pagingNumber.value += -1;
   await nextTick();
-  window.scrollTo(0, 0);
+  //window.scrollTo(0, 0);
 }
 
 async function nextPage() {
   pagingNumber.value += 1;
   await nextTick();
-  window.scrollTo(0, 0);
+  //window.scrollTo(0, 0);
 }
 
 onMounted(() => {
   console.log('mounted blog-index');
 
-  watch(pagingNumber, (newValue) => {
-    const pushOrReplace = (newValue: number) => {
+  watch(pagingNumber, (newValue, oldValue) => {
+    console.log('watch pagingNumber', newValue, oldValue);
+    const shouldReplace = (_newValue: number) => {
       const curr = router.currentRoute.value.query.page as string | undefined;
-      if (!curr) {
-        return router.replace;
-      }
-      if (newValue.toString() === curr) {
-        return router.replace;
-      }
-      return router.push;
+      console.log('shouldReplace', _newValue, curr);
+      if (!curr) return true;
+      if (_newValue.toString() === curr) return true;
+      return false;
     }
 
     if (perPage >= total.value) {
@@ -161,7 +155,7 @@ onMounted(() => {
       router.replace({ query: { page: totalPages.value <= 1 ? undefined : totalPages.value } });
     } else {
       if (totalPages.value <= 1) router.replace({ query: { page: undefined } });
-      else pushOrReplace(newValue)({ query: { page: newValue } });
+      else router.push({ query: { page: newValue }, replace: shouldReplace(newValue) });
     }
   }, { immediate: true });
 
