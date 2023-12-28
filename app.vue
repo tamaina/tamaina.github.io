@@ -61,7 +61,6 @@ function renderHead() {
 }
 
 router.afterEach(() => {
-    darkOrLight.value = isDark() ? 'dark' : 'light';
     renderHead();
 });
 
