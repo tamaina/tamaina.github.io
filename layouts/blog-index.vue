@@ -7,6 +7,14 @@
       </div>
 
       <div id="blog-index" v-if="pages && pages.length > 0">
+        <div class="mb-3" :class="$style['blog-index-pagination']" v-if="totalPages > 1">
+          <button :disabled="pagingNumber === 1" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="prevPage">Prev ＜</button>
+          <div>
+            <input type="number" v-model="pagingNumber" min="1" :max="totalPages" step="1" class="form-control" :class="$style['blog-index-pagination-input']" /> / {{ totalPages }}
+          </div>
+          <button :disabled="pagingNumber === totalPages" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="nextPage">＞ Next</button>
+        </div>
+
         <div :class="$style['blog-index']">
           <ins
             class="adsbygoogle mb-3"
@@ -52,11 +60,11 @@
         </div>
 
         <div :class="$style['blog-index-pagination']" v-if="totalPages > 1">
-          <button v-show="pagingNumber !== 1" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="prevPage">Prev ＜</button>
+          <button :disabled="pagingNumber === 1" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="prevPage">Prev ＜</button>
           <div>
             <input type="number" v-model="pagingNumber" min="1" :max="totalPages" step="1" class="form-control" :class="$style['blog-index-pagination-input']" /> / {{ totalPages }}
           </div>
-          <button v-show="pagingNumber !== totalPages" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="nextPage">＞ Next</button>
+          <button :disabled="pagingNumber === totalPages" class="btn btn-primary" :class="$style['blog-index-pagination-button']" @click="nextPage">＞ Next</button>
         </div>
       </div>
 
