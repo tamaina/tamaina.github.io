@@ -13,7 +13,7 @@ layout: default
 ## Blackview Tab 18　公式購入先
 amazon.co.jpでの購入がお勧めです。
 
-* [amazon.co.jp 本体](https://amzn.asia/d/bH4PPhg)
+* [amazon.co.jp 本体](https://amzn.asia/d/bH4PPhg) / [Amazon ペン](https://amzn.asia/d/a0R2ZSM)
 * [Blackview公式ストア（香港発送） 本体](https://jp.blackview.hk/products/tab-18-price) / [公式ストア ペン](https://jp.blackview.hk/products/magnetic-s-pen-gen-2-for-blackview-tab-18)
 * [AliExpress 本体](https://ja.aliexpress.com/item/1005006181047675.html) / [AliExpress ペン](https://ja.aliexpress.com/item/1005006211779860.html)
 
