@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="min-vh-100 py-5 container" :class="$style.default">
-      <BreadCrumb :addDividerToEnd="true" />
+      <BreadCrumb :addDividerToEnd="true" class="fw-bold" />
       <div id="body" :class="$style.content">
         <slot />
       </div>
