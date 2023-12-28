@@ -28,7 +28,10 @@ const linkTo = computed(() => {
 </script>
 
 <template>
-  <a :href="linkTo" :target="target">
+  <a v-if="props.href.startsWith('/')" :href="linkTo" :target="target">
     <slot />
   </a>
+  <NuxtLink v-else :to="linkTo" :target="target">
+    <slot />
+  </NuxtLink>
 </template>
