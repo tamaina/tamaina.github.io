@@ -24,6 +24,9 @@
           <li class="nav-item">
             <a href="/memo" class="nav-link">Memo</a>
           </li>
+          <li class="nav-item">
+            <a href="/privacypolicy" class="nav-link">プライバシーポリシー</a>
+          </li>
         </ul>
       </div>
     </div>
