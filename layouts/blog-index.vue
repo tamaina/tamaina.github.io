@@ -122,13 +122,13 @@ function onResize() {
 async function prevPage() {
   pagingNumber.value += -1;
   await nextTick();
-  //window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 }
 
 async function nextPage() {
   pagingNumber.value += 1;
   await nextTick();
-  //window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 }
 
 onMounted(() => {
@@ -154,8 +154,12 @@ onMounted(() => {
       page.value = totalPages.value;
       router.replace({ query: { page: totalPages.value <= 1 ? undefined : totalPages.value } });
     } else {
-      if (totalPages.value <= 1) router.replace({ query: { page: undefined } });
-      else router.push({ query: { page: newValue }, replace: shouldReplace(newValue) });
+      if (totalPages.value <= 1) {
+        router.replace({ query: { page: undefined } });
+      } else {
+        const replace = shouldReplace(newValue);
+        router.push({ query: { page: newValue }, replace });
+      }
     }
   }, { immediate: true });
 
