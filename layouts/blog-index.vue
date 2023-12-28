@@ -19,15 +19,15 @@
               v-push-ad>
             </ins>
             <div class="card mb-3 border-primary" :class="$style['blog-index-item-outer']" v-for="item in pageItems" :key="item._id">
-              <a :href="item._path" class="row g-0 text-reset text-decoration-none">
-                <div class="col-sm-4">
+              <a :href="item._path" class="row g-0 text-reset text-decoration-none" :class="$style['blog-index-item-inner']">
+                <div class="col-sm-4" :class="$style['blog-index-item-img-outer']">
                   <nuxt-picture
                     v-if="item.thumbnail"
                     :src="getImgRelativePath(item.thumbnail, item._file)"
                     quality="80"
-                    sizes="md:256px lg:512px"
+                    sizes="400 smp:560 sm:280 lg:312"
                     loading="eager"
-                    :img-attrs="{ class: `img-fluid w-100 rounded ${$style['blog-index-item-img']}` }"
+                    :img-attrs="{ class: `w-100 rounded ${$style['blog-index-item-img']}` }"
                   ></nuxt-picture>
                 </div>
                 <div class="col-sm-8">
@@ -35,8 +35,8 @@
                     <div class="card-text">
                       <small class="text-body-secondary"><PublishedAt :pageDefined="item" /></small>
                     </div>
-                    <h5 class="card-title fw-bold" :class="{ 'mb-0': !item.description }" v-text="item.title" />
-                    <div class="card-text" v-text="item.description" />
+                    <h5 class="card-title fw-bold" :class="{ 'mb-0': !item.description, [$style['blog-index-item-title']]: true }" v-text="item.title" />
+                    <div class="card-text" :class="$style['blog-index-item-description']" v-text="item.description" />
                   </div>
                 </div>
               </a>
@@ -209,17 +209,61 @@ onUnmounted(() => {
 .blog-index-item-outer {
   display: block;
   width: 100%;
+
+  @media (min-width: 576px) {
+    height: 184px;
+  }
+}
+
+.blog-index-item-inner {
+  height: auto;
+
+  @media (min-width: 576px) {
+    height: 100%;
+  }
+}
+
+.blog-index-item-img-outer {
+  height: auto;
+
+  @media (min-width: 576px) {
+    height: 100%;
+  }
 }
 
 .blog-index-item-img {
   display: block;
-  height: 100%;
+  height: 30vh !important;
   width: 100%;
   object-fit: cover;
 
-  @media (max-width: 575.98px) {
-    aspect-ratio: 3 / 2;
+  @media (min-width: 576px) {
+    height: 100% !important;
   }
+}
+
+.blog-index-item-title {
+  line-height: 1.3;
+  margin: 0 0 4px 0;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-break: strict;
+  text-align: justify;
+  word-break: normal;
+}
+
+.blog-index-item-description {
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-break: strict;
+  text-align: justify;
+  word-break: normal;
 }
 
 .blog-index-pagination {

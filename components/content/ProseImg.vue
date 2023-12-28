@@ -14,7 +14,7 @@
     :height="height"
     quality="85"
     loading="lazy"
-    sizes="xs:256px md:512px lg:720px"
+    sizes="350 smp:550 sm:650"
     @click="viewer?.show()"
     :img-attrs="{ class: `img-fluid ${$style['prose-img']}`, title }"
   />
@@ -70,13 +70,9 @@ const showAd = computed(() => Math.floor(Math.random() * 7) === 0); // 1/7 chanc
 .prose-img {
   display: block;
   margin: .5rem auto auto;
-  min-height: 5em;
-  max-height: min(30rem, 70vh);
+  max-height: min(30rem, 50vh);
+  max-width: 100%;
   cursor: pointer;
-
-  @media (min-width: 1400px) {
-    max-width: 70%;
-  }
 }
 
 .title {
