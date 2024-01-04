@@ -58,17 +58,19 @@ ROG Flow Z13とMinisforum V3を比較してみます。
 | SoC | Intel 13th Gen | AMD's Flagship |
 | RAM | 16GB | 16/32GB |
 | dGPU | NVIDIA ~RTX 4060 | N/A |
-| Display | 13.4'' 2560x1600 165Hz DCI-P3=100% Dolby Vision | 14'' 2.5K 165Hz |
+| Display | 13.4'' 2560x1600 165Hz<br>DCI-P3=100% Dolby Vision | 14'' 2560x1600 165Hz<br>DCI-P3=100% 500cd/m2(Max) |
 | Stylus Pen | MPP 2 | MPP 2.6 |
 | USB-C | TB4 x1, 3.2 x1 | USB4 x2 |
 | USB-A | 3.2 x1 | N/A |
-| SD | microSD UHS-II | Full? UHS-II |
+| SD | microSD UHS-II | Full UHS-II |
 | Speakers | 1W x2 | 4 |
 | 3.5mm Audio | Available | Available | 
 | Special Port | ROG XG Mobile | USB-C DP IN ("V-Link") |
-| Windows Hello | Face | Face? |
-| Thickness | 14.3mm | <9.9mm |
-| Weight | 1.2kg | <999g |
+| Windows Hello | Face | Face, Fingerprint |
+| Thickness | 14.3mm | 9.8mm |
+| Weight | 1.2kg | 946g |
+
+※24/01/04追記
 
 Minisforumはディスプレイのついたパソコンをあまり出していないため、やはり歴史もあるASUSの方がいいと思っていますが、どうして32GBモデルを出さないのでしょうか……？  
 どちらにせよ旧世代のIntel SoCでは役に立たないため、来年のモデルに期待しています。ただFlow Z13は32GBモデルのリクエストが多い割に全く反映されないのが恒例であるため、永久に16GBのままだと思いますがね……。
