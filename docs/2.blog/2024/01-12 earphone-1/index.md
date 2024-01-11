@@ -111,6 +111,13 @@ Bluetoothの受信感度はEarFun Air Pro 2と比べると悪いですが（MacB
 <dd>別の音色や音域が干渉しておらず、一つ一つを識別しやすい<dd>
 </dl>
 
+### リファレンス音源
+音質を評価するためのリファフェンス音源は、次の画像の通りです。自分が普段聞いているものとネットの情報を参考にしています。
+
+![](ref.webp "今回のリファレンス")
+
+[Apple Music オーディオ音質評価リファレンスプレイリスト (仮)](https://music.apple.com/jp/playlist/オーディオ音質評価リファレンス-by-aqz-tamaina-仮/pl.u-4JomajBFGVaA6L)
+
 ### Sennheiser IE 100 PRO
 ![](ie100p-00.webp "Sennheiser IE 100 PRO")
 
