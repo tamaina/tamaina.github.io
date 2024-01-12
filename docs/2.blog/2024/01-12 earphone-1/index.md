@@ -4,7 +4,7 @@ thumbnail: boxes.webp
 layout: default
 ---
 # イヤホン沼に手を出した
-お年玉を利用し、イヤホンに手を出します。手始めに「SHANLING M0 Pro」「Sennheiser IE 100 PRO」「KZ ZSTX」「NICEHCK DB1」「Kiwi Ears Dolce」などを購入してみました。
+お年玉を利用し、イヤホン趣味に手を出します。手始めに「SHANLING M0 Pro」「Sennheiser IE 100 PRO」「KZ ZSTX」「NICEHCK DB1」「Kiwi Ears Dolce」を購入してみました。
 
 （お年玉はMisskey開発に対する支援としていただきました。ありがとうございます。）
 
@@ -15,7 +15,8 @@ layout: default
 数量自体が多いためご了承ください。
 
 ## 用語集
-イヤホン用語まとめ
+<details>
+<summary>文章内で都度説明すると文章が長くなるため、イヤホン用語をまとめました。本筋に関係ないため折りたたんでいます。</summary>
 
 <dl>
 <dt>DAP</dt>
@@ -42,9 +43,13 @@ layout: default
 <dt>エイジング</dt>
 <dd>イヤホンを慣らし運転すること。数十〜100時間超行うのが良いらしい？</dd>
 
+<dt>IEM（インイヤーモニター）, イヤモニ, モニターイヤホン</dt>
+<dd>ライブや収録で利用するために遮音性を高めた形状のイヤホンのこと。リスニング用としても、遮音性が高い方が好ましいためIEM形状に行きつきがちである。</dt>
+</dl>
+
 <dt>リケーブル</dt>
 <dd>ケーブルを抜き差しできるイヤホンで、ケーブルを新品やサードパーティのものに交換すること。またそのためのケーブルのこと。バランス接続化や音質の変化を目的とする場合が多い。イヤホンでは次のように種類が多様（オーディオ界隈おかしいポイントその2）。</dd>
-</dl>
+</details>
 
 ![](recable.webp "今回出てくるイヤホンのコネクタの一覧")
 
@@ -123,7 +128,7 @@ Bluetoothの受信感度はEarFun Air Pro 2と比べると悪いですが（MacB
 
 | | IE 100 PRO | Dolce | ZSTX | DB1 |
 |:-:|:-:|:-:|:-:|:-:|
-|タイプ|In Ear|In Ear|In Ear|In Ear|
+|タイプ|IEM|IEM|IEM|IEM|
 |DD|1x10mm|1x10mm|1x10mm|1x10mm|
 |BA|-|-|1x30095|-|
 |インピーダンス|20Ω|16Ω±10%|12Ω|16Ω|
@@ -136,7 +141,7 @@ Bluetoothの受信感度はEarFun Air Pro 2と比べると悪いですが（MacB
 ### Sennheiser IE 100 PRO
 ![](ie100p-00.webp "Sennheiser IE 100 PRO")
 
-とりあえず[Misskeyでアンケート](https://p1.a9z.dev/notes/9ny277ri9k)をとって一番人気だったモニターイヤホン（IEM: インイヤーモニター）[Sennheiser「IE 100 PRO」をAmazonで購入](https://amzn.asia/d/64YNxxN)しました。11,809円でした。
+とりあえず[Misskeyでアンケート](https://p1.a9z.dev/notes/9ny277ri9k)をとって一番人気だったモニターイヤホン[Sennheiser「IE 100 PRO」をAmazonで購入](https://amzn.asia/d/64YNxxN)しました。11,809円でした。
 
 ![](anq.webp "モニターライクイヤホンのアンケート")
 
