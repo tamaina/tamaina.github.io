@@ -118,6 +118,21 @@ Bluetoothの受信感度はEarFun Air Pro 2と比べると悪いですが（MacB
 
 [Apple Music オーディオ音質評価リファレンスプレイリスト (仮)](https://music.apple.com/jp/playlist/オーディオ音質評価リファレンス-by-aqz-tamaina-仮/pl.u-4JomajBFGVaA6L)
 
+### スペック比較
+公称スペックを比較してみます。
+
+| | IE 100 PRO | Dolce | ZSTX | DB1 |
+|:-:|:-:|:-:|:-:|:-:|
+|タイプ|In Ear|In Ear|In Ear|In Ear|
+|DD|1x10mm|1x10mm|1x10mm|1x10mm|
+|BA|-|-|1x30095|-|
+|インピーダンス|20Ω|16Ω±10%|12Ω|16Ω|
+|帯域Hz|20〜18k|20〜20k|20〜40k|20〜20k|
+|感度 /mW|115dB|102±3dB|107dB|106dB|
+|コネクタ|Pentaconn Ear 異形|qdc (0.78mm 2pin)|KZ Type B (0.75mm 2pin)|TFZ (2pin 0.75mm)|
+|シェル|樹脂|樹脂|樹脂|樹脂|
+|ノズル|樹脂|樹脂|樹脂|金属|
+
 ### Sennheiser IE 100 PRO
 ![](ie100p-00.webp "Sennheiser IE 100 PRO")
 
