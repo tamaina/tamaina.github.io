@@ -88,7 +88,7 @@ AndroidでもUSB DACとして動作します。動作中に充電するかどう
 他の機器にソースを変更するにはソース機器かM0 Proで切断操作を行う必要があります。  
 Bluetoothのマルチポイントは対応していません（2つ繋がった状態にはなるのですが、おかしな状態になるのでやめておいたほうがいいです）。
 
-さらに**各種設定を行うには一度USBやBluetoothを切断してから行う必要があります。**これが一番辛いです。
+さらに **各種設定を行うには一度USBやBluetoothを切断する必要があります。** これが一番辛いです。
 
 ただ、機器本体のタッチパネルで色々な設定や操作が行えることは、これらの使いにくさを上回る快適性を与えているはずです。
 
@@ -280,3 +280,9 @@ Bluetoothの受信感度はEarFun Air Pro 2と比べると悪いですが（MacB
 ![](ndb5.webp "NICEHCK DB1 外装")
 
 ![](ndb6.webp "NICEHCK DB1 付属ケーブル")
+
+## TRIPOWIN Zonie 写真
+
+![](tripowinzonie1.webp "TRIPOWIN Zonie Moss (MMCX)")
+
+![](tripowinzonie2.webp "TRIPOWIN Zonie Blue (qdc)")

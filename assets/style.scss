@@ -7,8 +7,9 @@ body {
   overflow-wrap: break-word;
 }
 
-:root {
+p {
   --bs-body-line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
 body[data-bs-theme="dark"] {
