@@ -167,7 +167,7 @@ MacBook Proでは、USB-C接続時に120Hzを選択するとRGBでなくなり�
 
 ![](mc.webp "MacBook Proも対応する、が…")
 
-[DMM TVのテスト動画](https://tv.dmm.com/vod/detail/?season=seajur5xpkndk7oaknju3rt87)を再生できたので、HDCPにも対応しているはずです。
+[DMM TVのテスト動画](https://tv.dmm.com/vod/detail/?season=seajur5xpkndk7oaknju3rt87)やApple TVを再生できたのでHDCPにも対応しているはずです。
 
 ### FreeSync
 商品説明には書かれていませんが、FreeSyncを有効にできます。
