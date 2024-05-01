@@ -4,6 +4,8 @@ thumbnail: usage.webp
 layout: default
 ---
 # HDMIキャプチャー j5create JVA14 開封と外装
+j5create JVA14の開封と外装写真の記事です。
+
 [**詳細な使用レビューはこちら** (ezcap332 Game Link Comboと比較)](../05-02-3%20captures-compare)
 
 [](usage.webp "USB-Cを2つ刺した状態")
