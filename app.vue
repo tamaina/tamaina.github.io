@@ -1,8 +1,10 @@
 <template>
+    <SpeedInsights />
     <NuxtPage />
 </template>
 
 <script setup lang="ts">
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 const darkOrLight = ref(isDark() ? 'dark' : 'light');
 if (process.browser) {
     watch(darkOrLight, () => {
