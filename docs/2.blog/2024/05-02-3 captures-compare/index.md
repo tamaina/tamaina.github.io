@@ -3,7 +3,7 @@ publishedAt: 2024-05-02T05:02:00+0900
 thumbnail: thumbnail.webp
 layout: default
 ---
-# HDMIキャプチャ　j5create JVA14 / ezcap Game Link Combo 仕様検証と比較
+# HDMIキャプチャ j5create JVA14 / ezcap Game Link Combo 仕様検証と比較
 1080p120/2160p30に対応した2製品のHDMIキャプチャの動作を確認し、比較してみます。
 
 外装写真などは次のリンクをご覧ください。
