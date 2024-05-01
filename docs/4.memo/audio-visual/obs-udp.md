@@ -1,3 +1,8 @@
+---
+publishedAt: 2024-05-01T05:00:00+0900
+thumbnail: scnsht.webp
+layout: default
+---
 # LAN経由でOBSから別のPCのOBSへ映像を伝送する
 
 ネットワーク経由で、あるPCのOBSから別のPCのOBSへ映像を伝送する方法のメモです。
