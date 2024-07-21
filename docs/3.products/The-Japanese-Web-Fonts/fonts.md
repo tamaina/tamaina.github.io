@@ -14,7 +14,7 @@ The Japanese Web Fonts v7.2.0現在のフォント一覧。
 | 利用可能なfont-feature-settings指定 | palt |
 | URL | https://github.com/adobe-fonts/source-han-sans/ |
 | Liscense | SIL Open Font License 1.1 |
-| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/SourceHanSans/SourceHanSanscss` |
+| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/SourceHanSans/SourceHanSans.css` |
 
 #### ウェイト
 
@@ -38,7 +38,7 @@ Source Han Sansと同じく、AdobeとGoogleが共同で開発し、Adobeから�
 | 利用可能なfont-feature-settings指定 | palt |
 | URL | https://github.com/adobe-fonts/source-han-serif/ |
 | Liscense | SIL Open Font License 1.1 |
-| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/SourceHanSerif/SourceHanSerifcss` |
+| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/SourceHanSerif/SourceHanSerif.css` |
 
 #### ウェイト
 
@@ -116,7 +116,7 @@ MおよびMNにはheavyとblackがない。
 | font-family | `corporateLogo-w, SourceHanSans-w` |
 | URL | http://logotype.jp/corporate-logo-font-dl.html|
 | Liscense | SIL Open Font License 1.1 |
-| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/corporateLogo/corporateLogocss` |
+| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/corporateLogo/corporateLogo.css` |
 
 #### ウェイト
 
@@ -185,7 +185,7 @@ MおよびMNにはheavyとblackがない。
 | font-family | `GenEiAntique-w`(共通)<br>`GenEiAntique-N-w`(かな)<br>`GenEiAntique-P-w`(かなプロポーショナル) |
 | URL | http://okoneya.jp/font/genei-antique.html |
 | Liscense | SIL Open Font License 1.1 |
-| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/GenEiAntique/GenEiAntiquecss`<br>`https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/GenEiAntique-*/GenEiAntique-*.css`<br>*はP,Nに置き換えてください。 |
+| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/GenEiAntique/GenEiAntique.css`<br>`https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/GenEiAntique-*/GenEiAntique-*.css`<br>*はP,Nに置き換えてください。 |
 
 ### 源瑛ラテゴ
 
@@ -194,7 +194,7 @@ MおよびMNにはheavyとblackがない。
 | font-family | `GenEiLateGo-w`(共通)<br>`GenEiLateGo-N-w`(かな)<br>`GenEiLateGo-P-w`(かなプロポーショナル) |
 | URL | http://okoneya.jp/font/genei-latin.html|
 | Liscense | SIL Open Font License 1.1 |
-| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/GenEiLateGo/GenEiLateGocss`<br>`https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/GenEiLateGo-*/GenEiLateGo-*.css`<br>*はP,Nに置き換えてください。 |
+| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/GenEiLateGo/GenEiLateGo.css`<br>`https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/GenEiLateGo-*/GenEiLateGo-*.css`<br>*はP,Nに置き換えてください。 |
 
 ### 源瑛Nuゴシック
 
@@ -216,7 +216,7 @@ MおよびMNにはheavyとblackがない。
 | font-family | `GenEiUniverSans-w, SourceHanSans-w` |
 | URL | https://okoneya.jp/font/download.html |
 | Liscense | SIL Open Font License 1.1 |
-| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/GenEiUniverSans/GenEiUniverSanscss` |
+| CSS | `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/GenEiUniverSans/GenEiUniverSans.css` |
 
 #### ウェイト
 
