@@ -43,7 +43,7 @@ export default defineNuxtConfig({
 
   image: {
     // image config https://image.nuxtjs.org/configuration
-    //provider: 'netlify',
+    provider: 'netlify',
     screens: { smp: 399.99, sm: 575.99, md: 767.99, lg: 991.99, xl: 1199.99, xxl: 1399.99, '2xl': 1399.99, '4k': 4096, max: 8192 },
     densities: [1, 2],
     format: ['avif', 'webp'],
