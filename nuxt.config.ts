@@ -1,21 +1,27 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   ssr: true,
+
   app: {
   },
+
   css: [
     '~/assets/style.scss',
   ],
+
   dir: {
     public: 'docs',
   },
+
   modules: [
     '@nuxt/image',
     '@nuxt/content',
   ],
+
   router: {
     
   },
+
   content: {
     // content config https://content.nuxtjs.org/api/configuration/
     documentDriven: {
@@ -25,6 +31,7 @@ export default defineNuxtConfig({
     defaultLocale: 'ja',
     contentHead: false,
   },
+
   nitro: {
     // nitro config
     prerender: {
@@ -33,6 +40,7 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   image: {
     // image config https://image.nuxtjs.org/configuration
     //provider: 'netlify',
@@ -40,7 +48,10 @@ export default defineNuxtConfig({
     densities: [1, 2],
     format: ['avif', 'webp'],
   },
+
   plugins: [
     { src: '~/plugins/vercel.ts', mode: 'client' },
   ],
+
+  compatibilityDate: '2024-08-14',
 });
