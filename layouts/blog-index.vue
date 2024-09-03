@@ -142,10 +142,7 @@ async function nextPage() {
 }
 
 onMounted(() => {
-  console.log('mounted blog-index');
-
   watch(pagingNumber, (newValue, oldValue) => {
-    console.log('watch pagingNumber', newValue, oldValue);
     const shouldReplace = (_newValue: number) => {
       const curr = router.currentRoute.value.query.page as string | undefined;
       console.log('shouldReplace', _newValue, curr);
@@ -158,10 +155,10 @@ onMounted(() => {
       pagingNumber.value = 1;
       router.replace({ query: {} });
     } else if (Number.isNaN(newValue) || !Number.isInteger(newValue) || Number(newValue) < 1) {
-      page.value = 1;
+      pagingNumber.value = 1;
       router.replace({ query: { page: totalPages.value <= 1 ? undefined : 1 } });
     } else if (Number(newValue) > totalPages.value) {
-      page.value = totalPages.value;
+      pagingNumber.value = totalPages.value;
       router.replace({ query: { page: totalPages.value <= 1 ? undefined : totalPages.value } });
     } else {
       if (totalPages.value <= 1) {

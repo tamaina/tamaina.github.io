@@ -44,6 +44,8 @@
 </template>
 
 <script setup lang="ts">
+const perPage = 30;
+
 const { page } = useContent();
 
 const baseQuery = queryContent(page.value._path).where(page.value.where || {});
@@ -57,11 +59,10 @@ const pages = computed(() => (_pages.value ?? []).filter((p) =>
 
 const router = useRouter();
 const pagingNumber = ref(Number(router.currentRoute.value.query.page) || 1);
-const perPage = ref(20);
 const total = computed(() => pages.value.length);
-const totalPages = computed(() => Math.ceil(total.value / perPage.value));
-const start = computed(() => (pagingNumber.value - 1) * perPage.value);
-const end = computed(() => Math.min(start.value + perPage.value, total.value));
+const totalPages = computed(() => Math.ceil(total.value / perPage));
+const start = computed(() => (pagingNumber.value - 1) * perPage);
+const end = computed(() => Math.min(start.value + perPage, total.value));
 const pageItems = computed(() => pages.value.slice(start.value, end.value));
 
 async function prevPage() {
@@ -77,35 +78,34 @@ async function nextPage() {
 }
 
 onMounted(() => {
-  console.log('mounted index');
-
-  watch(pagingNumber, (newValue) => {
-    const pushOrReplace = (newValue: number) => {
+  watch(pagingNumber, (newValue, oldValue) => {
+    const shouldReplace = (_newValue: number) => {
       const curr = router.currentRoute.value.query.page as string | undefined;
-      if (!curr) {
-        return router.replace;
-      }
-      if (newValue.toString() === curr) {
-        return router.replace;
-      }
-      return router.push;
+      console.log('shouldReplace', _newValue, curr);
+      if (!curr) return true;
+      if (_newValue.toString() === curr) return true;
+      return false;
     }
 
-    if (perPage.value >= total.value) {
+    if (perPage >= total.value) {
       pagingNumber.value = 1;
       router.replace({ query: {} });
     } else if (Number.isNaN(newValue) || !Number.isInteger(newValue) || Number(newValue) < 1) {
       pagingNumber.value = 1;
-      router.replace({ query: { page: 1 } });
+      router.replace({ query: { page: totalPages.value <= 1 ? undefined : 1 } });
     } else if (Number(newValue) > totalPages.value) {
       pagingNumber.value = totalPages.value;
-      router.replace({ query: { page: totalPages.value } });
+      router.replace({ query: { page: totalPages.value <= 1 ? undefined : totalPages.value } });
     } else {
-      pushOrReplace(newValue)({ query: { page: newValue } });
+      if (totalPages.value <= 1) {
+        router.replace({ query: { page: undefined } });
+      } else {
+        const replace = shouldReplace(newValue);
+        router.push({ query: { page: newValue }, replace });
+      }
     }
-
-    window.scrollTo(0, 0);
   }, { immediate: true });
+
 });
 </script>
 
