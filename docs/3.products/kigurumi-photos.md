@@ -5,6 +5,10 @@ layout: default
 # kigurumi写真
 aqz/tamainaによる着ぐるみさん等のコスプレ・ポトレ撮影について (2025年7月27日)
 
+## 撮影させていただいた写真
+Misskey #aqz_kig_photo にまとめています  
+https://p1.a9z.dev/tags/aqz_kig_photo
+
 ## 写真の利用について
 - お渡しした写真はご自由にお使いください。
   * MisskeyやXで掲載される際は、メンションで撮影者を示していただけると嬉しいです。
