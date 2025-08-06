@@ -7,7 +7,7 @@ layout: default
 Xiaomi Smart Band 9が日本で発売されました。午前中Amazonで注文したら夜届いたため、即日で開封してXiaomi Smart Band 7と少しだけ比べてみます。購入した色はグレイシャーシルバーです。
 
 **購入リンク**  
-Amazon: https://amzn.asia/d/9Kzc986  
+Amazon: https://amzn.to/4flJlCi 
 楽天: https://item.rakuten.co.jp/xiaomiofficial/m55453/
 
 発売時の価格は5,480円でした。これは先代のXiaomi Smart Band 8と同等です。

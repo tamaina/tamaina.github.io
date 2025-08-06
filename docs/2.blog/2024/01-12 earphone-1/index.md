@@ -59,7 +59,7 @@ layout: default
 
 イヤホン・ヘッドホンはバランス出力ができるソースがないと始まりません。
 
-[SHANLING M0 Pro グリーン](https://amzn.asia/d/gyKeoGp)がAmazonのセールでたまたま16,830円で販売されていたため（通常19,800円）、今回はこちらを購入しました。
+[SHANLING M0 Pro グリーン](https://amzn.to/4oue7gG)がAmazonのセールでたまたま16,830円で販売されていたため（通常19,800円）、今回はこちらを購入しました。
 
 ![](m000.webp "SHANLING M0 Pro Amazon購入履歴 16,830円")
 
@@ -97,7 +97,7 @@ Bluetoothのマルチポイントは対応していません（2つ繋がった�
 Bluetoothの受信感度はEarFun Air Pro 2と比べると悪いですが（MacBookとのAAC接続で比較）、EarFunは割とBluetooth感度がいい方と言われているため、おそらくM0 Proはすごく悪いわけでもないかと思います。
 
 ## イヤホン
-さて、イヤホンを聴いていきます。「Sennheiser IE 100 PRO」「KZ ZSTX」「NICEHCK DB1」「Kiwi Ears Dolce」の4つを、[TRIPOWIN Zonie](https://amzn.asia/d/gmVdNV7)を使用し、すべてバランス接続で比較します。okcscの[0.75mmオス-MMCXメスアダプタ](https://amzn.asia/d/0zSGKS7)及び[Pentaconn Ear 異形オス-MMCXメスアダプタ](https://amzn.asia/d/2UvCJp9)も使用しています。
+さて、イヤホンを聴いていきます。「Sennheiser IE 100 PRO」「KZ ZSTX」「NICEHCK DB1」「Kiwi Ears Dolce」の4つを、[TRIPOWIN Zonie](https://amzn.to/4oowinG)を使用し、すべてバランス接続で比較します。okcscの[0.75mmオス-MMCXメスアダプタ](https://amzn.to/47eo1N2)及び[Pentaconn Ear 異形オス-MMCXメスアダプタ](https://amzn.asia/d/2UvCJp9)も使用しています。
 
 ### 用語定義
 自分自身にイヤホンのレビューなどができるような大層な耳があるとは思っていないのですが、ざっくり次のような感じで解釈してください。
@@ -141,7 +141,7 @@ Bluetoothの受信感度はEarFun Air Pro 2と比べると悪いですが（MacB
 ### Sennheiser IE 100 PRO
 ![](ie100p-00.webp "Sennheiser IE 100 PRO")
 
-とりあえず[Misskeyでアンケート](https://p1.a9z.dev/notes/9ny277ri9k)をとって一番人気だったモニターイヤホン[Sennheiser「IE 100 PRO」をAmazonで購入](https://amzn.asia/d/64YNxxN)しました。11,809円でした。
+とりあえず[Misskeyでアンケート](https://p1.a9z.dev/notes/9ny277ri9k)をとって一番人気だったモニターイヤホン[Sennheiser「IE 100 PRO」をAmazonで購入](https://amzn.to/45spRYf)しました。11,809円でした。
 
 ![](anq.webp "モニターライクイヤホンのアンケート")
 
@@ -153,7 +153,7 @@ Bluetoothの受信感度はEarFun Air Pro 2と比べると悪いですが（MacB
 これを使うと音源の音割れがわかります。知りたくなかった。
 
 ### Kiwi Ears Dolce
-中華イヤホンの[Kiwi Earsのエントリー「Dolce」](https://amzn.asia/d/8joB0zm)を試してみます。表示価格は3,630円で、5%オフクーポンがありました。
+中華イヤホンの[Kiwi Earsのエントリー「Dolce」](https://amzn.to/46JR5f7)を試してみます。表示価格は3,630円で、5%オフクーポンがありました。
 
 ![](ked21.webp "Kiwi Ears Dolce")
 
@@ -162,7 +162,7 @@ Bluetoothの受信感度はEarFun Air Pro 2と比べると悪いですが（MacB
 若干雑に扱ったため塗装面の一部がテカってきてしまいました。
 
 ### KZ ZSTX
-中華イヤホンでおすすめされがちな[KZ「ZSTX」](https://amzn.asia/d/4Je1Zkv)です。色がいくつかありますが、緑を購入しました。2,280円でした。
+中華イヤホンでおすすめされがちな[KZ「ZSTX」](https://amzn.to/46KJWLA)です。色がいくつかありますが、緑を購入しました。2,280円でした。
 
 ![](zstx21.webp "KZ ZSTX")
 
@@ -191,7 +191,9 @@ Bluetoothの受信感度はEarFun Air Pro 2と比べると悪いですが（MacB
 
 今の所、NICEHCK DB1をEQでちょっとだけドンシャリにして聞くのがいいのかなと思っています。
 
-色々なところで[TRN Conch](https://amzn.asia/d/fWvAyGQ)がおすすめされていますが、Amazon発送でない上に中国からの発送のようなのでちょっと手を出す気になれません。Amazon倉庫に在庫が復活することがあれば買いたいです。
+色々なところで[TRN Conch](https://amzn.to/4moaLd0)がおすすめされていますが、Amazon発送でない上に中国からの発送のようなのでちょっと手を出す気になれません。Amazon倉庫に在庫が復活することがあれば買いたいです。
+
+[◎追記: TRN Conch買ってみたので記事を書きました](../01-20%20trn-conch)
 
 ## 写真
 

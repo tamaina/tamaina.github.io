@@ -11,7 +11,7 @@ layout: default
 ![](body.webp "TRN Conch 本体")
 
 ## 価格・購入方法
-Amazonで、[TRN直営店](https://amzn.asia/d/79ud7s9)もしくは[LINSOUL (代理店)](https://amzn.asia/d/4Mdekqs)で購入できます。
+Amazonで、[TRN直営店](https://amzn.to/4mmuOct)もしくは[LINSOUL (代理店)](https://amzn.to/4m0LRQN)で購入できます。
 
 ![](amazon.webp "上がTRN直営店、下がLINSOULの出品")
 
@@ -42,15 +42,15 @@ Amazonで、[TRN直営店](https://amzn.asia/d/79ud7s9)もしくは[LINSOUL (代
 
 ## 付属品
 ### ケーブル
-[TRN-Redchain](https://amzn.asia/d/7tHZR2w)が付属しています。  
-[TRIPOWIN Zonie](https://amzn.asia/d/5AQGdJ8)も持っているため音質を比較してみましたが、違いは全くわかりませんでした。
+[TRN-Redchain](https://amzn.to/3J0Cpyx)が付属しています。  
+[TRIPOWIN Zonie](https://amzn.to/46Fh3jZ)も持っているため音質を比較してみましたが、違いは全くわかりませんでした。
 
 TRN-Redchainは編み込み線数が少ないため、触るとゴツゴツしています。個人的にはTRIPOWIN Zonieを使いたいと感じました。
 
 ### ノズル（フィルタ）・イヤーピース
 ノズル（フィルタ違い）は、初期装備の「Reference（黒）」に加え、「Translucent（青）」「Atmospheric Immersion（赤）」の3種類のノズル（フィルタ）が付属しています。
 
-イヤーピースは、初期装備の[「TRN T-Ear Tips」](https://amzn.asia/d/f7kkSiZ)と「バランス型（黒）」がそれぞれS/M/Lサイズ、フォームタイプのMサイズの7セットが付属しています。
+イヤーピースは、初期装備の[「TRN T-Ear Tips」](https://amzn.asia/d/fEXbDOc)と「バランス型（黒）」がそれぞれS/M/Lサイズ、フォームタイプのMサイズの7セットが付属しています。
 
 どちらの変更も多少味付けは変わりますが、そこまで大きく変わるわけではありません（フォームタイプイヤーチップは試していません）。
 
