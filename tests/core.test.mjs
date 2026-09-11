@@ -34,6 +34,7 @@ test('file and public relative links preserve image case and query/hash case',()
 test('fixed presets and content checksums',()=>{
   const original={url:'/test/original.webp',transformable:true};
   const settings=imageSettings({IMAGE_MODE:'cloudflare',IMAGE_ORIGIN:'https://images.example.com'});
+  assert.equal(imageUrl(original,'og',settings),imageUrl(original,'preview',settings));
   assert.equal(imageUrl(original,'preview',settings),`https://images.example.com/cdn-cgi/image/${presets.preview}${original.url}`);
   assert.equal(imageUrl(original,'thumbnail',{mode:'original'}),original.url);
   assert.equal(sha256(Buffer.from('original')),sha256(Buffer.from('original')));

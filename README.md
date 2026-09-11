@@ -33,3 +33,5 @@ gh workflow run astro.yml --ref main
 Actions はチェック・ビルド・デプロイまでを実行し、公開後の内容検証は行いません。必要な場合は `VERIFY_ORIGIN=https://a9z.dev pnpm verify:remote` などで手動検証できます。出力先は `.generated/verification/`、旧サイトとの互換性比較用データは `tests/fixtures/` です。
 
 画像・添付ファイルは `docs/` 内の元のパスで配信します。`.generated/public/` は原本へのシンボリックリンクで準備し、Astroが配信用の `dist/` に実体を配置します。ハッシュ別名への二重コピーや原本へのimmutableキャッシュ設定はありません。
+
+ブログ一覧の画像は `<picture>` の `srcset` / `sizes` で480pxと1200pxを選択します。1200px版は記事内プレビュー・OGPと共通の変換URLです。原本の縦横比を保ち、拡大やOGP専用の切り抜きは行いません。

@@ -8,7 +8,7 @@ export async function buildSite() {
   const { assets, excluded, files } = await prepareAssets();
   const settings = imageSettings();
   const articles = articleMap(files.filter(f=>f.endsWith('.md')));
-  const transforms = { thumbnail:new Set(), preview:new Set(), og:new Set() }, missing = [];
+  const transforms = { thumbnail:new Set(), preview:new Set() }, missing = [];
   const pages=[];
   for (const source of articles.bySource.keys()) {
     const data = readMarkdown(await fs.readFile('docs/'+source,'utf8'));
@@ -25,7 +25,7 @@ export async function buildSite() {
       if (!asset) missing.push({source,reference:page.thumbnail,kind:'existing-missing-thumbnail'});
       else {
       page.image = {original:asset.url,thumbnail:imageUrl(asset,'thumbnail',settings),og:imageUrl(asset,'og',settings),width:asset.width,height:asset.height};
-      transforms.og.add(imageUrl(asset,'og',{mode:'cloudflare',origin:settings.origin || 'https://a9z.dev'}));
+      transforms.preview.add(imageUrl(asset,'og',{mode:'cloudflare',origin:settings.origin || 'https://a9z.dev'}));
       }
     }
     Object.assign(page,await renderMarkdown(page,{articles,assets,settings,missing,transforms}));

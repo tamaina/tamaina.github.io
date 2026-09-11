@@ -65,6 +65,6 @@ test('touch viewer opens and closes',async({browser})=>{
 test('unread listing pages do not request their images',async({page})=>{
  const images:string[]=[];page.on('request',r=>{if(r.resourceType()==='image')images.push(new URL(r.url()).pathname)});
  await page.goto('/blog');await expect(page.locator('.card')).toHaveCount(10);
- const visible=await page.locator('.card img').evaluateAll(imgs=>imgs.map(img=>new URL((img as HTMLImageElement).src).pathname));
+ const visible=await page.locator('.card img').evaluateAll(imgs=>imgs.map(img=>new URL((img as HTMLImageElement).currentSrc || (img as HTMLImageElement).src).pathname));
  expect(images.every(url=>visible.includes(url))).toBe(true);
 });

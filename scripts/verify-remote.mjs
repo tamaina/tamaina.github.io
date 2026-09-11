@@ -6,10 +6,11 @@ import { imageUrl } from '../src/lib/images.mjs';
 const origin=process.env.VERIFY_ORIGIN;
 if(!origin || !origin.startsWith('https://'))throw new Error('Set VERIFY_ORIGIN to the Transformations-enabled HTTPS test host');
 const {assets}=JSON.parse(await fs.readFile('.generated/assets.json','utf8'));
-const [source,asset]=Object.entries(assets).find(([,a])=>a.transformable && a.width>1600 && a.height>630);
+const [source,asset]=Object.entries(assets).find(([,a])=>a.transformable && a.width>1200);
+assert.equal(imageUrl(asset,'og',{mode:'cloudflare',origin}),imageUrl(asset,'preview',{mode:'cloudflare',origin}));
 const results=[], failures=[];
-for(const preset of ['original','thumbnail','preview','og']) {
- for(const accept of preset==='original'||preset==='og'?['image/jpeg']:['image/avif,image/webp,image/*','image/jpeg,image/*']) {
+for(const preset of ['original','thumbnail','preview']) {
+ for(const accept of preset==='original'?['image/jpeg']:['image/avif,image/webp,image/*','image/jpeg,image/*']) {
   const url=preset==='original'?origin+asset.url:imageUrl(asset,preset,{mode:'cloudflare',origin});
   const response=await fetch(url,{headers:{Accept:accept},redirect:'manual'});
   const bytes=Buffer.from(await response.arrayBuffer());
@@ -25,8 +26,7 @@ for(const preset of ['original','thumbnail','preview','og']) {
   if(preset==='original')assert.equal(sha256(bytes),sha256(await fs.readFile('docs/'+source)));
   else {
    assert.notEqual(sha256(bytes),asset.hash,'Original fallback returned instead of transformation');
-   if(preset==='og'){assert.equal(metadata.width,1200);assert.equal(metadata.height,630);assert.equal(metadata.format,'jpeg')}
-   else {assert.equal(metadata.width,preset==='thumbnail'?1120:1600);assert(Math.abs(metadata.height-metadata.width*asset.height/asset.width)<=1)}
+   assert.equal(metadata.width,preset==='thumbnail'?480:1200);assert(Math.abs(metadata.height-metadata.width*asset.height/asset.width)<=1)
   }
   } catch(error) { result.error=error.message; failures.push(error); }
  }

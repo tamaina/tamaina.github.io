@@ -24,7 +24,9 @@ const canonical = new URL(url,'https://a9z.dev').href;
     document.addEventListener('error', function(e) {
       const image=e.target;
       if(image instanceof HTMLImageElement && image.dataset.original && !image.dataset.fallback) {
-        image.dataset.fallback='1'; image.src=image.dataset.original;
+        image.dataset.fallback='1';
+        image.closest('picture')?.querySelectorAll('source').forEach(source=>source.remove());
+        image.removeAttribute('srcset'); image.src=image.dataset.original;
       }
     },true);
   </script>

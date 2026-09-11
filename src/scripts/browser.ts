@@ -1,4 +1,5 @@
 import Viewer from 'viewerjs';
+import { thumbnailSizes, thumbnailSrcset } from '../lib/images.mjs';
 import 'viewerjs/dist/viewer.css';
 import { normalizePage } from '../lib/listing.mjs';
 
@@ -18,7 +19,7 @@ document.querySelectorAll<HTMLAnchorElement>('a[data-viewer]').forEach(link => {
   });
 });
 
-type Item = {url:string;title:string;description:string;dates:string;image?:{thumbnail:string;original:string;width:number;height:number}};
+type Item = {url:string;title:string;description:string;dates:string;image?:{thumbnail:string;og:string;original:string;width:number;height:number}};
 function el<K extends keyof HTMLElementTagNameMap>(tag:K, className='', text='') {
   const node = document.createElement(tag); node.className=className; node.textContent=text; return node;
 }
@@ -31,7 +32,9 @@ function card(item:Item, blog:boolean) {
   }
   const imageOuter=el('div','col-sm-4 blog-index-item-img-outer');
   if(item.image) {
-    const img=el('img','w-100 rounded blog-index-item-img');img.src=item.image.thumbnail;img.dataset.original=item.image.original;img.width=item.image.width;img.height=item.image.height;img.alt='';img.loading='eager';imageOuter.append(img);
+    const picture=el('picture'), source=el('source');
+    const srcset=thumbnailSrcset(item.image);if(srcset){source.srcset=srcset;source.sizes=thumbnailSizes;picture.append(source)}
+    const img=el('img','w-100 rounded blog-index-item-img');img.dataset.original=item.image.original;img.width=item.image.width;img.height=item.image.height;img.alt='';img.loading='eager';picture.append(img);img.src=item.image.thumbnail;imageOuter.append(picture);
   }
   const content=el('div','col-sm-8'), body=el('div','card-body'), date=el('div','card-text');
   date.append(el('small','text-body-secondary',item.dates));
