@@ -1,0 +1,12 @@
+17:48:18 [content] Syncing content
+17:48:18 [content] Content config changed
+17:48:18 [content] Clearing content store
+17:48:47 [existing-docs] Loaded 56 published pages directly from docs
+17:48:47 [content] Synced content
+17:48:47 [types] Generated 32.34s
+17:48:47 [check] Getting diagnostics for Astro files in /home/aqz/tamaina.github.io...
+Result (18 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+

@@ -1,0 +1,16 @@
+---
+interface Props { item: {url:string;title:string;description:string;dates:string;image?:{thumbnail:string;original:string;width:number;height:number}}; blog:boolean }
+const { item, blog } = Astro.props;
+---
+{blog ? <div class="card mb-3 border-primary blog-index-item-outer">
+  <a href={item.url} class="row g-0 text-reset text-decoration-none blog-index-item-inner">
+    <div class="col-sm-4 blog-index-item-img-outer">
+      {item.image && <img src={item.image.thumbnail} data-original={item.image.original} width={item.image.width} height={item.image.height} loading="eager" alt="" class="w-100 rounded blog-index-item-img" />}
+    </div>
+    <div class="col-sm-8"><div class="card-body">
+      <div class="card-text"><small class="text-body-secondary">{item.dates}</small></div>
+      <h5 class:list={['card-title fw-bold blog-index-item-title',{'mb-0':!item.description}]}>{item.title}</h5>
+      <div class="card-text blog-index-item-description">{item.description}</div>
+    </div></div>
+  </a>
+</div> : <div class="mb-3 index-item-outer"><a href={item.url} class="text-decoration-none"><div class:list={['index-item-title',{'mb-0':!item.description}]}>{item.title}</div><div class="index-item-description">{item.description}</div></a></div>}

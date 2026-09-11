@@ -1,0 +1,20 @@
+
+Running 13 tests using 1 worker
+
+(node:736609) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/ui/site.spec.ts:4:3 › layout and navigation at 390px (2.5s)
+  ✓   2 tests/ui/site.spec.ts:4:3 › layout and navigation at 575px (2.2s)
+  ✓   3 tests/ui/site.spec.ts:4:3 › layout and navigation at 576px (2.5s)
+  ✓   4 tests/ui/site.spec.ts:4:3 › layout and navigation at 768px (2.5s)
+  ✓   5 tests/ui/site.spec.ts:4:3 › layout and navigation at 991px (2.5s)
+  ✓   6 tests/ui/site.spec.ts:4:3 › layout and navigation at 992px (1.1s)
+  ✓   7 tests/ui/site.spec.ts:4:3 › layout and navigation at 1440px (1.1s)
+  ✓   8 tests/ui/site.spec.ts:20:1 › query pagination, correction, direct input, reload and history (2.6s)
+  ✓   9 tests/ui/site.spec.ts:34:1 › viewer opens original, Escape closes, anchor works, no AdSense (1.4s)
+  ✓  10 tests/ui/site.spec.ts:45:1 › no-JS body, original image links and first listing remain accessible (832ms)
+  ✓  11 tests/ui/site.spec.ts:52:1 › one-shot fallback and real 404, including missing media (586ms)
+  ✓  12 tests/ui/site.spec.ts:61:1 › touch viewer opens and closes (1.3s)
+  ✓  13 tests/ui/site.spec.ts:65:1 › unread listing pages do not request their images (527ms)
+
+  13 passed (22.9s)

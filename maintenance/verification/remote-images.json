@@ -1,0 +1,62 @@
+{
+  "origin": "https://a9z-astro-migration-preview.aqz.workers.dev",
+  "source": "2.blog/2022/05-20 m1mba-1/0.webp",
+  "results": [
+    {
+      "preset": "original",
+      "accept": "image/jpeg",
+      "status": 200,
+      "type": "image/webp",
+      "location": null,
+      "width": 2000,
+      "height": 1501,
+      "format": "webp",
+      "bytes": 2538694
+    },
+    {
+      "preset": "thumbnail",
+      "accept": "image/avif,image/webp,image/*",
+      "status": 404,
+      "type": "text/html; charset=UTF-8",
+      "location": null,
+      "bytes": 19984,
+      "error": "{\"preset\":\"thumbnail\",\"accept\":\"image/avif,image/webp,image/*\",\"status\":404,\"type\":\"text/html; charset=UTF-8\",\"location\":null,\"bytes\":19984}\n\n404 !== 200\n"
+    },
+    {
+      "preset": "thumbnail",
+      "accept": "image/jpeg,image/*",
+      "status": 404,
+      "type": "text/html; charset=UTF-8",
+      "location": null,
+      "bytes": 19984,
+      "error": "{\"preset\":\"thumbnail\",\"accept\":\"image/jpeg,image/*\",\"status\":404,\"type\":\"text/html; charset=UTF-8\",\"location\":null,\"bytes\":19984}\n\n404 !== 200\n"
+    },
+    {
+      "preset": "preview",
+      "accept": "image/avif,image/webp,image/*",
+      "status": 404,
+      "type": "text/html; charset=UTF-8",
+      "location": null,
+      "bytes": 19984,
+      "error": "{\"preset\":\"preview\",\"accept\":\"image/avif,image/webp,image/*\",\"status\":404,\"type\":\"text/html; charset=UTF-8\",\"location\":null,\"bytes\":19984}\n\n404 !== 200\n"
+    },
+    {
+      "preset": "preview",
+      "accept": "image/jpeg,image/*",
+      "status": 404,
+      "type": "text/html; charset=UTF-8",
+      "location": null,
+      "bytes": 19984,
+      "error": "{\"preset\":\"preview\",\"accept\":\"image/jpeg,image/*\",\"status\":404,\"type\":\"text/html; charset=UTF-8\",\"location\":null,\"bytes\":19984}\n\n404 !== 200\n"
+    },
+    {
+      "preset": "og",
+      "accept": "image/jpeg",
+      "status": 404,
+      "type": "text/html; charset=UTF-8",
+      "location": null,
+      "bytes": 19984,
+      "error": "{\"preset\":\"og\",\"accept\":\"image/jpeg\",\"status\":404,\"type\":\"text/html; charset=UTF-8\",\"location\":null,\"bytes\":19984}\n\n404 !== 200\n"
+    }
+  ]
+}

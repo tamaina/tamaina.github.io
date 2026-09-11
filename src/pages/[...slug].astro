@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import Site from '../layouts/Site.astro';
+import Card from '../components/Card.astro';
+import Pagination from '../components/Pagination.astro';
+export async function getStaticPaths() {
+  return (await getCollection('pages')).map(entry=>({params:{slug:entry.data.url.slice(1)||undefined},props:{page:entry.data}}));
+}
+const { page } = Astro.props;
+const blog = page.layout === 'blog-index';
+const listing = blog || page.layout === 'default-index';
+const total = Math.ceil(page.items.length/page.perPage);
+const dataUrl = `/list-data${page.url==='/'?'/home':page.url}.json`;
+---
+<Site title={page.title} description={page.description} url={page.url} image={page.image} plain={page.layout==='plain'}>
+  <main class:list={[page.layout!=='plain' && 'min-vh-100 py-5 container article',blog && 'blog-layout']}>
+    {page.layout!=='plain' && <div class:list={[!listing && 'd-flex flex-wrap-reverse justify-content-between','fw-bold']}>
+      {page.url!=='/' && <nav aria-label="breadcrumb" class="mb-0 breadcrumb-root"><ol class="breadcrumb mb-0">{page.breadcrumbs.map(p=><li class="breadcrumb-item with-end-divider"><a href={p.url} class="text-decoration-none">{p.title}</a></li>)}</ol></nav>}
+      {!listing && <p class="text-end small ms-auto ps-4 mb-0">{page.dates}</p>}
+    </div>}
+    <div id="body" set:html={page.html} />
+    {listing && page.items.length>0 && <section id={blog?'blog-index':'index'} class:list={[!blog && 'mt-5']} data-list={dataUrl} data-blog={String(blog)} data-total={total}>
+      {blog && <Pagination total={total} blog={blog} />}
+      <div data-items>{page.items.slice(0,page.perPage).map(item=><Card item={item} blog={blog} />)}</div>
+      <Pagination total={total} blog={blog} />
+      <p data-list-error hidden role="status">一覧を読み込めませんでした。再読み込みしてください。</p>
+    </section>}
+  </main>
+</Site>

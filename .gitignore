@@ -10,3 +10,9 @@ dist
 .netlify
 #
 /content
+.astro/
+.generated/
+.wrangler/
+test-results/
+playwright-report/
+.dev.vars*

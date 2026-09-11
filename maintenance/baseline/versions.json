@@ -1,0 +1,25 @@
+{
+  "checked": "2026-09-11",
+  "node": "v24.18.0",
+  "pnpm": {
+    "version": "12.3.4",
+    "engines": {
+      "node": ">=18.*"
+    }
+  },
+  "astro": {
+    "version": "7.3.2",
+    "engines": {
+      "npm": ">=9.6.5",
+      "node": ">=22.12.0",
+      "pnpm": ">=7.1.0"
+    }
+  },
+  "wrangler": {
+    "version": "4.131.0",
+    "engines": {
+      "node": ">=22.0.0"
+    }
+  },
+  "typescript": "6.0.3 (Astro check requires the programmatic API missing from 7.0.2)"
+}

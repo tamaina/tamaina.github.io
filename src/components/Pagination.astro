@@ -1,0 +1,8 @@
+---
+const { total, blog } = Astro.props;
+---
+{total > 1 && <div class="index-pagination mb-3">
+  <button type="button" data-prev class="btn btn-primary index-pagination-button" disabled={blog} hidden={!blog}>Prev ＜</button>
+  <div><input aria-label="ページ番号" type="number" value="1" min="1" max={total} step="1" class="form-control index-pagination-input" /> / {total}</div>
+  <button type="button" data-next class="btn btn-primary index-pagination-button">＞ Next</button>
+</div>}

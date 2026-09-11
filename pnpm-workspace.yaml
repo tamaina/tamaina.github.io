@@ -1,0 +1,7 @@
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  workerd: true
+minimumReleaseAgeExclude:
+  - miniflare@5.20260910.0-alpha
+  - wrangler@4.131.0

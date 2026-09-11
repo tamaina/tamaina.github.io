@@ -1,0 +1,86 @@
+[
+  {
+    "origin": "https://a9z.dev",
+    "width": 390,
+    "image": {
+      "complete": true,
+      "naturalWidth": 350,
+      "width": 350,
+      "height": 262,
+      "rect": {
+        "x": 20,
+        "y": 589.5625,
+        "width": 350,
+        "height": 262,
+        "top": 589.5625,
+        "right": 370,
+        "bottom": 851.5625,
+        "left": 20
+      },
+      "currentSrc": "https://a9z.dev/.netlify/images?w=350&fm=avif&q=85&url=%2F2.blog%2F2022%2F05-20+m1mba-1%2F0.webp"
+    }
+  },
+  {
+    "origin": "https://a9z.dev",
+    "width": 1440,
+    "image": {
+      "complete": true,
+      "naturalWidth": 650,
+      "width": 601,
+      "height": 450,
+      "rect": {
+        "x": 419.6875,
+        "y": 561.15625,
+        "width": 600.609375,
+        "height": 450,
+        "top": 561.15625,
+        "right": 1020.296875,
+        "bottom": 1011.15625,
+        "left": 419.6875
+      },
+      "currentSrc": "https://a9z.dev/.netlify/images?w=650&fm=avif&q=85&url=%2F2.blog%2F2022%2F05-20+m1mba-1%2F0.webp"
+    }
+  },
+  {
+    "origin": "http://127.0.0.1:4321",
+    "width": 390,
+    "image": {
+      "complete": true,
+      "naturalWidth": 2000,
+      "width": 366,
+      "height": 275,
+      "rect": {
+        "x": 12,
+        "y": 589.5625,
+        "width": 366,
+        "height": 274.671875,
+        "top": 589.5625,
+        "right": 378,
+        "bottom": 864.234375,
+        "left": 12
+      },
+      "currentSrc": "http://127.0.0.1:4321/_media/originals/7b700d254b0d5c442e6d829f6ded7f0cdeaa9a3b823c3964ed8b03301e5e1399.webp"
+    }
+  },
+  {
+    "origin": "http://127.0.0.1:4321",
+    "width": 1440,
+    "image": {
+      "complete": true,
+      "naturalWidth": 2000,
+      "width": 600,
+      "height": 450,
+      "rect": {
+        "x": 420.203125,
+        "y": 450.15625,
+        "width": 599.59375,
+        "height": 449.984375,
+        "top": 450.15625,
+        "right": 1019.796875,
+        "bottom": 900.140625,
+        "left": 420.203125
+      },
+      "currentSrc": "http://127.0.0.1:4321/_media/originals/7b700d254b0d5c442e6d829f6ded7f0cdeaa9a3b823c3964ed8b03301e5e1399.webp"
+    }
+  }
+]

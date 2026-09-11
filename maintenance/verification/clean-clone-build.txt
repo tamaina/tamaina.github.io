@@ -1,0 +1,88 @@
+17:50:25 [content] Syncing content
+17:50:34 [existing-docs] Loaded 56 published pages directly from docs
+17:50:34 [content] Synced content
+17:50:34 [types] Generated 9.30s
+17:50:34 [build] output: "static"
+17:50:34 [build] mode: "static"
+17:50:34 [build] directory: /home/aqz/.cache/a9z-clean-build-20260911/dist/
+17:50:34 [build] Collecting build info...
+17:50:34 [build] ✓ Completed in 9.37s.
+17:50:34 [build] Building static entrypoints...
+17:50:35 [vite] ✓ built in 1.09s
+17:50:45 [vite] ✓ built in 9.54s
+17:50:45 [build] Rearranging server assets...
+
+ generating static routes 
+17:50:45   ├─ /404.html (+14ms) 
+17:50:45   ├─ /list-data/home.json (+2ms) 
+17:50:45   ├─ /list-data/blog.json (+1ms) 
+17:50:45   ├─ /list-data/blog/2022.json (+1ms) 
+17:50:45   ├─ /list-data/blog/2023.json (+1ms) 
+17:50:45   ├─ /list-data/blog/2024.json (+1ms) 
+17:50:45   ├─ /list-data/memo.json (+1ms) 
+17:50:45   ├─ /list-data/memo/aokzoe.json (+1ms) 
+17:50:45   ├─ /list-data/memo/audio-visual.json (+1ms) 
+17:50:45   ├─ /list-data/products.json (+1ms) 
+17:50:45   ├─ /list-data/products/the-japanese-web-fonts.json (+1ms) 
+17:50:45   ├─ /sitemap.xml (+3ms) 
+17:50:45   ├─ /index.html (+2ms) 
+17:50:45   ├─ /blog.html (+2ms) 
+17:50:45   ├─ /blog/2022.html (+2ms) 
+17:50:45   ├─ /blog/2022/05-20-m1mba-1.html (+1ms) 
+17:50:45   ├─ /blog/2022/05-21-m1mba-2.html (+1ms) 
+17:50:45   ├─ /blog/2022/05-22-m1mba-3.html (+1ms) 
+17:50:45   ├─ /blog/2022/05-23-m1mba-4.html (+1ms) 
+17:50:45   ├─ /blog/2022/05-24-m1mba-5.html (+1ms) 
+17:50:45   ├─ /blog/2022/05-25-m1mba-6.html (+1ms) 
+17:50:45   ├─ /blog/2022/05-27-multipass.html (+1ms) 
+17:50:45   ├─ /blog/2022/09-05-xiaomi-11t-pro.html (+1ms) 
+17:50:45   ├─ /blog/2022/09-05-zzzz.html (+1ms) 
+17:50:45   ├─ /blog/2022/09-18-xiaomi-11t-pro-2.html (+1ms) 
+17:50:45   ├─ /blog/2022/09-24-tone-e22.html (+1ms) 
+17:50:45   ├─ /blog/2022/09-25-netlify-large-media.html (+1ms) 
+17:50:45   ├─ /blog/2022/09-26-leitz-phone-1-0.html (+1ms) 
+17:50:45   ├─ /blog/2022/09-29-leitz-phone-1-1.html (+1ms) 
+17:50:45   ├─ /blog/2022/10-04-leitz-phone-1-2.html (+1ms) 
+17:50:45   ├─ /blog/2022/10-14-xperia-10-iv.html (+1ms) 
+17:50:45   ├─ /blog/2022/10-16-oppo-reno5-a.html (+1ms) 
+17:50:45   ├─ /blog/2022/10-28-14m1prombp-1.html (+1ms) 
+17:50:45   ├─ /blog/2023.html (+1ms) 
+17:50:45   ├─ /blog/2023/01-09-cloudflared-mk.html (+1ms) 
+17:50:45   ├─ /blog/2023/02-21-pixel-7-1.html (+1ms) 
+17:50:45   ├─ /blog/2023/03-07-pixel-7-2.html (+1ms) 
+17:50:45   ├─ /blog/2023/03-08-14m1prombp-2.html (+1ms) 
+17:50:45   ├─ /blog/2023/06-18-m1-ipad-pro.html (+1ms) 
+17:50:45   ├─ /blog/2023/06-20-aokzoe-a1pro-0.html (+1ms) 
+17:50:45   ├─ /blog/2023/06-23-aokzoe-a1pro-1.html (+1ms) 
+17:50:45   ├─ /blog/2023/06-26-aokzoe-a1pro-2.html (+1ms) 
+17:50:45   ├─ /blog/2023/11-29-1-xperia-5-iv-1.html (+1ms) 
+17:50:45   ├─ /blog/2023/11-29-2-xperia-5-iv-2.html (+1ms) 
+17:50:45   ├─ /blog/2023/12-01-1-bv-tab-18-1.html (+1ms) 
+17:50:45   ├─ /blog/2023/12-01-2-bv-tab-18-2.html (+1ms) 
+17:50:45   ├─ /blog/2023/12-23-1-galaxy-s22-1.html (+1ms) 
+17:50:45   ├─ /blog/2023/12-23-2-galaxy-s22-2.html (+1ms) 
+17:50:45   ├─ /blog/2023/12-30-what-i-want.html (+1ms) 
+17:50:45   ├─ /blog/2024.html (+1ms) 
+17:50:45   ├─ /blog/2024/01-12-earphone-1.html (+1ms) 
+17:50:45   ├─ /blog/2024/01-20-trn-conch.html (+1ms) 
+17:50:45   ├─ /blog/2024/04-19-cheap-mobile-display.html (+1ms) 
+17:50:45   ├─ /blog/2024/05-02-1-j5create-jva14.html (+1ms) 
+17:50:45   ├─ /blog/2024/05-02-2-ezcap-capture.html (+1ms) 
+17:50:45   ├─ /blog/2024/05-02-3-captures-compare.html (+1ms) 
+17:50:45   ├─ /blog/2024/08-14-xiaomi-band-9.html (+1ms) 
+17:50:45   ├─ /memo.html (+1ms) 
+17:50:45   ├─ /memo/aokzoe.html (+1ms) 
+17:50:45   ├─ /memo/aokzoe/a1pro-keybind.html (+1ms) 
+17:50:45   ├─ /memo/audio-visual.html (+1ms) 
+17:50:45   ├─ /memo/audio-visual/obs-udp.html (+1ms) 
+17:50:45   ├─ /privacypolicy.html (+1ms) 
+17:50:45   ├─ /products.html (+1ms) 
+17:50:45   ├─ /products/kigurumi-photos.html (+1ms) 
+17:50:45   ├─ /products/the-japanese-web-fonts.html (+1ms) 
+17:50:45   ├─ /products/the-japanese-web-fonts/fonts.html (+1ms) 
+17:50:45   ├─ /products/venc.html (+1ms) 
+17:50:45 ✓ Completed in 131ms.
+
+17:50:45 [build] ✓ Completed in 10.83s.
+17:50:45 [build] 57 page(s) built in 20.21s
+17:50:45 [build] Complete!
