@@ -80,7 +80,17 @@ jobs:
       - name: Verify deployed originals, routes, and actual transformations
         run: |
           pnpm verify:remote
-          node scripts/verify-site.mjs
+          # Allow up to one minute for the new version to reach the checking edge.
+          for attempt in {1..7}; do
+            if node scripts/verify-site.mjs; then
+              exit 0
+            fi
+            if [ "$attempt" -eq 7 ]; then
+              exit 1
+            fi
+            echo "Deployment has not passed verification yet; retrying in 10 seconds."
+            sleep 10
+          done
         env:
           VERIFY_ORIGIN: https://a9z.dev
       - uses: actions/upload-artifact@v4
