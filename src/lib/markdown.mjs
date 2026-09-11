@@ -13,6 +13,11 @@ import { imageUrl } from './images.mjs';
 import { isExternal, sourceReference, resolveLink } from './paths.mjs';
 const element = (tagName, properties = {}, children = []) => ({ type: 'element', tagName, properties, children });
 const text = value => ({ type: 'text', value });
+function hasHeaderContent(node) {
+  if (node.type === 'text') return node.value.trim().length > 0;
+  if (node.type === 'element' && ['img','svg','video','audio','iframe','object','embed','input','button','canvas','hr'].includes(node.tagName)) return true;
+  return (node.children || []).some(hasHeaderContent);
+}
 export function readMarkdown(raw) {
   const lines = raw.split('\n');
   let data = {}, body = raw;
@@ -77,6 +82,7 @@ export async function renderMarkdown(page, context) {
       });
       visit(tree, 'element', (node,index,parent) => {
         if(node.tagName === 'table') {
+          node.children = node.children.filter(child => child.type !== 'element' || child.tagName !== 'thead' || hasHeaderContent(child));
           node.properties.className=['table','table-light','border-dark','mb-0'];
           parent.children[index]=element('div',{className:['table-responsive','mb-3']},[node]);
           return [SKIP,index+1];

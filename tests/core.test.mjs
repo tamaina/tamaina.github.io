@@ -77,3 +77,17 @@ test('list scope: direct descendants, year descendants, stable date ties and whe
  assert.deepEqual(listingPages({url:'/blog',layout:'default-index'},pages).map(p=>p.source),['year']);
  assert.deepEqual(listingPages({url:'/blog/2024',layout:'blog-index',where:{source:{$eq:'a'}}},pages).map(p=>p.source),['a']);
 });
+
+test('empty table headers disappear while body, alignment and meaningful headers remain',async()=>{
+ const source='test/index.md';
+ const context={articles:articleMap([source]),assets:new Map([['test/A.webp',{url:'/test/A.webp',transformable:true,width:100,height:50}]]),settings:{mode:'original'},missing:[],transforms:{preview:new Set()}};
+ const render=async body=>(await renderMarkdown({source,body},context)).html;
+ for(const header of ['| | |','| &nbsp; | <br> |','| <!-- comment --> | <em></em> |']){
+  const html=await render(header+'\n|:---|---:|\n|項目|値|');
+  assert.doesNotMatch(html,/<thead|<th[ >]/);
+  assert.match(html,/<tbody>/);assert.match(html,/<td align="left">項目<\/td>/);assert.match(html,/<td align="right">値<\/td>/);
+ }
+ for(const header of ['| 見出し | |','| | **見出し** |','| ![](A.webp) | |']){
+  assert.match(await render(header+'\n|---|---|\n|項目|値|'),/<thead>/);
+ }
+});
