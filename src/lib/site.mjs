@@ -1,4 +1,3 @@
-import { missingLinks } from './legacy-exceptions.mjs';
 import fs from 'node:fs/promises';
 import { articleMap, sourceReference } from './paths.mjs';
 import { prepareAssets } from './assets.mjs';
@@ -43,7 +42,7 @@ export async function buildSite() {
     }
     page.breadcrumbs = page.url === '/' ? [] : pages.filter(p=>p.url === '/' || page.url.startsWith(p.url+'/')).sort((a,b)=>a.url.length-b.url.length).map(p=>({url:p.url,title:p.navigation?.title || p.title}));
   }
-  const newMissing = missing.filter(issue => !issue.kind && !missingLinks.has(issue.source+'\n'+issue.reference));
+  const newMissing = missing.filter(issue => !issue.kind);
   if (newMissing.length) throw new Error('New broken internal links: '+JSON.stringify(newMissing));
   await fs.mkdir('.generated',{recursive:true});
   await fs.writeFile('.generated/assets.json',JSON.stringify({assets:Object.fromEntries(assets),excluded},null,2));

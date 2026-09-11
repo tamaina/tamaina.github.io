@@ -37,7 +37,7 @@ GPU性能の検証があまりなかったため、GPU性能が試されると�
 まずはDaVinci Resolveのスタビライズ解析処理にかかる時間を計測します。12秒の4K動画と1分半の4K動画のスタビライズ解析を比較します。\
 使用したバージョンはDaVinci Resolve 17.4.6及びDaVinci Resolve 18.1.3 BUILD 8です。
 
-![](2.webp)
+![](../../2022/05-21%20m1mba-2/2.webp "比較に使用した動画の測定画面（以前のM1 MacBook Airの記事より）")
 
 ### [12秒の動画](https://1drv.ms/v/s!AslpdQzTI0zLjcIyE11hEfZA0vmLuw)
 

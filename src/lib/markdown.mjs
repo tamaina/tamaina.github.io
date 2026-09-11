@@ -9,9 +9,8 @@ import { visit, SKIP } from 'unist-util-visit';
 import { toString } from 'hast-util-to-string';
 import GithubSlugger from 'github-slugger';
 import { parse as parseYaml } from 'yaml';
-import { missingImages } from './legacy-exceptions.mjs';
 import { imageUrl } from './images.mjs';
-import { isExternal, sourceReference, resolveLink, encodePath } from './paths.mjs';
+import { isExternal, sourceReference, resolveLink } from './paths.mjs';
 const element = (tagName, properties = {}, children = []) => ({ type: 'element', tagName, properties, children });
 const text = value => ({ type: 'text', value });
 export function readMarkdown(raw) {
@@ -64,12 +63,9 @@ export async function renderMarkdown(page, context) {
           if (!isExternal(src)) {
             const [file] = sourceReference(page.source, src);
             asset = assets.get(file);
-            if (!asset && !missingImages.has(page.source+'\n'+src)) throw new Error(`Missing image: ${page.source}: ${src} -> ${file}`);
-            if (!asset) { original = preview = '/'+encodePath(file); missing.push({source:page.source,reference:src,resolved:original,kind:'existing-missing-image'}); }
-            else {
+            if (!asset) throw new Error(`Missing image: ${page.source}: ${src} -> ${file}`);
             original = asset.url; preview = imageUrl(asset,'preview',settings);
             transforms.preview.add(imageUrl(asset,'preview',{mode:'cloudflare',origin:settings.origin || 'https://a9z.dev'}));
-            }
           }
           node.properties = {...node.properties,src:preview,loading:'lazy',decoding:'async',className:['img-fluid','prose-img'],'data-original':original,...(asset ? {width:asset.width,height:asset.height,style:`width:min(100%,var(--prose-image-width),${asset.width}px,calc(min(30rem,50vh) * ${asset.width/asset.height}));aspect-ratio:${asset.width}/${asset.height}`} : {})};
           const caption = String(node.properties.title || '');
