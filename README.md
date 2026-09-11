@@ -34,7 +34,7 @@ gh workflow run astro.yml --ref main
 gh workflow run astro.yml --ref main -f deploy_preview=true
 ```
 
-両方とも、設定済みの GitHub Environment `cloudflare-preview` の `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` を使用します（Environment名は既存のまま、Workerとビルド時の画像originを分離）。トークンには対象アカウントのWorkers Scripts編集と、`a9z.dev` のWorkers Routes編集が必要です。PRは検証のみでデプロイしません。同じ配信先のデプロイは直列化します。
+両方とも、設定済みの GitHub Environment `cloudflare-preview` の `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` を使用します（Environment名は既存のまま、Workerとビルド時の画像originを分離）。本番の継続デプロイは `wrangler versions upload` / `versions deploy` で行い、対象アカウントのWorkers Scripts編集権限を使用します。ルートは初回設定済みで、CIでは更新しません。ルートの新設・変更時だけ、別途 `a9z.dev` のWorkers Routes編集権限で `pnpm exec wrangler deploy --env production` を実行してください。PRは検証のみでデプロイしません。同じ配信先のデプロイは直列化します。
 
 デプロイ後は公開56ページ、404・リダイレクト、原本のハッシュ、変換画像の形式・寸法を検証します。結果は Actions の `deployment-verification` artifact に保存します。ローカル検証の出力先は `.generated/verification/`、旧サイトとの互換性比較用データは `tests/fixtures/` です。
 

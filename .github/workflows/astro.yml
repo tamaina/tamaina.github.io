@@ -82,8 +82,11 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       - name: Deploy production
         if: github.event_name != 'workflow_dispatch' || !inputs.deploy_preview
-        run: pnpm exec wrangler deploy --env production
+        run: |
+          pnpm exec wrangler versions upload --env production --tag "$DEPLOY_TAG"
+          pnpm exec wrangler versions deploy --env production --version-tag "$DEPLOY_TAG" --percentage 100 --yes
         env:
+          DEPLOY_TAG: ci-${{ github.run_id }}-${{ github.run_attempt }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       - name: Verify deployed originals, routes, and actual transformations
