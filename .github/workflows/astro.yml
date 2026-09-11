@@ -4,13 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      deploy_preview:
-        description: Deploy preview instead of production (main only)
-        type: boolean
-        default: false
 concurrency:
-  group: astro-${{ github.ref }}-${{ github.event_name == 'workflow_dispatch' && inputs.deploy_preview && 'preview' || 'production' }}
+  group: astro-${{ github.ref }}-production
   cancel-in-progress: false
 permissions:
   contents: read
@@ -39,7 +34,7 @@ jobs:
         run: pnpm build
         env:
           IMAGE_MODE: cloudflare
-          IMAGE_ORIGIN: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy_preview && 'https://astro-preview.a9z.dev' || 'https://a9z.dev' }}
+          IMAGE_ORIGIN: https://a9z.dev
       - name: Verify article and original inputs are unchanged
         run: git diff --exit-code -- docs
       - uses: actions/upload-artifact@v4
@@ -56,10 +51,10 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: verify
     runs-on: ubuntu-latest
-    # Reuse the configured Cloudflare credentials for both isolated Workers.
+    # This existing Environment holds the production deployment credentials.
     environment:
       name: cloudflare-preview
-      url: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy_preview && 'https://astro-preview.a9z.dev' || 'https://a9z.dev' }}
+      url: https://a9z.dev
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -74,17 +69,10 @@ jobs:
         with:
           name: verified-site
           path: .
-      - name: Deploy preview
-        if: github.event_name == 'workflow_dispatch' && inputs.deploy_preview
-        run: pnpm exec wrangler deploy
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       - name: Deploy production
-        if: github.event_name != 'workflow_dispatch' || !inputs.deploy_preview
         run: |
-          pnpm exec wrangler versions upload --env production --tag "$DEPLOY_TAG"
-          pnpm exec wrangler versions deploy --env production --version-tag "$DEPLOY_TAG" --percentage 100 --yes
+          pnpm exec wrangler versions upload --tag "$DEPLOY_TAG"
+          pnpm exec wrangler versions deploy --version-tag "$DEPLOY_TAG" --percentage 100 --yes
         env:
           DEPLOY_TAG: ci-${{ github.run_id }}-${{ github.run_attempt }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -94,7 +82,7 @@ jobs:
           pnpm verify:remote
           node scripts/verify-site.mjs
         env:
-          VERIFY_ORIGIN: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy_preview && 'https://astro-preview.a9z.dev' || 'https://a9z.dev' }}
+          VERIFY_ORIGIN: https://a9z.dev
       - uses: actions/upload-artifact@v4
         if: always()
         with:

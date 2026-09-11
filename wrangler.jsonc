@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "a9z-astro-migration-preview",
+  "name": "a9z-production",
   "compatibility_date": "2026-09-11",
   "assets": {
     "directory": "./dist",
@@ -9,21 +9,9 @@
   },
   "routes": [
     {
-      "pattern": "astro-preview.a9z.dev",
-      "custom_domain": true
+      "pattern": "a9z.dev/*",
+      "zone_name": "a9z.dev"
     }
   ],
-  "workers_dev": true,
-  "env": {
-    "production": {
-      "name": "a9z-production",
-      "routes": [
-        {
-          "pattern": "a9z.dev/*",
-          "zone_name": "a9z.dev"
-        }
-      ],
-      "workers_dev": true
-    }
-  }
+  "workers_dev": true
 }
