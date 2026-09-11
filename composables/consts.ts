@@ -1,1 +1,0 @@
-export const HOST = 'https://a9z.dev';
