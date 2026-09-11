@@ -11,7 +11,12 @@ export async function walk(root) {
 export async function prepareAssets(root = 'docs', output = '.generated/public') {
   const files = await walk(root), assets = new Map(), excluded = [];
   await fs.rm(output, { recursive: true, force: true });
-  await fs.mkdir(output + '/_media/originals', { recursive: true });
+  await fs.mkdir(output, { recursive: true });
+  async function stage(file) {
+    const target = path.join(output, file);
+    await fs.mkdir(path.dirname(target), { recursive: true });
+    await fs.symlink(path.relative(path.dirname(path.resolve(target)), path.resolve(root, file)), target);
+  }
   for (const file of files) {
     if (file.endsWith('.md')) continue;
     if (['ads.txt', 'boot.js'].includes(file)) { excluded.push({ file, reason: 'AdSense input, not published' }); continue; }
@@ -24,19 +29,14 @@ export async function prepareAssets(root = 'docs', output = '.generated/public')
       throw new Error(`Asset exceeds 25MiB: ${file} (${bytes.length} bytes), references: ${references.join(', ') || '(unreferenced)'}`);
     }
     const ext = path.extname(file).toLowerCase();
-    if (file === 'robots.txt') { await fs.copyFile(path.join(root,file),path.join(output,file)); continue; }
+    if (file === 'robots.txt') { await stage(file); continue; }
     if (!['.webp', '.png', '.jpg', '.jpeg', '.gif', '.avif', '.svg', '.heic', '.pdf', '.zip', '.txt'].includes(ext)) throw new Error(`Unclassified attachment: ${file}`);
-    const hash = sha256(bytes), url = `/_media/originals/${hash}${ext}`;
+    const hash = sha256(bytes), url = '/' + encodePath(file);
     const transformable = ['.webp', '.png', '.jpg', '.jpeg', '.gif', '.avif'].includes(ext);
     const metadata = transformable ? await sharp(bytes).metadata() : {};
     const asset = { url, hash, bytes: bytes.length, transformable, width: metadata.width, height: metadata.height, format: metadata.format || ext.slice(1) };
     assets.set(file, asset);
-    await fs.writeFile(output + url, bytes); // byte copy; sharp is metadata-only
-    // Legacy URLs contain case/space-sensitive filesystem paths. Copies avoid redirect limits.
-    await fs.mkdir(path.dirname(path.join(output,file)), { recursive: true });
-    await fs.writeFile(path.join(output,file), bytes);
-    asset.legacyUrl = '/' + encodePath(file);
+    await stage(file);
   }
-  await fs.writeFile(output + '/_headers', '/_media/originals/*\n  Cache-Control: public, max-age=31536000, immutable\n');
   return { assets, excluded, files };
 }

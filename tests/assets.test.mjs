@@ -13,14 +13,18 @@ test('add, replace, rename, delete images and text-only edits preserve byte iden
   await fs.writeFile(docs+'/A.webp',a);await fs.writeFile(docs+'/index.md','# Test');
   const first=await prepareAssets(docs,out),original=first.assets.get('A.webp');
   assert.deepEqual(await fs.readFile(out+original.url),a);
+  assert.equal(original.url,'/A.webp');
+  assert((await fs.lstat(out+'/A.webp')).isSymbolicLink());
+  await assert.rejects(fs.access(out+'/_media'));
+  await assert.rejects(fs.access(out+'/_headers'));
   await fs.writeFile(docs+'/index.md','# Edited');await fs.writeFile(docs+'/B.webp',b);
   const second=await prepareAssets(docs,out);assert.equal(second.assets.get('A.webp').url,original.url);
   const settings={mode:'cloudflare',origin:'https://a9z.dev'};
   assert.equal(imageUrl(second.assets.get('A.webp'),'preview',settings),imageUrl(original,'preview',settings));
   await fs.writeFile(docs+'/A.webp',b);const replaced=await prepareAssets(docs,out);
-  assert.notEqual(replaced.assets.get('A.webp').url,original.url);assert.equal(replaced.assets.get('B.webp').url,second.assets.get('B.webp').url);
+  assert.equal(replaced.assets.get('A.webp').url,original.url);assert.notEqual(replaced.assets.get('A.webp').hash,original.hash);assert.deepEqual(await fs.readFile(out+'/A.webp'),b);assert.equal(replaced.assets.get('B.webp').url,second.assets.get('B.webp').url);
   await fs.rename(docs+'/B.webp',docs+'/Case 日本語.webp');await fs.unlink(docs+'/A.webp');
-  const renamed=await prepareAssets(docs,out);assert.equal(renamed.assets.size,1);assert.equal(renamed.assets.get('Case 日本語.webp').url,second.assets.get('B.webp').url);
+  const renamed=await prepareAssets(docs,out);assert.equal(renamed.assets.size,1);assert.equal(renamed.assets.get('Case 日本語.webp').url,'/Case%20%E6%97%A5%E6%9C%AC%E8%AA%9E.webp');assert.deepEqual(await fs.readFile(out+'/Case 日本語.webp'),b);
   await assert.rejects(fs.access(out+'/B.webp'));
   assert.equal(articleMap(['index.md','new/index.md']).byUrl.size,2);assert.equal(articleMap(['index.md','renamed.md']).bySource.get('renamed.md'),'/renamed');
  } finally {await fs.rm(root,{recursive:true,force:true})}

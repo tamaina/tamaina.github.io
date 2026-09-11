@@ -46,7 +46,7 @@ test('no-JS body, original image links and first listing remain accessible',asyn
  const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();
  await page.goto('http://127.0.0.1:4321/blog');await expect(page.locator('.card')).toHaveCount(10);
  await page.goto('http://127.0.0.1:4321'+imageArticle);await expect(page.locator('h1')).toBeVisible();
- const href=await page.locator('a[data-viewer]').first().getAttribute('href');expect(href).toMatch(/^\/_media\/originals\//);
+ const href=await page.locator('a[data-viewer]').first().getAttribute('href');expect(href).toBe('/2.blog/2022/05-20%20m1mba-1/0.webp');
  await context.close();
 });
 test('one-shot fallback and real 404, including missing media',async({page,request})=>{
@@ -56,7 +56,7 @@ test('one-shot fallback and real 404, including missing media',async({page,reque
  await expect(img).toHaveAttribute('data-fallback','1');
  const original=await img.getAttribute('data-original');await expect(img).toHaveAttribute('src',original!);
  await img.evaluate((el:HTMLImageElement)=>{el.src='/missing-again';el.dispatchEvent(new Event('error'))});await expect(img).toHaveAttribute('src','/missing-again');
- expect((await request.get('/not-a-page')).status()).toBe(404);expect((await request.get('/_media/originals/not-an-image.webp')).status()).toBe(404);
+ expect((await request.get('/not-a-page')).status()).toBe(404);expect((await request.get('/2.blog/2022/05-20%20m1mba-1/not-an-image.webp')).status()).toBe(404);
 });
 test('touch viewer opens and closes',async({browser})=>{
  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true});const page=await context.newPage();

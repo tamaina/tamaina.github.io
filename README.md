@@ -33,3 +33,5 @@ gh workflow run astro.yml --ref main
 Actions はチェック・ビルド・デプロイまでを実行し、公開後の内容検証は行いません。必要な場合は `VERIFY_ORIGIN=https://a9z.dev pnpm verify:remote` などで手動検証できます。出力先は `.generated/verification/`、旧サイトとの互換性比較用データは `tests/fixtures/` です。
 
 旧Netlify配信へ戻す場合は、まずActionsの本ワークフローを無効化し、Cloudflareの `a9z-production` に割り当てた `a9z.dev/*` Routeを削除します。DNSは変更していないため旧配信へ戻ります。Worker内の変更だけを戻す場合は `pnpm exec wrangler rollback <version-id>` を使います。旧サイトとDNSはロールバック手段として残してください。
+
+画像・添付ファイルは `docs/` 内の元のパスで配信します。`.generated/public/` は原本へのシンボリックリンクで準備し、Astroが配信用の `dist/` に実体を配置します。ハッシュ別名への二重コピーや原本へのimmutableキャッシュ設定はありません。

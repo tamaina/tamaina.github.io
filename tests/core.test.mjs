@@ -22,17 +22,17 @@ test('URL case, numeric order prefixes, versions, spaces, index and collisions',
 });
 test('file and public relative links preserve image case and query/hash case',()=>{
   const map=articleMap(['1.index.md','2.blog/2022/Foo Bar/index.md','2.blog/2022/Baz.md','3.products/venc.md']);
-  const assets=new Map([['2.blog/2022/Foo Bar/A 日本語.webp',{url:'/_media/originals/abc.webp'}]]);
+  const assets=new Map([['2.blog/2022/Foo Bar/A 日本語.webp',{url:'/2.blog/2022/Foo%20Bar/A%20%E6%97%A5%E6%9C%AC%E8%AA%9E.webp'}]]);
   const source='2.blog/2022/Foo Bar/index.md';
   assert.equal(resolveLink(source,'../Baz.md?Q=Case#日本語',map,assets),'/blog/2022/baz?Q=Case#日本語');
   assert.equal(resolveLink(source,'../baz?Q=Case#Heading',map,assets),'/blog/2022/baz?Q=Case#Heading');
-  assert.equal(resolveLink(source,'A%20日本語.webp?Q=Case#A',map,assets),'/_media/originals/abc.webp?Q=Case#A');
+  assert.equal(resolveLink(source,'A%20日本語.webp?Q=Case#A',map,assets),'/2.blog/2022/Foo%20Bar/A%20%E6%97%A5%E6%9C%AC%E8%AA%9E.webp?Q=Case#A');
   assert.deepEqual(sourceReference(source,'./A%20日本語.webp'),['2.blog/2022/Foo Bar/A 日本語.webp','']);
   for(const url of ['https://example.com/A?B=C#D','mailto:Some@One.Example','tel:+123','#日本語'])assert.equal(resolveLink(source,url,map,assets),url);
   assert.deepEqual(sourceReference('3.products/venc.md','./a.webp'),['3.products/a.webp','']);
 });
-test('fixed presets and immutable content identity',()=>{
-  const original={url:`/_media/originals/${sha256(Buffer.from('original'))}.webp`,transformable:true};
+test('fixed presets and content checksums',()=>{
+  const original={url:'/test/original.webp',transformable:true};
   const settings=imageSettings({IMAGE_MODE:'cloudflare',IMAGE_ORIGIN:'https://images.example.com'});
   assert.equal(imageUrl(original,'preview',settings),`https://images.example.com/cdn-cgi/image/${presets.preview}${original.url}`);
   assert.equal(imageUrl(original,'thumbnail',{mode:'original'}),original.url);
@@ -52,7 +52,7 @@ test('frontmatter, H1 and descriptions retain legacy values across all articles'
 });
 test('headings across existing articles match Nuxt IDs',async()=>{
   const files=await fs.readdir('docs',{recursive:true});
-  const assets=new Map(files.filter(f=>/\.webp$/.test(f)).map(f=>[f,{url:'/_media/originals/test.webp',transformable:true,width:1,height:1}]));
+  const assets=new Map(files.filter(f=>/\.webp$/.test(f)).map(f=>[f,{url:'/test/image.webp',transformable:true,width:1,height:1}]));
   const context={articles:articleMap(baseline.map(p=>p._file)),assets,settings:{mode:'original'},missing:[],transforms:{preview:new Set()}};
   for(const old of baseline){
     const data=readMarkdown(await fs.readFile('docs/'+old._file,'utf8'));
@@ -61,7 +61,7 @@ test('headings across existing articles match Nuxt IDs',async()=>{
   }
 });
 test('HTML images, custom tags, tables and duplicate heading IDs use AST processing',async()=>{
-  const source='test/index.md';const assets=new Map([['test/A.webp',{url:'/_media/originals/a.webp',transformable:true,width:100,height:50}]]);
+  const source='test/index.md';const assets=new Map([['test/A.webp',{url:'/test/A.webp',transformable:true,width:100,height:50}]]);
   const context={articles:articleMap([source]),assets,settings:{mode:'original'},missing:[],transforms:{preview:new Set()}};
   const data=readMarkdown('# 日本語\n\n## A!\n\n## A!\n\n<img src="A.webp" alt="a" title="Caption">\n\n<embed-youtube video-id="Afk-P9sLUYo"></embed-youtube>\n\n|A|B|\n|-|-|\n|1|2|');
   const result=await renderMarkdown({...data,source},context);

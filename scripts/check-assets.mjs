@@ -8,11 +8,10 @@ let total=0, largest={file:'',bytes:0};
 const allowedImages=new Set();
 for(const [source,asset] of Object.entries(assets)) {
   const input=await fs.readFile('docs/'+source);
-  for(const target of [asset.url.slice(1),source]) {
-    const bytes=await fs.readFile('dist/'+target);
-    assert.equal(sha256(bytes),sha256(input),`Original changed: ${source}`);
-    allowedImages.add(target);
-  }
+  const bytes=await fs.readFile('dist/'+source);
+  assert.equal(sha256(bytes),sha256(input),`Original changed: ${source}`);
+  assert.equal(asset.url,'/'+source.split('/').map(encodeURIComponent).join('/'));
+  allowedImages.add(source);
 }
 for(const file of files) {
   const bytes=await fs.readFile('dist/'+file);
