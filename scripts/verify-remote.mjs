@@ -16,8 +16,8 @@ for(const preset of ['original','thumbnail','preview','og']) {
   const metadata=await sharp(bytes).metadata().catch(()=>({}));
   const result={preset,accept,status:response.status,type:response.headers.get('content-type'),location:response.headers.get('location'),width:metadata.width,height:metadata.height,format:metadata.format,bytes:bytes.length};
   results.push(result);
-  await fs.mkdir('maintenance/verification',{recursive:true});
-  await fs.writeFile('maintenance/verification/remote-images.json',JSON.stringify({origin,source,results},null,2));
+  await fs.mkdir('.generated/verification',{recursive:true});
+  await fs.writeFile('.generated/verification/remote-images.json',JSON.stringify({origin,source,results},null,2));
   try {
   assert.equal(response.status,200,JSON.stringify(result));
   assert.equal(result.location,null,'Redirect/fallback is not transformation success');
@@ -31,7 +31,7 @@ for(const preset of ['original','thumbnail','preview','og']) {
   } catch(error) { result.error=error.message; failures.push(error); }
  }
 }
-await fs.mkdir('maintenance/verification',{recursive:true});
-await fs.writeFile('maintenance/verification/remote-images.json',JSON.stringify({origin,source,results},null,2));
+await fs.mkdir('.generated/verification',{recursive:true});
+await fs.writeFile('.generated/verification/remote-images.json',JSON.stringify({origin,source,results},null,2));
 console.log(results);
 if(failures.length) throw new AggregateError(failures, 'Real transformations did not pass; original fallback is not success');

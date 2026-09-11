@@ -1,7 +1,7 @@
 import { chromium } from '@playwright/test';
 import fs from 'node:fs/promises';
 const origin=process.argv[2] || 'http://127.0.0.1:4321';
-const output=process.argv[3] || 'maintenance/after';
+const output=process.argv[3] || '.generated/verification/screenshots';
 await fs.mkdir(output,{recursive:true});
 const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_EXECUTABLE_PATH?{executablePath:process.env.PLAYWRIGHT_EXECUTABLE_PATH}:{})});
 const result=[];

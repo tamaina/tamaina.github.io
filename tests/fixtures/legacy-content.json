@@ -1,0 +1,1169 @@
+{
+  "sourceCommit": "25c890dc23daa38a279da7f7ec2174a8ede1b556",
+  "captured": "2026-09-11",
+  "publishedPaths": [
+    "/",
+    "/blog/2022/05-20-m1mba-1",
+    "/blog/2022/05-21-m1mba-2",
+    "/blog/2022/05-22-m1mba-3",
+    "/blog/2022/05-23-m1mba-4",
+    "/blog/2022/05-24-m1mba-5",
+    "/blog/2022/05-25-m1mba-6",
+    "/blog/2022/05-27-multipass",
+    "/blog/2022/09-05-xiaomi-11t-pro",
+    "/blog/2022/09-05-zzzz",
+    "/blog/2022/09-18-xiaomi-11t-pro-2",
+    "/blog/2022/09-24-tone-e22",
+    "/blog/2022/09-25-netlify-large-media",
+    "/blog/2022/09-26-leitz-phone-1-0",
+    "/blog/2022/09-29-leitz-phone-1-1",
+    "/blog/2022/10-04-leitz-phone-1-2",
+    "/blog/2022/10-14-xperia-10-iv",
+    "/blog/2022/10-16-oppo-reno5-a",
+    "/blog/2022/10-28-14m1prombp-1",
+    "/blog/2022",
+    "/blog/2023/01-09-cloudflared-mk",
+    "/blog/2023/02-21-pixel-7-1",
+    "/blog/2023/03-07-pixel-7-2",
+    "/blog/2023/03-08-14m1prombp-2",
+    "/blog/2023/06-18-m1-ipad-pro",
+    "/blog/2023/06-20-aokzoe-a1pro-0",
+    "/blog/2023/06-23-aokzoe-a1pro-1",
+    "/blog/2023/06-26-aokzoe-a1pro-2",
+    "/blog/2023/11-29-1-xperia-5-iv-1",
+    "/blog/2023/11-29-2-xperia-5-iv-2",
+    "/blog/2023/12-01-1-bv-tab-18-1",
+    "/blog/2023/12-01-2-bv-tab-18-2",
+    "/blog/2023/12-23-1-galaxy-s22-1",
+    "/blog/2023/12-23-2-galaxy-s22-2",
+    "/blog/2023/12-30-what-i-want",
+    "/blog/2023",
+    "/blog/2024/01-12-earphone-1",
+    "/blog/2024/01-20-trn-conch",
+    "/blog/2024/04-19-cheap-mobile-display",
+    "/blog/2024/05-02-1-j5create-jva14",
+    "/blog/2024/05-02-2-ezcap-capture",
+    "/blog/2024/05-02-3-captures-compare",
+    "/blog/2024/08-14-xiaomi-band-9",
+    "/blog/2024",
+    "/blog",
+    "/products",
+    "/products/kigurumi-photos",
+    "/products/the-japanese-web-fonts/fonts",
+    "/products/the-japanese-web-fonts",
+    "/products/venc",
+    "/memo/aokzoe/a1pro-keybind",
+    "/memo/aokzoe",
+    "/memo/audio-visual",
+    "/memo/audio-visual/obs-udp",
+    "/memo",
+    "/privacypolicy"
+  ],
+  "articles": [
+    {
+      "_file": "1.index.md",
+      "_path": "/",
+      "title": "Home",
+      "description": "aqz/tamainaのホームページにようこそ！",
+      "headings": [
+        "a9zdev-aqztamainas-homepage",
+        "aqztamainaについて",
+        "accounts",
+        "support-me"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/05-20 m1mba-1/index.md",
+      "_path": "/blog/2022/05-20-m1mba-1",
+      "title": "M1 MacBook Air レビュー #1 開封編",
+      "description": "M1 MacBook Air (7コアGPU/RAM16GB/ROM256GB)の整備済製品を購入したので、レビューしていきたいと思います。",
+      "headings": [
+        "m1-macbook-air-レビュー-1-開封編",
+        "いかがでしたか"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/05-21 m1mba-2/index.md",
+      "_path": "/blog/2022/05-21-m1mba-2",
+      "title": "M1 MacBook Air レビュー #2 M1をベンチマーク！7コアGPUの性能を解明！",
+      "description": "この記事では、ベンチマークを実行し、M1 MacBook Airの性能を解剖・比較します。\n特にGPU性能についての解説がインターネット上にあまり見当たらなかったため、GPU性能について詳しく見ていきたいと思います。",
+      "headings": [
+        "m1-macbook-air-レビュー-2-m1をベンチマーク7コアgpuの性能を解明",
+        "基本情報",
+        "cpu-cinebench-r23",
+        "発熱時の性能は",
+        "misskeyビルド対決",
+        "gpu-davinci-resolve-17-スタビライズ",
+        "_12秒の動画",
+        "_1分30秒の動画",
+        "考察と感想",
+        "davinci-resolve-17-動画エンコード",
+        "自作pc",
+        "m1-macbook-air",
+        "何が起こったか",
+        "gpu-minecraftシェーダー使用時fps比較",
+        "gpuram-citiesskylines",
+        "設定",
+        "結果",
+        "考察等",
+        "結論",
+        "感想",
+        "m1-pro-14インチ-macbook-proが買いたくなってきたぞ",
+        "他の記事"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/05-22 m1mba-3/index.md",
+      "_path": "/blog/2022/05-22-m1mba-3",
+      "title": "M1 MacBook Air レビュー #3 macOSを快適に使うために色々設定してみた",
+      "description": "個人的なmacOS Montereyの設定やアプリについてお話しします。",
+      "headings": [
+        "m1-macbook-air-レビュー-3-macosを快適に使うために色々設定してみた",
+        "uiの文字が小さすぎる",
+        "webブラウザの表示がデカすぎる",
+        "firefox",
+        "safari",
+        "edge",
+        "dockとメニューバーの設定",
+        "スクロールの設定-scroll-reverser",
+        "キーの役割を変更-karabiner-elements",
+        "内蔵キーボード",
+        "外付けjisキーボード",
+        "amphetamineでスリープさせないように",
+        "amphetamineでも電源なしでクラムシェルモードにすることはできない",
+        "senseiでいい感じのハードウェア監視",
+        "他のm1-macbook-air記事"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/05-23 m1mba-4/index.md",
+      "_path": "/blog/2022/05-23-m1mba-4",
+      "title": "M1 MacBook Air レビュー #4 メモリは8GBで十分?16GBが必要?",
+      "description": "「M1 MacBook Airって、メモリは結局8GBでいいの？16GB必要なの？」という疑問の声がありましたので、M1 MacBook Air(7コアGPU/16GB)でいくつかのアプリケーションを起動した際のアクティビティモニタのスクリーンショットを掲載します。参考にしていただければと思います。",
+      "headings": [
+        "m1-macbook-air-レビュー-4-メモリは8gbで十分16gbが必要",
+        "マシン起動時",
+        "ブラウザ",
+        "safari",
+        "firefox",
+        "microsoft-edge",
+        "excel",
+        "darktableraw現像ソフト",
+        "davinci-resolve",
+        "vramは",
+        "xcode",
+        "multipass-vm",
+        "minecraft",
+        "シェーダー使用時",
+        "citiesskylines-mod多め",
+        "それでも16gbをお勧めしたい",
+        "one-more-thing",
+        "他のm1-macbook-air記事"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/05-24 m1mba-5/index.md",
+      "_path": "/blog/2022/05-24-m1mba-5",
+      "title": "M1 MacBook Air レビュー #5 Surface Pro 7と対決！",
+      "description": "M1 MacBook AirをSurface Pro 7 (i3 4GB)と対決させてみます。\n性能や安定性は当然ながらM1 MacBook Airの方が遥かに優秀ですが、スピーカー音質やカメラ・マイクの性能、サイズとキーボードを比べてみます。",
+      "headings": [
+        "m1-macbook-air-レビュー-5-surface-pro-7と対決",
+        "サイズ比較",
+        "キーボードタッチパッド比較",
+        "m1-macbook-air-jisキーボード",
+        "surface-pro-タイプ-カバー-jis指紋認証機能付き",
+        "大きさ比較",
+        "重さ",
+        "内臓スピーカー",
+        "surface-pro-7",
+        "m1-macbook-air",
+        "内臓スピーカー総評",
+        "フロントカメラとマイク",
+        "surface-pro-7-サーキュレーターなし",
+        "m1-macbook-air-サーキュレーターなし",
+        "surface-pro-7-サーキュレーターあり",
+        "m1-macbook-air-サーキュレーターあり",
+        "カメラ評価",
+        "マイク評価",
+        "いかがでしたか",
+        "他のm1-macbook-air記事"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/05-25 m1mba-6/index.md",
+      "_path": "/blog/2022/05-25-m1mba-6",
+      "title": "M1 MacBook Air レビュー #6 返品します。ごめんなさい。",
+      "description": "今まで散々ネタにしたM1 MacBook Airですが、返品することにしました。\n昨日5月24日に返品の電話をし、本日発送しました。破産寸前と煽っておいて5000円の投げ銭を頂いたのにも関わらずこのような判断をしたことをお詫び申し上げます。",
+      "headings": [
+        "m1-macbook-air-レビュー-6-返品しますごめんなさい",
+        "中途半端な性能",
+        "デザインと重量について",
+        "電池持ちについて",
+        "m1-pro搭載14インチmacbook-proがほしい",
+        "macは割高",
+        "他のm1-macbook-air記事"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/05-27 multipass/index.md",
+      "_path": "/blog/2022/05-27-multipass",
+      "title": "Multipassを使ってmacOSでMisskey開発はやめておこう",
+      "description": "Multipassは私の環境ではどうも不安定になってしまったため、お勧めできません！",
+      "headings": [
+        "multipassを使ってmacosでmisskey開発はやめておこう",
+        "multipassは不安定なのでやめました",
+        "それでもmultipassを使いたい方は以下をお読みください",
+        "multipassのインストールとダウンロード",
+        "multipassインスタンスの作成実行",
+        "各種パッケージのインストール",
+        "postgresqlのセットアップ",
+        "ssh接続の準備",
+        "multipassインスタンスにvs-codeでssh接続する",
+        "続き",
+        "いかがでしたか"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/09-05 Xiaomi 11T Pro/index.md",
+      "_path": "/blog/2022/09-05-xiaomi-11t-pro",
+      "title": "Xiaomi 11T Pro #1 ざっくりハンズオンレビュー",
+      "description": "IIJmioのセールで3万2千円程度で販売しており、これは安いぞと思ったのでXiaomi 11T Proを購入しました。",
+      "headings": [
+        "xiaomi-11t-pro-1-ざっくりハンズオンレビュー",
+        "ディスプレイ",
+        "指紋認証",
+        "バイブレーター",
+        "音質",
+        "bluetoothコーデック",
+        "おサイフケータイ",
+        "ベンチマーク性能",
+        "サイズ",
+        "充電",
+        "カメラ静止画",
+        "miui",
+        "blu",
+        "つづき"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/09-05 ZZZZ/index.md",
+      "_path": "/blog/2022/09-05-zzzz",
+      "title": "新a9z.dev始動",
+      "description": "Nuxt.jsで新しいホームページを作りました。",
+      "headings": [
+        "新a9zdev始動"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/09-18 Xiaomi 11T Pro 2/index.md",
+      "_path": "/blog/2022/09-18-xiaomi-11t-pro-2",
+      "title": "Xiaomi 11T Pro #2 いろいろ深掘り",
+      "description": "Xiaomi 11T Proの写真・動画撮影、テザリング、ルート化について。",
+      "headings": [
+        "xiaomi-11t-pro-2-いろいろ深掘り",
+        "テザリングモバイルホットスポット",
+        "動画撮影",
+        "暗所静止画撮影比較",
+        "rom焼き",
+        "ルート化",
+        "_5g-sa"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/09-24 TONE e22/index.md",
+      "_path": "/blog/2022/09-24-tone-e22",
+      "title": "TONE e22 ざっくりハンズオンレビュー",
+      "description": "トーンモバイルが2022年6月に発売した、MediaTek Dimensity 700 / Android 11搭載スマートフォン「TONE e22」のレビューです。",
+      "headings": [
+        "tone-e22-ざっくりハンズオンレビュー",
+        "背面外観筐体",
+        "公式tpuケース",
+        "指紋認証",
+        "ディスプレイ",
+        "サウンド",
+        "スピーカー",
+        "bluetooth-オーディオ-コーデック",
+        "カメラ",
+        "静止画",
+        "動画",
+        "バッテリー",
+        "qi充電",
+        "nfc",
+        "自動修復",
+        "モバイル通信-ltenr",
+        "対応バンド",
+        "nr新周波数帯しか対応していないsa対応なのに",
+        "全キャリアのプラチナバンドに対応",
+        "band-4142は",
+        "band-25",
+        "楽天モバイルとの相性",
+        "ベンチマーク性能",
+        "テザリングモバイルホットスポット",
+        "os",
+        "製造元輸入元",
+        "他の端末と比較してみたい",
+        "本題トーンモバイルについて"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/09-25 Netlify Large Media/index.md",
+      "_path": "/blog/2022/09-25-netlify-large-media",
+      "title": "Netlify Large Mediaのリポジトリをクローンする",
+      "description": "私はNetlify Large Mediaを使用したリポジトリを何も考えずVS Codeでクローンしようとしてしまいました。",
+      "headings": [
+        "netlify-large-mediaのリポジトリをクローンする",
+        "_1-git-lfsをインストールする",
+        "_2-netlify-lminstall",
+        "_3-git-clone",
+        "_4-netlify-link"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/09-26 Leitz Phone 1 0/index.md",
+      "_path": "/blog/2022/09-26-leitz-phone-1-0",
+      "title": "Leitz Phone 1 #0 開封・外観編",
+      "description": "月末なのでヤマダデンキにスマホを見に行ったところ、Softbank契約でLeitz Phone 1（定価187,920円）が一括9,800円（+手数料3,300円）で投げ売り売っていたので、買いました。",
+      "headings": [
+        "leitz-phone-1-0-開封外観編",
+        "開封",
+        "包装と内容物についての感想",
+        "サイズ重量",
+        "外装",
+        "起動してから",
+        "update-paradise",
+        "_240hzディスプレイが癖になる",
+        "だがラウンドエッジディスプレイてめぇはダメだ",
+        "softbankのプリインストールアプリ",
+        "で写真は",
+        "結論",
+        "次の記事へ"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/09-29 Leitz Phone 1 1/index.md",
+      "_path": "/blog/2022/09-29-leitz-phone-1-1",
+      "title": "Leitz Phone 1 #1 ざっくりハンズオンレビュー（カメラ以外）",
+      "description": "Leitz Phone 1の外装とカメラ以外の機能を紹介していきます。",
+      "headings": [
+        "leitz-phone-1-1-ざっくりハンズオンレビューカメラ以外",
+        "ディスプレイ",
+        "超音波式画面内指紋認証",
+        "バイブレーター",
+        "音質",
+        "bluetoothコーデック",
+        "おサイフケータイ",
+        "ベンチマーク性能",
+        "サイズ",
+        "充電",
+        "ui",
+        "テザリングインターネット共有",
+        "ltenr通信",
+        "防水防塵",
+        "_5g-sa",
+        "カメラカバー",
+        "感想",
+        "良かった点",
+        "残念だった点",
+        "じゃあカメラの話をしよう"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/10-04 Leitz Phone 1 2/index.md",
+      "_path": "/blog/2022/10-04-leitz-phone-1-2",
+      "title": "Leitz Phone 1 #2 カメラ編　スマホカメラはスマホカメラでした……",
+      "description": "Leitz Phone 1のカメラ比較です。より安価に購入できるマイクロフォーサーズ機（LUMIX GX7MK2）と比較するとお勧めできません。",
+      "headings": [
+        "leitz-phone-1-2-カメラ編スマホカメラはスマホカメラでした",
+        "他の記事",
+        "素性",
+        "比較対象",
+        "leica-dg-summilux-9mmf17-asph-h-x09-の特徴",
+        "lumix-gx7mk2-の特徴",
+        "lumix-g100-の特徴",
+        "静止画",
+        "夜間は",
+        "動画",
+        "画角比較",
+        "結論"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/10-14 Xperia 10 IV/index.md",
+      "_path": "/blog/2022/10-14-xperia-10-iv",
+      "title": "Xperia 10 IV ざっくりハンズオンレビュー",
+      "description": "Xperia 10 IVがSoftbankで一括1円なのは前から知っていたのですが、この度、機会があったため購入しました。",
+      "headings": [
+        "xperia-10-iv-ざっくりハンズオンレビュー",
+        "開封付属品",
+        "背面外観筐体サイズ感",
+        "他機種との比較",
+        "防水防塵耐衝撃",
+        "指紋認証",
+        "ディスプレイ",
+        "サウンド",
+        "スピーカー",
+        "独自機能",
+        "bluetooth-オーディオ-コーデック",
+        "カメラ",
+        "バッテリー充電",
+        "おサイフケータイfelica",
+        "モバイル通信-ltenr",
+        "対応バンド",
+        "_5g-sa",
+        "ベンチマーク性能",
+        "wi-fi",
+        "wi-fiテザリング",
+        "os",
+        "総評",
+        "結論"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/10-16 OPPO Reno5 A/index.md",
+      "_path": "/blog/2022/10-16-oppo-reno5-a",
+      "title": "OPPO Reno5 A (eSIM) 超ざっくりハンズオンレビュー",
+      "description": "Y!mobileにMNPすると1円で購入できる「OPPO Reno5 A (eSIM)」について、いつにも増してざっくり見ていきたいと思います。",
+      "headings": [
+        "oppo-reno5-a-esim-超ざっくりハンズオンレビュー",
+        "背面外観筐体",
+        "防水防塵",
+        "指紋認証",
+        "ディスプレイ",
+        "サウンド",
+        "スピーカー",
+        "bluetooth-オーディオ-コーデック",
+        "カメラ",
+        "バッテリー充電",
+        "おサイフケータイfelica",
+        "モバイル通信-ltenr",
+        "対応バンド",
+        "ベンチマーク性能",
+        "wi-fi",
+        "パーソナルホットスポットwi-fiテザリング",
+        "os",
+        "総評"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/10-28 14m1prombp-1/index.md",
+      "_path": "/blog/2022/10-28-14m1prombp-1",
+      "title": "14インチMacBook Pro (M1 Pro) #1 購入・開封編",
+      "description": "5ヶ月前にお届けしたM1 MacBook Air編でM1 Pro MacBook Proが欲しいと言っていましたが、この度14インチMacBook Pro最廉価モデルの整備済製品を購入しました。破産寸前です。自作PCもSurface Pro 7も両方売ってしまったので、もう後には引けません。",
+      "headings": [
+        "_14インチmacbook-pro-m1-pro-1-購入開封編",
+        "整備済製品の価格変化",
+        "開封の儀",
+        "timemachineで復元",
+        "筐体についての感想-2337追記",
+        "次"
+      ]
+    },
+    {
+      "_file": "2.blog/2022/index.md",
+      "_path": "/blog/2022",
+      "title": "ブログ 2022年",
+      "description": "",
+      "headings": [
+        "ブログ-2022年"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/01-09 cloudflared-mk/index.md",
+      "_path": "/blog/2023/01-09-cloudflared-mk",
+      "title": "cloudflaredでMisskeyサーバーを立ち上げるメモ",
+      "description": "cloudflared (Cloudflare Zero Trust, Cloudflare Tunnels)でMisskeyサーバーを立ち上げます。Misskeyのインストールはbash-installで行います。",
+      "headings": [
+        "cloudflaredでmisskeyサーバーを立ち上げるメモ",
+        "cloudflare-tunnels-特徴",
+        "利点",
+        "欠点",
+        "cloudflareのセットアップ",
+        "cloudflare-zero-trustのセットアップ",
+        "アクセスグループの作成",
+        "ログインメソッドの設定",
+        "トンネルの作成とマシンへのセットアップ",
+        "バッファサイズを拡張する",
+        "トンネルを作成しコマンド実行",
+        "公開するホスト名を編集",
+        "ssh設定",
+        "アプリケーションの作成",
+        "ssh接続する",
+        "公開鍵認証の設定",
+        "bash-installでmisskeyをインストール",
+        "いかがでしたか"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/02-21 pixel-7-1/index.md",
+      "_path": "/blog/2023/02-21-pixel-7-1",
+      "title": "Pixel 7 超適当ハンズオンレビュー #1 開封と静止画撮影",
+      "description": "Google謹製スマートフォン「Pixel 7」を即povoレンタル1円でゲットしてみました。開封と静止画撮影編。",
+      "headings": [
+        "pixel-7-超適当ハンズオンレビュー-1-開封と静止画撮影",
+        "購入",
+        "開封",
+        "外観",
+        "静止画撮影",
+        "いかがでしたか"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/03-07 pixel-7-2/index.md",
+      "_path": "/blog/2023/03-07-pixel-7-2",
+      "title": "Pixel 7 超適当ハンズオンレビュー #2 使用感/ベンチマーク/独自機能",
+      "description": "Google謹製スマートフォンのフラッグシップPixel 7をざっくり紹介。独自機能、使用感やベンチマークなど。",
+      "headings": [
+        "pixel-7-超適当ハンズオンレビュー-2-使用感ベンチマーク独自機能",
+        "背面外観筐体",
+        "防水防塵",
+        "生体認証",
+        "ディスプレイ",
+        "サウンド",
+        "スピーカー",
+        "bluetooth-オーディオ-コーデック",
+        "カメラ",
+        "バッテリー充電",
+        "おサイフケータイfelica",
+        "モバイル通信-ltenr",
+        "対応バンド",
+        "ベンチマーク性能",
+        "wi-fi",
+        "wi-fiアクセスポイントwi-fiテザリング",
+        "os",
+        "この曲なに",
+        "ゲームダッシュボード",
+        "雑感"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/03-08 14m1prombp-2/index.md",
+      "_path": "/blog/2023/03-08-14m1prombp-2",
+      "title": "14インチMacBook Pro (M1 Pro) #2 ベンチマーク/使用感",
+      "description": "開封編のすぐあとにベンチマーク記事を出そうと思っていましたが、5ヶ月も間が空いてしまいました。\nベンチマークをまとめて、使用感についても述べていければと思います。",
+      "headings": [
+        "_14インチmacbook-pro-m1-pro-2-ベンチマーク使用感",
+        "今回使用するモデルについて",
+        "cpu性能",
+        "gpu-davinci-resolve-スタビライズ",
+        "_12秒の動画",
+        "_1分30秒の動画",
+        "考察と感想",
+        "gpu-minecraftシェーダー使用時fps比較",
+        "gpuram-citiesskylines",
+        "ファン音",
+        "ポート類",
+        "キーボード",
+        "トラックパッド",
+        "ノッチ",
+        "スピーカー",
+        "ディスプレイ",
+        "バッテリーと充電",
+        "アクセサリなど",
+        "感想"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/06-18 m1-ipad-pro/index.md",
+      "_path": "/blog/2023/06-18-m1-ipad-pro",
+      "title": "11インチiPad Pro（第3世代,2021,M1） 開封と軽いレビュー",
+      "description": "14インチMacBook Proを購入した直後、M2搭載iPad Proが発表されたことも相まってiPadが欲しくなったため、11インチiPad Pro（第3世代）Wi-Fiモデル スペースグレイ(MHQR3J/A)を購入しました。",
+      "headings": [
+        "_11インチipad-pro第3世代2021m1-開封と軽いレビュー",
+        "購入",
+        "開封と外観",
+        "実際に使用して",
+        "いいところ",
+        "apple-careが安い",
+        "_120hz液晶でペン入力が快適に",
+        "sidecarやユニバーサルコントロールでmacの作業領域を拡張できる",
+        "iphoneripad向けゲームが快適に遊べる",
+        "カラオケ端末になる",
+        "悪いところ",
+        "帯に短し襷に長し",
+        "ちょっと重量が重たい",
+        "イヤホンジャックがない",
+        "アドバイス烏滸がましいですが",
+        "ipadの選び方",
+        "ipadはそのまま使おう",
+        "apple-pencil高すぎ問題",
+        "バッテリー検証"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/06-20 aokzoe-a1pro-0/index.md",
+      "_path": "/blog/2023/06-20-aokzoe-a1pro-0",
+      "title": "AOKZOE A1Proレビュー #0 座学と購入編",
+      "description": "自称世界初のRyzen 7 7840U搭載ゲーミングハンドヘルド機「AOKZOE A1Pro」をIndiegogoで出資しました。この記事では、実機を手に取る前に、ゲーミングハンドヘルドAOKZOEについての解説、Ryzen 7040シリーズの特徴紹介、他の機種との比較、そしてFedExの追跡をします。",
+      "headings": [
+        "aokzoe-a1proレビュー-0-座学と購入編",
+        "座学",
+        "windowsゲーミングハンドヘルドpcについて",
+        "aokzoeと前世代a1について",
+        "aokzoe-a1の欠点",
+        "aokzoeまたやらかす-今度はusbで",
+        "aokzoe-a1proの進化点",
+        "rog-allyについて",
+        "メモリが16gb",
+        "ssdが2230",
+        "aokzoe-a1シリーズの買い方",
+        "ryzen-7040シリーズapuについて",
+        "購入編出資とfedex配送",
+        "出資",
+        "aokzoeの言動",
+        "配送",
+        "次の記事"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/06-23 aokzoe-a1pro-1/index.md",
+      "_path": "/blog/2023/06-23-aokzoe-a1pro-1",
+      "title": "AOKZOE A1Proレビュー #1 開封・外観・操作編",
+      "description": "AOKZOE A1Proを開封し、外観を見てみます。コントローラーなどハードウェアに関する感想、キーボードのないハードを便利に使うための解説を書きました。",
+      "headings": [
+        "aokzoe-a1proレビュー-1-開封外観操作編",
+        "開封",
+        "充電器",
+        "ケース",
+        "本体",
+        "重量",
+        "充電や電源周りについて",
+        "ファン",
+        "コントローラーの感触",
+        "スピーカー音質",
+        "画面",
+        "画面内キーボード",
+        "キーボード入力がおかしい時は",
+        "ファンクションキー",
+        "onexconsole",
+        "game-center-panel",
+        "game-library-panel",
+        "いかがでしたか",
+        "他の記事"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/06-26 aokzoe-a1pro-2/index.md",
+      "_path": "/blog/2023/06-26-aokzoe-a1pro-2",
+      "title": "AOKZOE A1Proレビュー #2.1 ベンチマークとゲーム動かしてみた編（情報は古い）",
+      "description": "6/26時点での、CPU-Zなどのハードウェアの情報や、今までのベンチマークやゲーム動作の感想を掲載します。",
+      "headings": [
+        "aokzoe-a1proレビュー-21-ベンチマークとゲーム動かしてみた編情報は古い",
+        "この記事で言いたいこと",
+        "ちょっと悪い話",
+        "画面が焼き付く",
+        "ハイビーム天空の企業体質も微妙らしい",
+        "免責",
+        "ドライバについて",
+        "windowsの機能やバックグラウンドタスクについて",
+        "hwバージョン等",
+        "ベンチマーク結果リンク",
+        "_1-cpu-zgpu-z",
+        "_2-geekbench-6-cpu",
+        "_3-cpu-z-bench-cinebench-r23",
+        "_4-3dmark",
+        "_5-pcmark10",
+        "_6-crystaldiskinfo-crystaldiskmark",
+        "_7-ゲームベンチマーク",
+        "blue-protocol-ff1415",
+        "street-fighter-6-benchmark",
+        "_8-ゲームを動かしたぞ",
+        "jr東日本トレインシミュレーター-v101152",
+        "原神-genshin-impact",
+        "gta-v",
+        "apex-legends",
+        "minecraft-bedrock-for-windows",
+        "minecraft-java-w-shaders",
+        "_9-で",
+        "_10-geekbench-6-compute"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/11-29-1 xperia-5-iv-1/index.md",
+      "_path": "/blog/2023/11-29-1-xperia-5-iv-1",
+      "title": "Xperia 5 IV 超適当ハンズオンレビュー #1 開封・外装・サイズ比較編",
+      "description": "例によって家電量販店のSoftbank契約でXperia 5 IVが9800円となっていたため、買ってみました。",
+      "headings": [
+        "xperia-5-iv-超適当ハンズオンレビュー-1-開封外装サイズ比較編",
+        "開封",
+        "外装",
+        "サイズ比較",
+        "アプデ地獄",
+        "使い勝手については次の記事へ"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/11-29-2 xperia-5-iv-2/index.md",
+      "_path": "/blog/2023/11-29-2-xperia-5-iv-2",
+      "title": "Xperia 5 IV 超適当ハンズオンレビュー #2 諸々の使い勝手編",
+      "description": "Xperia 5 IVの使い心地を軽く紹介します。",
+      "headings": [
+        "xperia-5-iv-超適当ハンズオンレビュー-2-諸々の使い勝手編",
+        "要約",
+        "良い点",
+        "悪い点",
+        "ディスプレイ画質",
+        "指紋認証",
+        "バイブレーター",
+        "音質",
+        "スピーカー",
+        "bluetoothコーデック",
+        "_35mmオーディオジャック端子搭載",
+        "おサイフケータイfelica",
+        "モバイル通信-ltenr",
+        "_4g-lte-対応バンド",
+        "_5g-sa",
+        "wi-fi",
+        "wi-fiテザリング",
+        "ベンチマーク性能",
+        "バッテリー充電",
+        "カメラ",
+        "osui",
+        "いかがでしたか"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/12-01-1 bv-tab-18-1/index.md",
+      "_path": "/blog/2023/12-01-1-bv-tab-18-1",
+      "title": "Blackview Tab 18 超適当ハンズオンレビュー #1 開封・外装編",
+      "description": "12インチ中華タブ「Blackview Tab 18」をAliExpressにて購入しました。本当に全部入りなのでお勧めです。スタイラスペン「Blackview S Pen Gen 2」も買いました。",
+      "headings": [
+        "blackview-tab-18-超適当ハンズオンレビュー-1-開封外装編",
+        "blackview-tab-18公式購入先",
+        "開封",
+        "本体",
+        "スタイラスペン",
+        "本体外装",
+        "起動",
+        "使い勝手については次の記事へ"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/12-01-2 bv-tab-18-2/index.md",
+      "_path": "/blog/2023/12-01-2-bv-tab-18-2",
+      "title": "Blackview Tab 18 超適当ハンズオンレビュー #2 諸々の使い勝手編",
+      "description": "Blackview Tab 18の機能を軽く紹介します。11インチiPad Pro（第3世代）と比べても結構いい感じだと思います。",
+      "headings": [
+        "blackview-tab-18-超適当ハンズオンレビュー-2-諸々の使い勝手編",
+        "要約",
+        "良い点",
+        "悪い点",
+        "ディスプレイ画質",
+        "スタイラスペン",
+        "指紋認証顔認証",
+        "バイブレーター",
+        "音質",
+        "スピーカー",
+        "bluetoothコーデック",
+        "モバイル通信-lte",
+        "_4g-lte-対応バンド",
+        "wi-fi",
+        "wi-fiテザリング",
+        "ベンチマーク性能",
+        "バッテリー充電",
+        "カメラ",
+        "ストレージ",
+        "osui",
+        "ipadと比較して",
+        "付属のカバーが使いにくい",
+        "いかがでしたか"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/12-23-1 galaxy-s22-1/index.md",
+      "_path": "/blog/2023/12-23-1-galaxy-s22-1",
+      "title": "Galaxy S22 本当に適当レビュー #1 開封・外装・サイズ比較編",
+      "description": "諸事情によりGalaxy S22 (UQ版)が手元に来たため、軽く紹介します。",
+      "headings": [
+        "galaxy-s22-本当に適当レビュー-1-開封外装サイズ比較編",
+        "開封",
+        "外装",
+        "サイズ比較",
+        "使い勝手については次の記事へ"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/12-23-2 galaxy-s22-2/index.md",
+      "_path": "/blog/2023/12-23-2-galaxy-s22-2",
+      "title": "Galaxy S22 本当に適当レビュー #2 諸々の使い勝手編",
+      "description": "Galaxy S22を軽く触った感想です。少々辛口になりました。",
+      "headings": [
+        "galaxy-s22-本当に適当レビュー-2-諸々の使い勝手編",
+        "要約",
+        "良い点",
+        "悪い点",
+        "ディスプレイ画質",
+        "生体認証",
+        "バイブレーター",
+        "音質",
+        "スピーカー",
+        "bluetoothコーデック",
+        "おサイフケータイfelica",
+        "モバイル通信-ltenr",
+        "_4g-lte-対応バンド",
+        "５g-nr対応バンド",
+        "_5g-sa",
+        "wi-fi",
+        "wi-fiテザリング",
+        "ベンチマーク性能",
+        "バッテリー充電",
+        "カメラ",
+        "望遠レンズ3倍",
+        "osui-one-ui",
+        "goodlock",
+        "samsung-dex",
+        "galaxyだけのwindowsとの連携",
+        "最終的な感想"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/12-30 what-i-want/index.md",
+      "_path": "/blog/2023/12-30-what-i-want",
+      "title": "完璧で究極のパソコンは存在するのか 〜 Minisforum V3が欲しい",
+      "description": "もしかするとMinisforum V3は完璧で究極のパソコンかもしれない",
+      "headings": [
+        "完璧で究極のパソコンは存在するのか-minisforum-v3が欲しい",
+        "aqzが定義する完璧で究極のパソコンとは何か",
+        "macはダメなのか",
+        "ハンドヘルドゲーム機はダメなのか",
+        "モバイルディスプレイはダメなのか",
+        "完璧で究極のパソコンはあるのか",
+        "rog-flow-z13-vs-minisforum-v3"
+      ]
+    },
+    {
+      "_file": "2.blog/2023/index.md",
+      "_path": "/blog/2023",
+      "title": "ブログ 2023年",
+      "description": "",
+      "headings": [
+        "ブログ-2023年"
+      ]
+    },
+    {
+      "_file": "2.blog/2024/01-12 earphone-1/index.md",
+      "_path": "/blog/2024/01-12-earphone-1",
+      "title": "イヤホン沼に手を出した",
+      "description": "お年玉を利用し、イヤホン趣味に手を出します。手始めに「SHANLING M0 Pro」「Sennheiser IE 100 PRO」「KZ ZSTX」「NICEHCK DB1」「Kiwi Ears Dolce」を購入してみました。",
+      "headings": [
+        "イヤホン沼に手を出した",
+        "今回の記事の形式",
+        "用語集",
+        "shanling-m0-pro",
+        "スペック",
+        "使い勝手",
+        "イヤホン",
+        "用語定義",
+        "リファレンス音源",
+        "スペック比較",
+        "sennheiser-ie-100-pro",
+        "kiwi-ears-dolce",
+        "kz-zstx",
+        "nicehck-db1",
+        "結論",
+        "写真",
+        "shanling-m0-pro-写真",
+        "ie-100-pro-写真",
+        "kiwi-ears-dolce-写真",
+        "kz-zstx-写真",
+        "nicehck-db1-写真",
+        "tripowin-zonie-写真"
+      ]
+    },
+    {
+      "_file": "2.blog/2024/01-20 trn-conch/index.md",
+      "_path": "/blog/2024/01-20-trn-conch",
+      "title": "TRN Conchふんわりレビュー",
+      "description": "前回のイヤホンはじめました記事で予告？した通り、TRN Conchを買いました。TRN Conchは、5000円未満で1万円の製品と同等なのではないかと話題の製品です。",
+      "headings": [
+        "trn-conchふんわりレビュー",
+        "価格購入方法",
+        "開封同梱品",
+        "付属品",
+        "ケーブル",
+        "ノズルフィルタイヤーピース",
+        "ケース",
+        "デザイン質感",
+        "音質",
+        "スペック比較表",
+        "感想"
+      ]
+    },
+    {
+      "_file": "2.blog/2024/04-19 cheap-mobile-display/index.md",
+      "_path": "/blog/2024/04-19-cheap-mobile-display",
+      "title": "Amazonでやっすいモバイルモニターを買った",
+      "description": "モバイルモニターが欲しかったので、Amazonで1万円ちょっとの中華モバイルモニターを購入しました。AOKZOE A1Proと14インチMacBook Proに繋いで試してみます。",
+      "headings": [
+        "amazonでやっすいモバイルモニターを買った",
+        "免責事項",
+        "開封と付属品確認",
+        "本体外観",
+        "サイズ",
+        "osd設定画面",
+        "液晶の性能",
+        "スピーカー35mmイヤホンジャック",
+        "入力ポート",
+        "挙動",
+        "映像規格",
+        "freesync",
+        "usb-cを同時に繋いだ時",
+        "aokzoe-a1proと繋いだ時",
+        "まとめ",
+        "良かった点",
+        "悪かった点",
+        "いかがでしたか"
+      ]
+    },
+    {
+      "_file": "2.blog/2024/05-02-1 j5create-jva14/index.md",
+      "_path": "/blog/2024/05-02-1-j5create-jva14",
+      "title": "HDMIキャプチャー j5create JVA14 開封と外装",
+      "description": "j5create JVA14の開封と外装写真の記事です。",
+      "headings": [
+        "hdmiキャプチャー-j5create-jva14-開封と外装",
+        "外箱",
+        "開封付属品",
+        "本体外装"
+      ]
+    },
+    {
+      "_file": "2.blog/2024/05-02-2 ezcap-capture/index.md",
+      "_path": "/blog/2024/05-02-2-ezcap-capture",
+      "title": "HDMIキャプチャー ezcap332 Game Link Combo （上海問屋） 開封と外装",
+      "description": "ezcap332 Game Link Combo / 上海問屋 UVC準拠USB接続・ライブオーディオコンソール一体型HDMIキャプチャユニット DN-916264 の開封と外装写真の記事です。",
+      "headings": [
+        "hdmiキャプチャー-ezcap332-game-link-combo-上海問屋-開封と外装",
+        "開封",
+        "外装"
+      ]
+    },
+    {
+      "_file": "2.blog/2024/05-02-3 captures-compare/index.md",
+      "_path": "/blog/2024/05-02-3-captures-compare",
+      "title": "HDMIキャプチャ j5create JVA14 / ezcap Game Link Combo 仕様検証と比較",
+      "description": "1080p120/2160p30に対応した2製品のHDMIキャプチャの動作を確認し、比較してみます。",
+      "headings": [
+        "hdmiキャプチャ-j5create-jva14-ezcap-game-link-combo-仕様検証と比較",
+        "価格購入先",
+        "j5create-jva14",
+        "ezcap332-game-link-combo-上海問屋-dn-916264",
+        "ユニークな機能",
+        "jva14",
+        "ezcap332",
+        "hdmiキャプチャの仕様",
+        "基本的な仕様",
+        "jva14の仕様",
+        "windows-obsで選択可能な映像フォーマットとfps",
+        "macos-obsで選択可能な映像フォーマットとfps",
+        "色範囲",
+        "ezcap332の仕様",
+        "windows-obsで選択可能なフォーマットとfps",
+        "macos-obsで選択可能な映像フォーマットとfps-1",
+        "色範囲-1",
+        "遅延",
+        "音声入出力",
+        "音声入力について",
+        "モニター出力について",
+        "熱について",
+        "不可解な現象バグ",
+        "色範囲について",
+        "音声信号について",
+        "パススルー先のディスプレイが169でない場合",
+        "単独使用時の内部仮想ディスプレイのフレームレートについて",
+        "ezcap332は映像にノイズが乗ることがある",
+        "何が違うの",
+        "どっちがいいの",
+        "感想"
+      ]
+    },
+    {
+      "_file": "2.blog/2024/08-14 xiaomi-band-9/index.md",
+      "_path": "/blog/2024/08-14-xiaomi-band-9",
+      "title": "Xiaomi Smart Band 9 発売即日購入＆開封",
+      "description": "Xiaomi Smart Band 9が日本で発売されました。午前中Amazonで注文したら夜届いたため、即日で開封してXiaomi Smart Band 7と少しだけ比べてみます。購入した色はグレイシャーシルバーです。",
+      "headings": [
+        "xiaomi-smart-band-9-発売即日購入開封",
+        "開封",
+        "外観",
+        "なぜ買った",
+        "機能性能",
+        "とにかく動作がヌルヌルサクサク",
+        "充電ケーブルの違い",
+        "ディスプレイの進化が嬉しい",
+        "バイブレーション",
+        "いかがでしたか"
+      ]
+    },
+    {
+      "_file": "2.blog/2024/index.md",
+      "_path": "/blog/2024",
+      "title": "ブログ 2024年",
+      "description": "",
+      "headings": [
+        "ブログ-2024年"
+      ]
+    },
+    {
+      "_file": "2.blog/index.md",
+      "_path": "/blog",
+      "title": "ブログ",
+      "description": "ブログと言いつつガジェットレビューが大半を占めています。",
+      "headings": [
+        "ブログ"
+      ]
+    },
+    {
+      "_file": "3.products/The-Japanese-Web-Fonts/fonts.md",
+      "_path": "/products/the-japanese-web-fonts/fonts",
+      "title": "フォント一覧",
+      "description": "The Japanese Web Fonts v7.2.0現在のフォント一覧。",
+      "headings": [
+        "フォント一覧",
+        "ベースフォント",
+        "source-han-sans-源ノ角ゴシック",
+        "ウェイト",
+        "source-han-sans-hw",
+        "ウェイト-1",
+        "m-fonts",
+        "ウェイト-2",
+        "アドオンフォント",
+        "いろは角クラシック",
+        "ウェイト-3",
+        "コーポレートロゴ",
+        "ウェイト-4",
+        "ラノベpop",
+        "けいふぉんと",
+        "ぼくたちのゴシック2",
+        "ウェイト-5",
+        "ぼくたちのゴシック",
+        "源瑛アンチック",
+        "源瑛ラテゴ",
+        "源瑛nuゴシック",
+        "genei-univer-sans",
+        "ウェイト-6",
+        "源瑛ロマンのーと",
+        "nasu",
+        "ウェイト-7",
+        "nasum",
+        "ウェイト-8"
+      ]
+    },
+    {
+      "_file": "3.products/The-Japanese-Web-Fonts/index.md",
+      "_path": "/products/the-japanese-web-fonts",
+      "title": "The Japanese Web Fonts",
+      "description": "The Japanese Web Fontsは、フリーフォントを集めたWebフォントセットです。",
+      "headings": [
+        "the-japanese-web-fonts",
+        "概要",
+        "使い方"
+      ]
+    },
+    {
+      "_file": "3.products/index.md",
+      "_path": "/products",
+      "title": "製品",
+      "description": "各種製品の紹介や取扱説明書、サポート情報など",
+      "headings": [
+        "製品"
+      ]
+    },
+    {
+      "_file": "3.products/kigurumi-photos.md",
+      "_path": "/products/kigurumi-photos",
+      "title": "kigurumi写真",
+      "description": "aqz/tamainaによる着ぐるみさん等のコスプレ・ポトレ撮影について",
+      "headings": [
+        "kigurumi写真",
+        "撮影させていただいた写真",
+        "写真の利用について",
+        "現像の流れと共有について",
+        "aqztamainaをどうしても呼びたい場合"
+      ]
+    },
+    {
+      "_file": "3.products/venc.md",
+      "_path": "/products/venc",
+      "title": "Easy Video Encoder for browsers",
+      "description": "ブラウザで完結する動画再エンコード・リサイズツール",
+      "headings": [
+        "easy-video-encoder-for-browsers"
+      ]
+    },
+    {
+      "_file": "4.memo/aokzoe/a1pro-keybind.md",
+      "_path": "/memo/aokzoe/a1pro-keybind",
+      "title": "AOKZOE A1Pro Function Keys",
+      "description": "",
+      "headings": [
+        "aokzoe-a1pro-function-keys"
+      ]
+    },
+    {
+      "_file": "4.memo/aokzoe/index.md",
+      "_path": "/memo/aokzoe",
+      "title": "AOKZOE",
+      "description": "",
+      "headings": [
+        "aokzoe"
+      ]
+    },
+    {
+      "_file": "4.memo/audio-visual/index.md",
+      "_path": "/memo/audio-visual",
+      "title": "Audio Visual",
+      "description": "",
+      "headings": [
+        "audio-visual-音声映像関係"
+      ]
+    },
+    {
+      "_file": "4.memo/audio-visual/obs-udp.md",
+      "_path": "/memo/audio-visual/obs-udp",
+      "title": "LAN経由でOBSから別のPCのOBSへ映像を伝送する",
+      "description": "ネットワーク経由で、あるPCのOBSから別のPCのOBSへ映像を伝送する方法のメモです。",
+      "headings": [
+        "lan経由でobsから別のpcのobsへ映像を伝送する",
+        "前提",
+        "受信側obsの設定",
+        "送信側obsの設定",
+        "_1プロファイルの作成",
+        "_2-録画設定",
+        "_3-録画開始",
+        "コメント",
+        "参考文献"
+      ]
+    },
+    {
+      "_file": "4.memo/index.md",
+      "_path": "/memo",
+      "title": "MEMO",
+      "description": "",
+      "headings": [
+        "memo"
+      ]
+    },
+    {
+      "_file": "4.memo/kig-scoring.md",
+      "_path": "/memo/kig-scoring",
+      "title": "怪文書: kigurumi採点表 / kigurumi scoring",
+      "description": "",
+      "draft": true,
+      "headings": [
+        "怪文書-kigurumi採点表-kigurumi-scoring"
+      ]
+    },
+    {
+      "_file": "5.privacypolicy.md",
+      "_path": "/privacypolicy",
+      "title": "プライバシー ポリシー",
+      "description": "",
+      "headings": [
+        "プライバシー-ポリシー",
+        "広告",
+        "商品リンク",
+        "amazonアソシエイト"
+      ]
+    }
+  ]
+}

@@ -6,12 +6,12 @@ import { imageUrl, imageSettings, presets } from '../src/lib/images.mjs';
 import { sha256 } from '../src/lib/assets.mjs';
 import { readMarkdown, renderMarkdown } from '../src/lib/markdown.mjs';
 import { normalizePage, formatDates, listingPages } from '../src/lib/listing.mjs';
-const baseline = JSON.parse(await fs.readFile('maintenance/baseline/content.json','utf8'));
+const fixture = JSON.parse(await fs.readFile(new URL('./fixtures/legacy-content.json', import.meta.url),'utf8'));
+const baseline = fixture.articles;
 test('all legacy URLs match original Nuxt parser and captured production sitemap',async()=>{
   const actual=baseline.filter(p=>!p.draft).map(p=>articleUrl(p._file)).sort();
   assert.deepEqual(actual,baseline.filter(p=>!p.draft).map(p=>p._path).sort());
-  const sitemap=await fs.readFile('maintenance/baseline/sitemap.xml','utf8');
-  assert.deepEqual(actual,[...sitemap.matchAll(/<loc>https:\/\/a9z.dev([^<]*)<\/loc>/g)].map(m=>m[1]||'/').sort());
+  assert.deepEqual(actual,[...fixture.publishedPaths].sort());
 });
 test('URL case, numeric order prefixes, versions, spaces, index and collisions',()=>{
   assert.equal(articleUrl('3.products/The-Japanese-Web-Fonts/index.md'),'/products/the-japanese-web-fonts');
@@ -57,8 +57,7 @@ test('headings across existing articles match Nuxt IDs',async()=>{
   for(const old of baseline){
     const data=readMarkdown(await fs.readFile('docs/'+old._file,'utf8'));
     const {headings}=await renderMarkdown({...data,source:old._file},context);
-    const expected=[];function walk(n){if(/^h[1-6]$/.test(n.tag))expected.push(n.props.id);for(const child of n.children||[])walk(child)}walk(old.body);
-    assert.deepEqual(headings,expected,old._file);
+    assert.deepEqual(headings,old.headings,old._file);
   }
 });
 test('HTML images, custom tags, tables and duplicate heading IDs use AST processing',async()=>{
