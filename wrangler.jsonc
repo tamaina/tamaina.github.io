@@ -13,5 +13,17 @@
       "custom_domain": true
     }
   ],
-  "workers_dev": true
+  "workers_dev": true,
+  "env": {
+    "production": {
+      "name": "a9z-production",
+      "routes": [
+        {
+          "pattern": "a9z.dev/*",
+          "zone_name": "a9z.dev"
+        }
+      ],
+      "workers_dev": true
+    }
+  }
 }

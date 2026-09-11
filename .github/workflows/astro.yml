@@ -1,4 +1,4 @@
-name: Astro checks and preview deployment
+name: Astro checks and deployment
 on:
   pull_request:
   push:
@@ -6,9 +6,12 @@ on:
   workflow_dispatch:
     inputs:
       deploy_preview:
-        description: Deploy the verified build to the isolated preview Worker
+        description: Deploy preview instead of production (main only)
         type: boolean
         default: false
+concurrency:
+  group: astro-${{ github.ref }}-${{ github.event_name == 'workflow_dispatch' && inputs.deploy_preview && 'preview' || 'production' }}
+  cancel-in-progress: false
 permissions:
   contents: read
 jobs:
@@ -31,12 +34,12 @@ jobs:
       - run: pnpm build
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:ui
-      - name: Build the verified preview with Cloudflare image URLs
-        if: github.event_name == 'workflow_dispatch' && inputs.deploy_preview
+      - name: Build the verified deployment with Cloudflare image URLs
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: pnpm build
         env:
           IMAGE_MODE: cloudflare
-          IMAGE_ORIGIN: https://astro-preview.a9z.dev
+          IMAGE_ORIGIN: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy_preview && 'https://astro-preview.a9z.dev' || 'https://a9z.dev' }}
       - name: Verify article and original inputs are unchanged
         run: git diff --exit-code -- docs
       - uses: actions/upload-artifact@v4
@@ -48,11 +51,15 @@ jobs:
             .generated/assets.json
           include-hidden-files: true
           retention-days: 7
-  deploy-preview:
-    if: github.event_name == 'workflow_dispatch' && inputs.deploy_preview && github.ref == 'refs/heads/main'
+          compression-level: 0
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: verify
     runs-on: ubuntu-latest
-    environment: cloudflare-preview
+    # Reuse the configured Cloudflare credentials for both isolated Workers.
+    environment:
+      name: cloudflare-preview
+      url: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy_preview && 'https://astro-preview.a9z.dev' || 'https://a9z.dev' }}
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -67,7 +74,15 @@ jobs:
         with:
           name: verified-site
           path: .
-      - run: pnpm exec wrangler deploy
+      - name: Deploy preview
+        if: github.event_name == 'workflow_dispatch' && inputs.deploy_preview
+        run: pnpm exec wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Deploy production
+        if: github.event_name != 'workflow_dispatch' || !inputs.deploy_preview
+        run: pnpm exec wrangler deploy --env production
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -76,10 +91,10 @@ jobs:
           pnpm verify:remote
           node scripts/verify-site.mjs
         env:
-          VERIFY_ORIGIN: https://astro-preview.a9z.dev
+          VERIFY_ORIGIN: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy_preview && 'https://astro-preview.a9z.dev' || 'https://a9z.dev' }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: preview-verification
+          name: deployment-verification
           path: .generated/verification
           retention-days: 7

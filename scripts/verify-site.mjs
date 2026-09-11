@@ -10,6 +10,18 @@ for(const path of [...paths,'/blog?page=2','/not-a-page','/_media/originals/miss
  const result={path,status:response.status,location:response.headers.get('location')};results.push(result);
  if(path==='/blog/')assert.equal(response.status,307);
  else assert.equal(response.status,paths.includes(path)||path==='/blog?page=2'?200:404,JSON.stringify(result));
+ if(paths.includes(path)){
+  const expected=await fs.readFile(path==='/'?'dist/index.html':`dist${path}.html`);
+  const actual=Buffer.from(await response.arrayBuffer());
+  assert.equal(sha256(actual),sha256(expected),`Deployed HTML differs from verified build: ${path}`);
+  result.sha256=sha256(actual);
+ }
+}
+for(const path of ['/sitemap.xml','/robots.txt']){
+ const response=await fetch(origin+path,{redirect:'manual'});assert.equal(response.status,200,path);
+ const actual=Buffer.from(await response.arrayBuffer()),expected=await fs.readFile(`dist${path}`);
+ assert.equal(sha256(actual),sha256(expected),`Deployed metadata differs: ${path}`);
+ results.push({path,status:response.status,sha256:sha256(actual)});
 }
 const {assets}=JSON.parse(await fs.readFile('.generated/assets.json','utf8'));
 const [source,asset]=Object.entries(assets)[0];
