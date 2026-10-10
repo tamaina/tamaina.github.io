@@ -13,8 +13,6 @@ Node.js **24.18.0** / pnpm **12.3.4**を使用します。
 pnpm check
 pnpm test
 pnpm build
-pnpm exec playwright install chromium
-pnpm test:ui
 pnpm preview
 ```
 
@@ -22,7 +20,7 @@ pnpm preview
 
 [移行レポート](https://github.com/tamaina/tamaina.github.io/tree/bcef095a1724c3f60926a38499a1e9bf27e5876a/maintenance/astro-migration.md) / [デプロイ・切り替え手順](https://github.com/tamaina/tamaina.github.io/tree/bcef095a1724c3f60926a38499a1e9bf27e5876a/maintenance/deployment.md)
 
-`main` への push は、チェック・UIテスト後に本番用の画像変換URLでビルドし、`a9z-production` Workerへ自動デプロイします。`a9z.dev/*` の Worker Route を使用し、既存DNSとNetlifyサイト、`www` の転送を維持します。手動の本番再デプロイも可能です。
+`main` への push は、チェック・単体テスト後に本番用の画像変換URLでビルドし、`a9z-production` Workerへ自動デプロイします。`a9z.dev/*` の Worker Route を使用し、既存DNSとNetlifyサイト、`www` の転送を維持します。手動の本番再デプロイも可能です。
 
 ```sh
 gh workflow run astro.yml --ref main

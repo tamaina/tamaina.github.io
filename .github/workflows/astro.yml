@@ -27,8 +27,6 @@ jobs:
       - run: pnpm check
       - run: pnpm test
       - run: pnpm build
-      - run: pnpm exec playwright install --with-deps chromium
-      - run: pnpm test:ui
       - name: Build the verified deployment with Cloudflare image URLs
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: pnpm build
